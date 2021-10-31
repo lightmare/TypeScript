@@ -2355,7 +2355,10 @@ namespace ts {
                     exportName,
                     factory.createAssignment(
                         exportName,
-                        factory.createObjectLiteralExpression()
+                        setTextRange(
+                            factory.createObjectLiteralExpression(),
+                            /*location*/ some(node.members) ? undefined : node.members
+                        )
                     )
                 );
 
@@ -2372,20 +2375,20 @@ namespace ts {
             //      ...
             //  })(x || (x = {}));
             const enumStatement = factory.createExpressionStatement(
-                factory.createCallExpression(
-                    factory.createFunctionExpression(
-                        /*modifiers*/ undefined,
-                        /*asteriskToken*/ undefined,
-                        /*name*/ undefined,
-                        /*typeParameters*/ undefined,
-                        [factory.createParameterDeclaration(/*decorators*/ undefined, /*modifiers*/ undefined, /*dotDotDotToken*/ undefined, parameterName)],
-                        /*type*/ undefined,
-                        transformEnumBody(node, containerName)
-                    ),
-                    /*typeArguments*/ undefined,
-                    [moduleArg]
-                )
-            );
+                some(node.members)
+                    ? factory.createCallExpression(
+                        factory.createFunctionExpression(
+                            /*modifiers*/ undefined,
+                            /*asteriskToken*/ undefined,
+                            /*name*/ undefined,
+                            /*typeParameters*/ undefined,
+                            [factory.createParameterDeclaration(/*decorators*/ undefined, /*modifiers*/ undefined, /*dotDotDotToken*/ undefined, parameterName)],
+                            /*type*/ undefined,
+                            transformEnumBody(node, containerName)
+                        ),
+                        /*typeArguments*/ undefined,
+                        [moduleArg])
+                    : moduleArg);
 
             setOriginalNode(enumStatement, node);
             if (varAdded) {
