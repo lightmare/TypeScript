@@ -18,11 +18,9 @@ function foo1(x: number) {
 
 //// [overload2.js]
 var A;
-(function (A) {
-})(A || (A = {}));
+A || (A = {});
 var B;
-(function (B) {
-})(B || (B = {}));
+B || (B = {});
 // should be ok
 function foo(x) {
 }

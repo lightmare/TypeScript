@@ -523,8 +523,7 @@ class C extends B {
         })(),
         (() => {
             let Reflect;
-            (function (Reflect) {
-            })(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+            Reflect || (Reflect = {}); // collision (es2015-es2021 only)
             super.w();
         })(),
         (() => {
@@ -570,8 +569,7 @@ class C extends B {
     }
     static {
         let Reflect;
-        (function (Reflect) {
-        })(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+        Reflect || (Reflect = {}); // collision (es2015-es2021 only)
         super.w();
     }
     static {
@@ -668,16 +666,14 @@ class C extends B {
 export {};
 //// [enumInContainingScopeStaticField.js]
 var Reflect;
-(function (Reflect) {
-})(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+Reflect || (Reflect = {}); // collision (es2015-es2021 only)
 class C extends B {
     static _ = super.w();
 }
 export {};
 //// [enumInContainingScopeStaticBlock.js]
 var Reflect;
-(function (Reflect) {
-})(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+Reflect || (Reflect = {}); // collision (es2015-es2021 only)
 class C extends B {
     static { super.w(); }
 }

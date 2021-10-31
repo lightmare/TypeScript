@@ -106,8 +106,7 @@ var M;
 M = value;
 C = value;
 var E;
-(function (E) {
-})(E || (E = {}));
+E || (E = {});
 E = value;
 foo = value;
 // literals

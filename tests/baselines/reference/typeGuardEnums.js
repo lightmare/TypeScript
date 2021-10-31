@@ -21,11 +21,9 @@ else {
 
 //// [typeGuardEnums.js]
 var E;
-(function (E) {
-})(E || (E = {}));
+E || (E = {});
 var V;
-(function (V) {
-})(V || (V = {}));
+V || (V = {});
 var x;
 if (typeof x === "number") {
     x; // number|E|V

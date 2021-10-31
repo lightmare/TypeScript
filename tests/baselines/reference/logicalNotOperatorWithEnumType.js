@@ -31,8 +31,7 @@ var ENUM;
 })(ENUM || (ENUM = {}));
 ;
 var ENUM1;
-(function (ENUM1) {
-})(ENUM1 || (ENUM1 = {}));
+ENUM1 || (ENUM1 = {});
 ;
 // enum type var
 var ResultIsBoolean1 = !ENUM;

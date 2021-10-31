@@ -32,8 +32,7 @@ System.register([], function (exports_1, context_1) {
                 var x;
             })(C || (C = {}));
             exports_1("C", C);
-            (function (E) {
-            })(E || (E = {}));
+            E || (E = {});
             exports_1("E", E);
             (function (E) {
                 var x;

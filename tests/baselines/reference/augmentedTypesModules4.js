@@ -24,8 +24,7 @@ module m5 { export interface I { foo(): void } } // should already be reasonably
 
 //// [augmentedTypesModules4.js]
 var m4;
-(function (m4) {
-})(m4 || (m4 = {}));
+m4 || (m4 = {});
 var m4a;
 (function (m4a) {
     var y = 2;

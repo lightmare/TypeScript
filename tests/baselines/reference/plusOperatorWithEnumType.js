@@ -21,8 +21,7 @@ var ResultIsNumber4 = +(ENUM[0] + ENUM1["B"]);
 //// [plusOperatorWithEnumType.js]
 // + operator on enum type
 var ENUM;
-(function (ENUM) {
-})(ENUM || (ENUM = {}));
+ENUM || (ENUM = {});
 ;
 var ENUM1;
 (function (ENUM1) {

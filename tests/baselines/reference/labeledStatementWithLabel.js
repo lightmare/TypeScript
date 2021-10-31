@@ -62,8 +62,7 @@ label: function gen1() {
 }
 label: {
     var E;
-    (function (E) {
-    })(E || (E = {}));
+    E || (E = {});
 }
 label: ;
 label: {

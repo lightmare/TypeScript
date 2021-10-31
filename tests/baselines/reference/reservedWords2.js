@@ -35,8 +35,7 @@ debugger;
 if ()
     ;
 [1, 2];
-(function () {
-})( || ( = {}));
+ || ( = {});
 void {};
 function f() { }
 var C = /** @class */ (function () {

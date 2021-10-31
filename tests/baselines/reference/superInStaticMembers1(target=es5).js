@@ -561,8 +561,7 @@ var C = /** @class */ (function (_super) {
         })(),
         (function () {
             var Reflect;
-            (function (Reflect) {
-            })(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+            Reflect || (Reflect = {}); // collision (es2015-es2021 only)
             _super.w.call(_a);
         })(),
         (function () {
@@ -614,8 +613,7 @@ var C = /** @class */ (function (_super) {
     })();
     (function () {
         var Reflect;
-        (function (Reflect) {
-        })(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+        Reflect || (Reflect = {}); // collision (es2015-es2021 only)
         _super.w.call(_a);
     })();
     (function () {
@@ -1032,8 +1030,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Reflect;
-(function (Reflect) {
-})(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+Reflect || (Reflect = {}); // collision (es2015-es2021 only)
 var C = /** @class */ (function (_super) {
     __extends(C, _super);
     function C() {
@@ -1065,8 +1062,7 @@ var _a;
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Reflect;
-(function (Reflect) {
-})(Reflect || (Reflect = {})); // collision (es2015-es2021 only)
+Reflect || (Reflect = {}); // collision (es2015-es2021 only)
 var C = /** @class */ (function (_super) {
     __extends(C, _super);
     function C() {

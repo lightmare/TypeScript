@@ -9,8 +9,7 @@ function f5(for) {}
 //// [reservedWords3.js]
 function f1() { }
 var ;
-(function () {
-})( || ( = {}));
+ || ( = {});
 { }
 function f2() { }
 var default_1 = /** @class */ (function () {

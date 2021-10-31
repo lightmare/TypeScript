@@ -171,8 +171,7 @@ M += value;
 C *= value;
 C += value;
 var E;
-(function (E) {
-})(E || (E = {}));
+E || (E = {});
 E *= value;
 E += value;
 foo *= value;

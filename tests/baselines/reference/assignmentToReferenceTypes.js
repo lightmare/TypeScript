@@ -33,8 +33,7 @@ var C = /** @class */ (function () {
 }());
 C = null;
 var E;
-(function (E) {
-})(E || (E = {}));
+E || (E = {});
 E = null;
 function f() { }
 f = null;

@@ -25,8 +25,7 @@ delete ENUM, ENUM1;
 //// [deleteOperatorWithEnumType.js]
 // delete  operator on enum type
 var ENUM;
-(function (ENUM) {
-})(ENUM || (ENUM = {}));
+ENUM || (ENUM = {});
 ;
 var ENUM1;
 (function (ENUM1) {

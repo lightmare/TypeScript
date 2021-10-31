@@ -46,8 +46,7 @@ var M;
             }());
             plop_1.fudge = fudge;
             var plop;
-            (function (plop) {
-            })(plop = plop_1.plop || (plop_1.plop = {}));
+            plop = plop_1.plop || (plop_1.plop = {});
             // Emit these references as follows
             var v1 = gunk; // gunk
             var v2 = buz; // buz

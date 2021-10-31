@@ -206,8 +206,7 @@ var m3g;
     m3g.C = C;
 })(m3g || (m3g = {}));
 var m4;
-(function (m4) {
-})(m4 || (m4 = {}));
+m4 || (m4 = {});
 var m4a;
 (function (m4a) {
     var y = 2;

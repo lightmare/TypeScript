@@ -8,8 +8,7 @@ var c = /** @class */ (function () {
 }());
 (function () { });
 var e;
-(function (e) {
-})(e || (e = {}));
+e || (e = {});
 // leading
 /*@before*/
 function f2() { } // trailing

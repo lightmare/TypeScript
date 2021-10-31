@@ -30,8 +30,7 @@ z: typeof ENUM1;
 //// [typeofOperatorWithEnumType.js]
 // typeof  operator on enum type
 var ENUM;
-(function (ENUM) {
-})(ENUM || (ENUM = {}));
+ENUM || (ENUM = {});
 ;
 var ENUM1;
 (function (ENUM1) {
@@ -56,8 +55,7 @@ typeof ENUM1["B"];
 typeof ENUM, ENUM1;
 // use typeof in type query
 var z;
-(function (z) {
-})(z || (z = {}));
+z || (z = {});
 ;
 z: typeof ENUM;
 z: typeof ENUM1;

@@ -57,17 +57,13 @@ enum E14 { a, b: any "hello" += 1, c, d}
 //// [enumErrors.js]
 // Enum named with PredefinedTypes
 var any;
-(function (any) {
-})(any || (any = {}));
+any || (any = {});
 var number;
-(function (number) {
-})(number || (number = {}));
+number || (number = {});
 var string;
-(function (string) {
-})(string || (string = {}));
+string || (string = {});
 var boolean;
-(function (boolean) {
-})(boolean || (boolean = {}));
+boolean || (boolean = {});
 // Enum with computed member initializer of type Number
 var E5;
 (function (E5) {

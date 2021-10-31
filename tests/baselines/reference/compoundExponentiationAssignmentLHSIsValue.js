@@ -128,8 +128,7 @@ var M;
 M = Math.pow(M, value);
 C = Math.pow(C, value);
 var E;
-(function (E) {
-})(E || (E = {}));
+E || (E = {});
 E = Math.pow(E, value);
 foo = Math.pow(foo, value);
 // literals

@@ -7,6 +7,5 @@ enum E {
 
 //// [decoratorOnEnum2.js]
 var E;
-(function (E) {
-})(E || (E = {}));
+E || (E = {});
 A;
