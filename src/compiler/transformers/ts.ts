@@ -2439,12 +2439,23 @@ namespace ts {
             // old emitter always generate 'expression' part of the name as-is.
             const name = getExpressionForPropertyName(member, /*generateNameForComputedPropertyName*/ false);
             const valueExpression = transformEnumMemberDeclarationValue(member);
+            let innerKey: Expression = name;
+            let innerValue: Expression = valueExpression;
+
+            if (isNumericLiteral(valueExpression) && isLiteralExpression(name)) {
+                // Generate more compact code by using the numeric value as the
+                // inner assignment key that will be repeated, and the (usually
+                // longer) string name as the outer assignment key.
+                innerKey = valueExpression;
+                innerValue = name;
+            }
+
             const innerAssignment = factory.createAssignment(
                 factory.createElementAccessExpression(
                     currentNamespaceContainerName,
-                    name
+                    innerKey
                 ),
-                valueExpression
+                innerValue
             );
             const outerAssignment = valueExpression.kind === SyntaxKind.StringLiteral ?
                 innerAssignment :
@@ -2453,7 +2464,7 @@ namespace ts {
                         currentNamespaceContainerName,
                         innerAssignment
                     ),
-                    name
+                    innerKey
                 );
             return setTextRange(
                 factory.createExpressionStatement(
