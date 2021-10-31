@@ -36,8 +36,8 @@ const flags: TypeFlag = SymbolFlags.Type;
 exports.__esModule = true;
 var SyntaxKind;
 (function (SyntaxKind) {
-    SyntaxKind[SyntaxKind["ImportClause"] = 0] = "ImportClause";
-    SyntaxKind[SyntaxKind["ExportDeclaration"] = 1] = "ExportDeclaration";
+    SyntaxKind[SyntaxKind[0] = "ImportClause"] = 0;
+    SyntaxKind[SyntaxKind[1] = "ExportDeclaration"] = 1;
 })(SyntaxKind || (SyntaxKind = {}));
 //// [b.js]
 "use strict";

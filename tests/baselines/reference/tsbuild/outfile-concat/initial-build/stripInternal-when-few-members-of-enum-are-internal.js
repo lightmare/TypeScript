@@ -981,19 +981,19 @@ sourceFile:../first_part3.ts
 //// [/src/first/bin/first-output.js]
 var TokenFlags;
 (function (TokenFlags) {
-    TokenFlags[TokenFlags["None"] = 0] = "None";
-    TokenFlags[TokenFlags["PrecedingLineBreak"] = 1] = "PrecedingLineBreak";
-    TokenFlags[TokenFlags["PrecedingJSDocComment"] = 2] = "PrecedingJSDocComment";
-    TokenFlags[TokenFlags["Unterminated"] = 4] = "Unterminated";
-    TokenFlags[TokenFlags["ExtendedUnicodeEscape"] = 8] = "ExtendedUnicodeEscape";
-    TokenFlags[TokenFlags["Scientific"] = 16] = "Scientific";
-    TokenFlags[TokenFlags["Octal"] = 32] = "Octal";
-    TokenFlags[TokenFlags["HexSpecifier"] = 64] = "HexSpecifier";
-    TokenFlags[TokenFlags["BinarySpecifier"] = 128] = "BinarySpecifier";
-    TokenFlags[TokenFlags["OctalSpecifier"] = 256] = "OctalSpecifier";
-    TokenFlags[TokenFlags["ContainsSeparator"] = 512] = "ContainsSeparator";
-    TokenFlags[TokenFlags["BinaryOrOctalSpecifier"] = 384] = "BinaryOrOctalSpecifier";
-    TokenFlags[TokenFlags["NumericLiteralFlags"] = 1008] = "NumericLiteralFlags";
+    TokenFlags[TokenFlags[0] = "None"] = 0;
+    TokenFlags[TokenFlags[1] = "PrecedingLineBreak"] = 1;
+    TokenFlags[TokenFlags[2] = "PrecedingJSDocComment"] = 2;
+    TokenFlags[TokenFlags[4] = "Unterminated"] = 4;
+    TokenFlags[TokenFlags[8] = "ExtendedUnicodeEscape"] = 8;
+    TokenFlags[TokenFlags[16] = "Scientific"] = 16;
+    TokenFlags[TokenFlags[32] = "Octal"] = 32;
+    TokenFlags[TokenFlags[64] = "HexSpecifier"] = 64;
+    TokenFlags[TokenFlags[128] = "BinarySpecifier"] = 128;
+    TokenFlags[TokenFlags[256] = "OctalSpecifier"] = 256;
+    TokenFlags[TokenFlags[512] = "ContainsSeparator"] = 512;
+    TokenFlags[TokenFlags[384] = "BinaryOrOctalSpecifier"] = 384;
+    TokenFlags[TokenFlags[1008] = "NumericLiteralFlags"] = 1008;
 })(TokenFlags || (TokenFlags = {}));
 var s = "Hello, world";
 console.log(s);
@@ -1004,7 +1004,7 @@ function f() {
 //# sourceMappingURL=first-output.js.map
 
 //// [/src/first/bin/first-output.js.map]
-{"version":3,"file":"first-output.js","sourceRoot":"","sources":["../first_PART1.ts","../first_part2.ts","../first_part3.ts"],"names":[],"mappings":"AAAA,IAAK,UAqBJ;AArBD,WAAK,UAAU;IACX,2CAAQ,CAAA;IAER,uEAA2B,CAAA;IAE3B,6EAA8B,CAAA;IAE9B,2DAAqB,CAAA;IAErB,6EAA8B,CAAA;IAC9B,wDAAmB,CAAA;IACnB,8CAAc,CAAA;IACd,4DAAqB,CAAA;IACrB,mEAAwB,CAAA;IACxB,iEAAuB,CAAA;IAEvB,uEAA0B,CAAA;IAE1B,iFAAyD,CAAA;IAEzD,4EAAoG,CAAA;AACxG,CAAC,EArBI,UAAU,KAAV,UAAU,QAqBd;AAKD,IAAM,CAAC,GAAG,cAAc,CAAC;AAMzB,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC;AChCf,OAAO,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC,CAAC;ACAjB,SAAS,CAAC;IACN,OAAO,gBAAgB,CAAC;AAC5B,CAAC"}
+{"version":3,"file":"first-output.js","sourceRoot":"","sources":["../first_PART1.ts","../first_part2.ts","../first_part3.ts"],"names":[],"mappings":"AAAA,IAAK,UAqBJ;AArBD,WAAK,UAAU;IACX,sCAAQ,CAAA;IAER,oDAA2B,CAAA;IAE3B,uDAA8B,CAAA;IAE9B,8CAAqB,CAAA;IAErB,uDAA8B,CAAA;IAC9B,8CAAmB,CAAA;IACnB,yCAAc,CAAA;IACd,gDAAqB,CAAA;IACrB,qDAAwB,CAAA;IACxB,oDAAuB,CAAA;IAEvB,uDAA0B,CAAA;IAE1B,4DAAyD,CAAA;IAEzD,2DAAoG,CAAA;AACxG,CAAC,EArBI,UAAU,KAAV,UAAU,QAqBd;AAKD,IAAM,CAAC,GAAG,cAAc,CAAC;AAMzB,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC;AChCf,OAAO,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC,CAAC;ACAjB,SAAS,CAAC;IACN,OAAO,gBAAgB,CAAC;AAC5B,CAAC"}
 
 //// [/src/first/bin/first-output.js.map.baseline.txt]
 ===================================================================
@@ -1054,7 +1054,7 @@ sourceFile:../first_PART1.ts
 1->
 2 >^^^^^^^^^^^
 3 >           ^^^^^^^^^^
-4 >                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
+4 >                     ^^^^^^^^^^^^^^^^^^^^^^^->
 1->
 2 >enum 
 3 >           TokenFlags
@@ -1062,175 +1062,175 @@ sourceFile:../first_PART1.ts
 2 >Emitted(2, 12) Source(1, 6) + SourceIndex(0)
 3 >Emitted(2, 22) Source(1, 16) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["None"] = 0] = "None";
+>>>    TokenFlags[TokenFlags[0] = "None"] = 0;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                               ^
-4 >                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                          ^
+4 >                                           ^^^^^^^^^^^^^^^->
 1-> {
   >    
 2 >    None = 0
-3 >                                               
+3 >                                          
 1->Emitted(3, 5) Source(2, 5) + SourceIndex(0)
-2 >Emitted(3, 48) Source(2, 13) + SourceIndex(0)
-3 >Emitted(3, 49) Source(2, 13) + SourceIndex(0)
+2 >Emitted(3, 43) Source(2, 13) + SourceIndex(0)
+3 >Emitted(3, 44) Source(2, 13) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["PrecedingLineBreak"] = 1] = "PrecedingLineBreak";
+>>>    TokenFlags[TokenFlags[1] = "PrecedingLineBreak"] = 1;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                           ^
-4 >                                                                            ^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                        ^
+4 >                                                         ^^^^->
 1->,
   >    /* @internal */
   >    
 2 >    PrecedingLineBreak = 1 << 0
-3 >                                                                           
+3 >                                                        
 1->Emitted(4, 5) Source(4, 5) + SourceIndex(0)
-2 >Emitted(4, 76) Source(4, 32) + SourceIndex(0)
-3 >Emitted(4, 77) Source(4, 32) + SourceIndex(0)
+2 >Emitted(4, 57) Source(4, 32) + SourceIndex(0)
+3 >Emitted(4, 58) Source(4, 32) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["PrecedingJSDocComment"] = 2] = "PrecedingJSDocComment";
+>>>    TokenFlags[TokenFlags[2] = "PrecedingJSDocComment"] = 2;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                 ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                           ^
 1->,
   >    /* @internal */
   >    
 2 >    PrecedingJSDocComment = 1 << 1
-3 >                                                                                 
+3 >                                                           
 1->Emitted(5, 5) Source(6, 5) + SourceIndex(0)
-2 >Emitted(5, 82) Source(6, 35) + SourceIndex(0)
-3 >Emitted(5, 83) Source(6, 35) + SourceIndex(0)
+2 >Emitted(5, 60) Source(6, 35) + SourceIndex(0)
+3 >Emitted(5, 61) Source(6, 35) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["Unterminated"] = 4] = "Unterminated";
+>>>    TokenFlags[TokenFlags[4] = "Unterminated"] = 4;
 1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                               ^
-4 >                                                                ^^^^^^^^^^^^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                  ^
+4 >                                                   ^^^^^^^^^^->
 1 >,
   >    /* @internal */
   >    
 2 >    Unterminated = 1 << 2
-3 >                                                               
+3 >                                                  
 1 >Emitted(6, 5) Source(8, 5) + SourceIndex(0)
-2 >Emitted(6, 64) Source(8, 26) + SourceIndex(0)
-3 >Emitted(6, 65) Source(8, 26) + SourceIndex(0)
+2 >Emitted(6, 51) Source(8, 26) + SourceIndex(0)
+3 >Emitted(6, 52) Source(8, 26) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["ExtendedUnicodeEscape"] = 8] = "ExtendedUnicodeEscape";
+>>>    TokenFlags[TokenFlags[8] = "ExtendedUnicodeEscape"] = 8;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                 ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                           ^
 1->,
   >    /* @internal */
   >    
 2 >    ExtendedUnicodeEscape = 1 << 3
-3 >                                                                                 
+3 >                                                           
 1->Emitted(7, 5) Source(10, 5) + SourceIndex(0)
-2 >Emitted(7, 82) Source(10, 35) + SourceIndex(0)
-3 >Emitted(7, 83) Source(10, 35) + SourceIndex(0)
+2 >Emitted(7, 60) Source(10, 35) + SourceIndex(0)
+3 >Emitted(7, 61) Source(10, 35) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["Scientific"] = 16] = "Scientific";
-1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                            ^
-1 >,
-  >    
-2 >    Scientific = 1 << 4
-3 >                                                            
-1 >Emitted(8, 5) Source(11, 5) + SourceIndex(0)
-2 >Emitted(8, 61) Source(11, 24) + SourceIndex(0)
-3 >Emitted(8, 62) Source(11, 24) + SourceIndex(0)
----
->>>    TokenFlags[TokenFlags["Octal"] = 32] = "Octal";
+>>>    TokenFlags[TokenFlags[16] = "Scientific"] = 16;
 1 >^^^^
 2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 >                                                  ^
-4 >                                                   ^^^^^^^^^^^^^^^->
+1 >,
+  >    
+2 >    Scientific = 1 << 4
+3 >                                                  
+1 >Emitted(8, 5) Source(11, 5) + SourceIndex(0)
+2 >Emitted(8, 51) Source(11, 24) + SourceIndex(0)
+3 >Emitted(8, 52) Source(11, 24) + SourceIndex(0)
+---
+>>>    TokenFlags[TokenFlags[32] = "Octal"] = 32;
+1 >^^^^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                             ^
+4 >                                              ^^^^^^^^->
 1 >,
   >    
 2 >    Octal = 1 << 5
-3 >                                                  
+3 >                                             
 1 >Emitted(9, 5) Source(12, 5) + SourceIndex(0)
-2 >Emitted(9, 51) Source(12, 19) + SourceIndex(0)
-3 >Emitted(9, 52) Source(12, 19) + SourceIndex(0)
+2 >Emitted(9, 46) Source(12, 19) + SourceIndex(0)
+3 >Emitted(9, 47) Source(12, 19) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["HexSpecifier"] = 64] = "HexSpecifier";
+>>>    TokenFlags[TokenFlags[64] = "HexSpecifier"] = 64;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                ^
-4 >                                                                 ^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                    ^
+4 >                                                     ^^^^^^->
 1->,
   >    
 2 >    HexSpecifier = 1 << 6
-3 >                                                                
+3 >                                                    
 1->Emitted(10, 5) Source(13, 5) + SourceIndex(0)
-2 >Emitted(10, 65) Source(13, 26) + SourceIndex(0)
-3 >Emitted(10, 66) Source(13, 26) + SourceIndex(0)
+2 >Emitted(10, 53) Source(13, 26) + SourceIndex(0)
+3 >Emitted(10, 54) Source(13, 26) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["BinarySpecifier"] = 128] = "BinarySpecifier";
+>>>    TokenFlags[TokenFlags[128] = "BinarySpecifier"] = 128;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                       ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                         ^
 1->,
   >    
 2 >    BinarySpecifier = 1 << 7
-3 >                                                                       
+3 >                                                         
 1->Emitted(11, 5) Source(14, 5) + SourceIndex(0)
-2 >Emitted(11, 72) Source(14, 29) + SourceIndex(0)
-3 >Emitted(11, 73) Source(14, 29) + SourceIndex(0)
+2 >Emitted(11, 58) Source(14, 29) + SourceIndex(0)
+3 >Emitted(11, 59) Source(14, 29) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["OctalSpecifier"] = 256] = "OctalSpecifier";
+>>>    TokenFlags[TokenFlags[256] = "OctalSpecifier"] = 256;
 1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                     ^
-4 >                                                                      ^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                        ^
+4 >                                                         ^^^^->
 1 >,
   >    
 2 >    OctalSpecifier = 1 << 8
-3 >                                                                     
+3 >                                                        
 1 >Emitted(12, 5) Source(15, 5) + SourceIndex(0)
-2 >Emitted(12, 70) Source(15, 28) + SourceIndex(0)
-3 >Emitted(12, 71) Source(15, 28) + SourceIndex(0)
+2 >Emitted(12, 57) Source(15, 28) + SourceIndex(0)
+3 >Emitted(12, 58) Source(15, 28) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["ContainsSeparator"] = 512] = "ContainsSeparator";
+>>>    TokenFlags[TokenFlags[512] = "ContainsSeparator"] = 512;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                           ^
-4 >                                                                            ^^^^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                           ^
+4 >                                                            ^^^^^^->
 1->,
   >    /* @internal */
   >    
 2 >    ContainsSeparator = 1 << 9
-3 >                                                                           
+3 >                                                           
 1->Emitted(13, 5) Source(17, 5) + SourceIndex(0)
-2 >Emitted(13, 76) Source(17, 31) + SourceIndex(0)
-3 >Emitted(13, 77) Source(17, 31) + SourceIndex(0)
+2 >Emitted(13, 60) Source(17, 31) + SourceIndex(0)
+3 >Emitted(13, 61) Source(17, 31) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["BinaryOrOctalSpecifier"] = 384] = "BinaryOrOctalSpecifier";
+>>>    TokenFlags[TokenFlags[384] = "BinaryOrOctalSpecifier"] = 384;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                     ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                                ^
 1->,
   >    /* @internal */
   >    
 2 >    BinaryOrOctalSpecifier = BinarySpecifier | OctalSpecifier
-3 >                                                                                     
+3 >                                                                
 1->Emitted(14, 5) Source(19, 5) + SourceIndex(0)
-2 >Emitted(14, 86) Source(19, 62) + SourceIndex(0)
-3 >Emitted(14, 87) Source(19, 62) + SourceIndex(0)
+2 >Emitted(14, 65) Source(19, 62) + SourceIndex(0)
+3 >Emitted(14, 66) Source(19, 62) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["NumericLiteralFlags"] = 1008] = "NumericLiteralFlags";
+>>>    TokenFlags[TokenFlags[1008] = "NumericLiteralFlags"] = 1008;
 1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                               ^
 1 >,
   >    /* @internal */
   >    
 2 >    NumericLiteralFlags = Scientific | Octal | HexSpecifier | BinaryOrOctalSpecifier | ContainsSeparator
-3 >                                                                                
+3 >                                                               
 1 >Emitted(15, 5) Source(21, 5) + SourceIndex(0)
-2 >Emitted(15, 81) Source(21, 105) + SourceIndex(0)
-3 >Emitted(15, 82) Source(21, 105) + SourceIndex(0)
+2 >Emitted(15, 64) Source(21, 105) + SourceIndex(0)
+3 >Emitted(15, 65) Source(21, 105) + SourceIndex(0)
 ---
 >>>})(TokenFlags || (TokenFlags = {}));
 1 >
@@ -1412,28 +1412,28 @@ sourceFile:../first_part3.ts
 >>>//# sourceMappingURL=first-output.js.map
 
 //// [/src/first/bin/first-output.tsbuildinfo]
-{"bundle":{"commonSourceDirectory":"..","sourceFiles":["../first_PART1.ts","../first_part2.ts","../first_part3.ts"],"js":{"sections":[{"pos":0,"end":1131,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":42,"kind":"text"},{"pos":42,"end":156,"kind":"internal"},{"pos":158,"end":276,"kind":"text"},{"pos":276,"end":371,"kind":"internal"},{"pos":373,"end":533,"kind":"text"}]}},"version":"FakeTSVersion"}
+{"bundle":{"commonSourceDirectory":"..","sourceFiles":["../first_PART1.ts","../first_part2.ts","../first_part3.ts"],"js":{"sections":[{"pos":0,"end":942,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":42,"kind":"text"},{"pos":42,"end":156,"kind":"internal"},{"pos":158,"end":276,"kind":"text"},{"pos":276,"end":371,"kind":"internal"},{"pos":373,"end":533,"kind":"text"}]}},"version":"FakeTSVersion"}
 
 //// [/src/first/bin/first-output.tsbuildinfo.baseline.txt]
 ======================================================================
 File:: /src/first/bin/first-output.js
 ----------------------------------------------------------------------
-text: (0-1131)
+text: (0-942)
 var TokenFlags;
 (function (TokenFlags) {
-    TokenFlags[TokenFlags["None"] = 0] = "None";
-    TokenFlags[TokenFlags["PrecedingLineBreak"] = 1] = "PrecedingLineBreak";
-    TokenFlags[TokenFlags["PrecedingJSDocComment"] = 2] = "PrecedingJSDocComment";
-    TokenFlags[TokenFlags["Unterminated"] = 4] = "Unterminated";
-    TokenFlags[TokenFlags["ExtendedUnicodeEscape"] = 8] = "ExtendedUnicodeEscape";
-    TokenFlags[TokenFlags["Scientific"] = 16] = "Scientific";
-    TokenFlags[TokenFlags["Octal"] = 32] = "Octal";
-    TokenFlags[TokenFlags["HexSpecifier"] = 64] = "HexSpecifier";
-    TokenFlags[TokenFlags["BinarySpecifier"] = 128] = "BinarySpecifier";
-    TokenFlags[TokenFlags["OctalSpecifier"] = 256] = "OctalSpecifier";
-    TokenFlags[TokenFlags["ContainsSeparator"] = 512] = "ContainsSeparator";
-    TokenFlags[TokenFlags["BinaryOrOctalSpecifier"] = 384] = "BinaryOrOctalSpecifier";
-    TokenFlags[TokenFlags["NumericLiteralFlags"] = 1008] = "NumericLiteralFlags";
+    TokenFlags[TokenFlags[0] = "None"] = 0;
+    TokenFlags[TokenFlags[1] = "PrecedingLineBreak"] = 1;
+    TokenFlags[TokenFlags[2] = "PrecedingJSDocComment"] = 2;
+    TokenFlags[TokenFlags[4] = "Unterminated"] = 4;
+    TokenFlags[TokenFlags[8] = "ExtendedUnicodeEscape"] = 8;
+    TokenFlags[TokenFlags[16] = "Scientific"] = 16;
+    TokenFlags[TokenFlags[32] = "Octal"] = 32;
+    TokenFlags[TokenFlags[64] = "HexSpecifier"] = 64;
+    TokenFlags[TokenFlags[128] = "BinarySpecifier"] = 128;
+    TokenFlags[TokenFlags[256] = "OctalSpecifier"] = 256;
+    TokenFlags[TokenFlags[512] = "ContainsSeparator"] = 512;
+    TokenFlags[TokenFlags[384] = "BinaryOrOctalSpecifier"] = 384;
+    TokenFlags[TokenFlags[1008] = "NumericLiteralFlags"] = 1008;
 })(TokenFlags || (TokenFlags = {}));
 var s = "Hello, world";
 console.log(s);
@@ -1496,7 +1496,7 @@ declare function f(): string;
       "sections": [
         {
           "pos": 0,
-          "end": 1131,
+          "end": 942,
           "kind": "text"
         }
       ]
@@ -1532,7 +1532,7 @@ declare function f(): string;
     }
   },
   "version": "FakeTSVersion",
-  "size": 403
+  "size": 402
 }
 
 //// [/src/third/thirdjs/output/third-output.d.ts]
@@ -1919,19 +1919,19 @@ sourceFile:../../third_part1.ts
 //// [/src/third/thirdjs/output/third-output.js]
 var TokenFlags;
 (function (TokenFlags) {
-    TokenFlags[TokenFlags["None"] = 0] = "None";
-    TokenFlags[TokenFlags["PrecedingLineBreak"] = 1] = "PrecedingLineBreak";
-    TokenFlags[TokenFlags["PrecedingJSDocComment"] = 2] = "PrecedingJSDocComment";
-    TokenFlags[TokenFlags["Unterminated"] = 4] = "Unterminated";
-    TokenFlags[TokenFlags["ExtendedUnicodeEscape"] = 8] = "ExtendedUnicodeEscape";
-    TokenFlags[TokenFlags["Scientific"] = 16] = "Scientific";
-    TokenFlags[TokenFlags["Octal"] = 32] = "Octal";
-    TokenFlags[TokenFlags["HexSpecifier"] = 64] = "HexSpecifier";
-    TokenFlags[TokenFlags["BinarySpecifier"] = 128] = "BinarySpecifier";
-    TokenFlags[TokenFlags["OctalSpecifier"] = 256] = "OctalSpecifier";
-    TokenFlags[TokenFlags["ContainsSeparator"] = 512] = "ContainsSeparator";
-    TokenFlags[TokenFlags["BinaryOrOctalSpecifier"] = 384] = "BinaryOrOctalSpecifier";
-    TokenFlags[TokenFlags["NumericLiteralFlags"] = 1008] = "NumericLiteralFlags";
+    TokenFlags[TokenFlags[0] = "None"] = 0;
+    TokenFlags[TokenFlags[1] = "PrecedingLineBreak"] = 1;
+    TokenFlags[TokenFlags[2] = "PrecedingJSDocComment"] = 2;
+    TokenFlags[TokenFlags[4] = "Unterminated"] = 4;
+    TokenFlags[TokenFlags[8] = "ExtendedUnicodeEscape"] = 8;
+    TokenFlags[TokenFlags[16] = "Scientific"] = 16;
+    TokenFlags[TokenFlags[32] = "Octal"] = 32;
+    TokenFlags[TokenFlags[64] = "HexSpecifier"] = 64;
+    TokenFlags[TokenFlags[128] = "BinarySpecifier"] = 128;
+    TokenFlags[TokenFlags[256] = "OctalSpecifier"] = 256;
+    TokenFlags[TokenFlags[512] = "ContainsSeparator"] = 512;
+    TokenFlags[TokenFlags[384] = "BinaryOrOctalSpecifier"] = 384;
+    TokenFlags[TokenFlags[1008] = "NumericLiteralFlags"] = 1008;
 })(TokenFlags || (TokenFlags = {}));
 var s = "Hello, world";
 console.log(s);
@@ -1959,7 +1959,7 @@ c.doSomething();
 //# sourceMappingURL=third-output.js.map
 
 //// [/src/third/thirdjs/output/third-output.js.map]
-{"version":3,"file":"third-output.js","sourceRoot":"","sources":["../../../first/first_PART1.ts","../../../first/first_part2.ts","../../../first/first_part3.ts","../../../second/second_part1.ts","../../../second/second_part2.ts","../../third_part1.ts"],"names":[],"mappings":"AAAA,IAAK,UAqBJ;AArBD,WAAK,UAAU;IACX,2CAAQ,CAAA;IAER,uEAA2B,CAAA;IAE3B,6EAA8B,CAAA;IAE9B,2DAAqB,CAAA;IAErB,6EAA8B,CAAA;IAC9B,wDAAmB,CAAA;IACnB,8CAAc,CAAA;IACd,4DAAqB,CAAA;IACrB,mEAAwB,CAAA;IACxB,iEAAuB,CAAA;IAEvB,uEAA0B,CAAA;IAE1B,iFAAyD,CAAA;IAEzD,4EAAoG,CAAA;AACxG,CAAC,EArBI,UAAU,KAAV,UAAU,QAqBd;AAKD,IAAM,CAAC,GAAG,cAAc,CAAC;AAMzB,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC;AChCf,OAAO,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC,CAAC;ACAjB,SAAS,CAAC;IACN,OAAO,gBAAgB,CAAC;AAC5B,CAAC;ACED,IAAU,CAAC,CAMV;AAND,WAAU,CAAC;IACP,SAAS,CAAC;QACN,OAAO,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC;IAC3B,CAAC;IAED,CAAC,EAAE,CAAC;AACR,CAAC,EANS,CAAC,KAAD,CAAC,QAMV;ACVD;IAAA;IAIA,CAAC;IAHG,uBAAW,GAAX;QACI,OAAO,CAAC,GAAG,CAAC,oBAAoB,CAAC,CAAC;IACtC,CAAC;IACL,QAAC;AAAD,CAAC,AAJD,IAIC;ACJD,IAAI,CAAC,GAAG,IAAI,CAAC,EAAE,CAAC;AAChB,CAAC,CAAC,WAAW,EAAE,CAAC"}
+{"version":3,"file":"third-output.js","sourceRoot":"","sources":["../../../first/first_PART1.ts","../../../first/first_part2.ts","../../../first/first_part3.ts","../../../second/second_part1.ts","../../../second/second_part2.ts","../../third_part1.ts"],"names":[],"mappings":"AAAA,IAAK,UAqBJ;AArBD,WAAK,UAAU;IACX,sCAAQ,CAAA;IAER,oDAA2B,CAAA;IAE3B,uDAA8B,CAAA;IAE9B,8CAAqB,CAAA;IAErB,uDAA8B,CAAA;IAC9B,8CAAmB,CAAA;IACnB,yCAAc,CAAA;IACd,gDAAqB,CAAA;IACrB,qDAAwB,CAAA;IACxB,oDAAuB,CAAA;IAEvB,uDAA0B,CAAA;IAE1B,4DAAyD,CAAA;IAEzD,2DAAoG,CAAA;AACxG,CAAC,EArBI,UAAU,KAAV,UAAU,QAqBd;AAKD,IAAM,CAAC,GAAG,cAAc,CAAC;AAMzB,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC;AChCf,OAAO,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC,CAAC;ACAjB,SAAS,CAAC;IACN,OAAO,gBAAgB,CAAC;AAC5B,CAAC;ACED,IAAU,CAAC,CAMV;AAND,WAAU,CAAC;IACP,SAAS,CAAC;QACN,OAAO,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC;IAC3B,CAAC;IAED,CAAC,EAAE,CAAC;AACR,CAAC,EANS,CAAC,KAAD,CAAC,QAMV;ACVD;IAAA;IAIA,CAAC;IAHG,uBAAW,GAAX;QACI,OAAO,CAAC,GAAG,CAAC,oBAAoB,CAAC,CAAC;IACtC,CAAC;IACL,QAAC;AAAD,CAAC,AAJD,IAIC;ACJD,IAAI,CAAC,GAAG,IAAI,CAAC,EAAE,CAAC;AAChB,CAAC,CAAC,WAAW,EAAE,CAAC"}
 
 //// [/src/third/thirdjs/output/third-output.js.map.baseline.txt]
 ===================================================================
@@ -2009,7 +2009,7 @@ sourceFile:../../../first/first_PART1.ts
 1->
 2 >^^^^^^^^^^^
 3 >           ^^^^^^^^^^
-4 >                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
+4 >                     ^^^^^^^^^^^^^^^^^^^^^^^->
 1->
 2 >enum 
 3 >           TokenFlags
@@ -2017,175 +2017,175 @@ sourceFile:../../../first/first_PART1.ts
 2 >Emitted(2, 12) Source(1, 6) + SourceIndex(0)
 3 >Emitted(2, 22) Source(1, 16) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["None"] = 0] = "None";
+>>>    TokenFlags[TokenFlags[0] = "None"] = 0;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                               ^
-4 >                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                          ^
+4 >                                           ^^^^^^^^^^^^^^^->
 1-> {
   >    
 2 >    None = 0
-3 >                                               
+3 >                                          
 1->Emitted(3, 5) Source(2, 5) + SourceIndex(0)
-2 >Emitted(3, 48) Source(2, 13) + SourceIndex(0)
-3 >Emitted(3, 49) Source(2, 13) + SourceIndex(0)
+2 >Emitted(3, 43) Source(2, 13) + SourceIndex(0)
+3 >Emitted(3, 44) Source(2, 13) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["PrecedingLineBreak"] = 1] = "PrecedingLineBreak";
+>>>    TokenFlags[TokenFlags[1] = "PrecedingLineBreak"] = 1;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                           ^
-4 >                                                                            ^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                        ^
+4 >                                                         ^^^^->
 1->,
   >    /* @internal */
   >    
 2 >    PrecedingLineBreak = 1 << 0
-3 >                                                                           
+3 >                                                        
 1->Emitted(4, 5) Source(4, 5) + SourceIndex(0)
-2 >Emitted(4, 76) Source(4, 32) + SourceIndex(0)
-3 >Emitted(4, 77) Source(4, 32) + SourceIndex(0)
+2 >Emitted(4, 57) Source(4, 32) + SourceIndex(0)
+3 >Emitted(4, 58) Source(4, 32) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["PrecedingJSDocComment"] = 2] = "PrecedingJSDocComment";
+>>>    TokenFlags[TokenFlags[2] = "PrecedingJSDocComment"] = 2;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                 ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                           ^
 1->,
   >    /* @internal */
   >    
 2 >    PrecedingJSDocComment = 1 << 1
-3 >                                                                                 
+3 >                                                           
 1->Emitted(5, 5) Source(6, 5) + SourceIndex(0)
-2 >Emitted(5, 82) Source(6, 35) + SourceIndex(0)
-3 >Emitted(5, 83) Source(6, 35) + SourceIndex(0)
+2 >Emitted(5, 60) Source(6, 35) + SourceIndex(0)
+3 >Emitted(5, 61) Source(6, 35) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["Unterminated"] = 4] = "Unterminated";
+>>>    TokenFlags[TokenFlags[4] = "Unterminated"] = 4;
 1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                               ^
-4 >                                                                ^^^^^^^^^^^^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                  ^
+4 >                                                   ^^^^^^^^^^->
 1 >,
   >    /* @internal */
   >    
 2 >    Unterminated = 1 << 2
-3 >                                                               
+3 >                                                  
 1 >Emitted(6, 5) Source(8, 5) + SourceIndex(0)
-2 >Emitted(6, 64) Source(8, 26) + SourceIndex(0)
-3 >Emitted(6, 65) Source(8, 26) + SourceIndex(0)
+2 >Emitted(6, 51) Source(8, 26) + SourceIndex(0)
+3 >Emitted(6, 52) Source(8, 26) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["ExtendedUnicodeEscape"] = 8] = "ExtendedUnicodeEscape";
+>>>    TokenFlags[TokenFlags[8] = "ExtendedUnicodeEscape"] = 8;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                 ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                           ^
 1->,
   >    /* @internal */
   >    
 2 >    ExtendedUnicodeEscape = 1 << 3
-3 >                                                                                 
+3 >                                                           
 1->Emitted(7, 5) Source(10, 5) + SourceIndex(0)
-2 >Emitted(7, 82) Source(10, 35) + SourceIndex(0)
-3 >Emitted(7, 83) Source(10, 35) + SourceIndex(0)
+2 >Emitted(7, 60) Source(10, 35) + SourceIndex(0)
+3 >Emitted(7, 61) Source(10, 35) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["Scientific"] = 16] = "Scientific";
-1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                            ^
-1 >,
-  >    
-2 >    Scientific = 1 << 4
-3 >                                                            
-1 >Emitted(8, 5) Source(11, 5) + SourceIndex(0)
-2 >Emitted(8, 61) Source(11, 24) + SourceIndex(0)
-3 >Emitted(8, 62) Source(11, 24) + SourceIndex(0)
----
->>>    TokenFlags[TokenFlags["Octal"] = 32] = "Octal";
+>>>    TokenFlags[TokenFlags[16] = "Scientific"] = 16;
 1 >^^^^
 2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 3 >                                                  ^
-4 >                                                   ^^^^^^^^^^^^^^^->
+1 >,
+  >    
+2 >    Scientific = 1 << 4
+3 >                                                  
+1 >Emitted(8, 5) Source(11, 5) + SourceIndex(0)
+2 >Emitted(8, 51) Source(11, 24) + SourceIndex(0)
+3 >Emitted(8, 52) Source(11, 24) + SourceIndex(0)
+---
+>>>    TokenFlags[TokenFlags[32] = "Octal"] = 32;
+1 >^^^^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                             ^
+4 >                                              ^^^^^^^^->
 1 >,
   >    
 2 >    Octal = 1 << 5
-3 >                                                  
+3 >                                             
 1 >Emitted(9, 5) Source(12, 5) + SourceIndex(0)
-2 >Emitted(9, 51) Source(12, 19) + SourceIndex(0)
-3 >Emitted(9, 52) Source(12, 19) + SourceIndex(0)
+2 >Emitted(9, 46) Source(12, 19) + SourceIndex(0)
+3 >Emitted(9, 47) Source(12, 19) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["HexSpecifier"] = 64] = "HexSpecifier";
+>>>    TokenFlags[TokenFlags[64] = "HexSpecifier"] = 64;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                ^
-4 >                                                                 ^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                    ^
+4 >                                                     ^^^^^^->
 1->,
   >    
 2 >    HexSpecifier = 1 << 6
-3 >                                                                
+3 >                                                    
 1->Emitted(10, 5) Source(13, 5) + SourceIndex(0)
-2 >Emitted(10, 65) Source(13, 26) + SourceIndex(0)
-3 >Emitted(10, 66) Source(13, 26) + SourceIndex(0)
+2 >Emitted(10, 53) Source(13, 26) + SourceIndex(0)
+3 >Emitted(10, 54) Source(13, 26) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["BinarySpecifier"] = 128] = "BinarySpecifier";
+>>>    TokenFlags[TokenFlags[128] = "BinarySpecifier"] = 128;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                       ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                         ^
 1->,
   >    
 2 >    BinarySpecifier = 1 << 7
-3 >                                                                       
+3 >                                                         
 1->Emitted(11, 5) Source(14, 5) + SourceIndex(0)
-2 >Emitted(11, 72) Source(14, 29) + SourceIndex(0)
-3 >Emitted(11, 73) Source(14, 29) + SourceIndex(0)
+2 >Emitted(11, 58) Source(14, 29) + SourceIndex(0)
+3 >Emitted(11, 59) Source(14, 29) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["OctalSpecifier"] = 256] = "OctalSpecifier";
+>>>    TokenFlags[TokenFlags[256] = "OctalSpecifier"] = 256;
 1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                     ^
-4 >                                                                      ^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                        ^
+4 >                                                         ^^^^->
 1 >,
   >    
 2 >    OctalSpecifier = 1 << 8
-3 >                                                                     
+3 >                                                        
 1 >Emitted(12, 5) Source(15, 5) + SourceIndex(0)
-2 >Emitted(12, 70) Source(15, 28) + SourceIndex(0)
-3 >Emitted(12, 71) Source(15, 28) + SourceIndex(0)
+2 >Emitted(12, 57) Source(15, 28) + SourceIndex(0)
+3 >Emitted(12, 58) Source(15, 28) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["ContainsSeparator"] = 512] = "ContainsSeparator";
+>>>    TokenFlags[TokenFlags[512] = "ContainsSeparator"] = 512;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                           ^
-4 >                                                                            ^^^^^^^^^^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                           ^
+4 >                                                            ^^^^^^->
 1->,
   >    /* @internal */
   >    
 2 >    ContainsSeparator = 1 << 9
-3 >                                                                           
+3 >                                                           
 1->Emitted(13, 5) Source(17, 5) + SourceIndex(0)
-2 >Emitted(13, 76) Source(17, 31) + SourceIndex(0)
-3 >Emitted(13, 77) Source(17, 31) + SourceIndex(0)
+2 >Emitted(13, 60) Source(17, 31) + SourceIndex(0)
+3 >Emitted(13, 61) Source(17, 31) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["BinaryOrOctalSpecifier"] = 384] = "BinaryOrOctalSpecifier";
+>>>    TokenFlags[TokenFlags[384] = "BinaryOrOctalSpecifier"] = 384;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                     ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                                ^
 1->,
   >    /* @internal */
   >    
 2 >    BinaryOrOctalSpecifier = BinarySpecifier | OctalSpecifier
-3 >                                                                                     
+3 >                                                                
 1->Emitted(14, 5) Source(19, 5) + SourceIndex(0)
-2 >Emitted(14, 86) Source(19, 62) + SourceIndex(0)
-3 >Emitted(14, 87) Source(19, 62) + SourceIndex(0)
+2 >Emitted(14, 65) Source(19, 62) + SourceIndex(0)
+3 >Emitted(14, 66) Source(19, 62) + SourceIndex(0)
 ---
->>>    TokenFlags[TokenFlags["NumericLiteralFlags"] = 1008] = "NumericLiteralFlags";
+>>>    TokenFlags[TokenFlags[1008] = "NumericLiteralFlags"] = 1008;
 1 >^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                                                ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                               ^
 1 >,
   >    /* @internal */
   >    
 2 >    NumericLiteralFlags = Scientific | Octal | HexSpecifier | BinaryOrOctalSpecifier | ContainsSeparator
-3 >                                                                                
+3 >                                                               
 1 >Emitted(15, 5) Source(21, 5) + SourceIndex(0)
-2 >Emitted(15, 81) Source(21, 105) + SourceIndex(0)
-3 >Emitted(15, 82) Source(21, 105) + SourceIndex(0)
+2 >Emitted(15, 64) Source(21, 105) + SourceIndex(0)
+3 >Emitted(15, 65) Source(21, 105) + SourceIndex(0)
 ---
 >>>})(TokenFlags || (TokenFlags = {}));
 1 >
@@ -2665,30 +2665,30 @@ sourceFile:../../third_part1.ts
 >>>//# sourceMappingURL=third-output.js.map
 
 //// [/src/third/thirdjs/output/third-output.tsbuildinfo]
-{"bundle":{"commonSourceDirectory":"../..","sourceFiles":["../../third_part1.ts"],"js":{"sections":[{"pos":0,"end":1131,"kind":"prepend","data":"../../../first/bin/first-output.js","texts":[{"pos":0,"end":1131,"kind":"text"}]},{"pos":1131,"end":1416,"kind":"prepend","data":"../../../2/second-output.js","texts":[{"pos":1131,"end":1416,"kind":"text"}]},{"pos":1416,"end":1452,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":320,"kind":"prepend","data":"../../../first/bin/first-output.d.ts","texts":[{"pos":0,"end":320,"kind":"text"}]},{"pos":320,"end":420,"kind":"prepend","data":"../../../2/second-output.d.ts","texts":[{"pos":320,"end":420,"kind":"text"}]},{"pos":420,"end":439,"kind":"text"}]}},"version":"FakeTSVersion"}
+{"bundle":{"commonSourceDirectory":"../..","sourceFiles":["../../third_part1.ts"],"js":{"sections":[{"pos":0,"end":942,"kind":"prepend","data":"../../../first/bin/first-output.js","texts":[{"pos":0,"end":942,"kind":"text"}]},{"pos":942,"end":1227,"kind":"prepend","data":"../../../2/second-output.js","texts":[{"pos":942,"end":1227,"kind":"text"}]},{"pos":1227,"end":1263,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":320,"kind":"prepend","data":"../../../first/bin/first-output.d.ts","texts":[{"pos":0,"end":320,"kind":"text"}]},{"pos":320,"end":420,"kind":"prepend","data":"../../../2/second-output.d.ts","texts":[{"pos":320,"end":420,"kind":"text"}]},{"pos":420,"end":439,"kind":"text"}]}},"version":"FakeTSVersion"}
 
 //// [/src/third/thirdjs/output/third-output.tsbuildinfo.baseline.txt]
 ======================================================================
 File:: /src/third/thirdjs/output/third-output.js
 ----------------------------------------------------------------------
-prepend: (0-1131):: ../../../first/bin/first-output.js texts:: 1
+prepend: (0-942):: ../../../first/bin/first-output.js texts:: 1
 >>--------------------------------------------------------------------
-text: (0-1131)
+text: (0-942)
 var TokenFlags;
 (function (TokenFlags) {
-    TokenFlags[TokenFlags["None"] = 0] = "None";
-    TokenFlags[TokenFlags["PrecedingLineBreak"] = 1] = "PrecedingLineBreak";
-    TokenFlags[TokenFlags["PrecedingJSDocComment"] = 2] = "PrecedingJSDocComment";
-    TokenFlags[TokenFlags["Unterminated"] = 4] = "Unterminated";
-    TokenFlags[TokenFlags["ExtendedUnicodeEscape"] = 8] = "ExtendedUnicodeEscape";
-    TokenFlags[TokenFlags["Scientific"] = 16] = "Scientific";
-    TokenFlags[TokenFlags["Octal"] = 32] = "Octal";
-    TokenFlags[TokenFlags["HexSpecifier"] = 64] = "HexSpecifier";
-    TokenFlags[TokenFlags["BinarySpecifier"] = 128] = "BinarySpecifier";
-    TokenFlags[TokenFlags["OctalSpecifier"] = 256] = "OctalSpecifier";
-    TokenFlags[TokenFlags["ContainsSeparator"] = 512] = "ContainsSeparator";
-    TokenFlags[TokenFlags["BinaryOrOctalSpecifier"] = 384] = "BinaryOrOctalSpecifier";
-    TokenFlags[TokenFlags["NumericLiteralFlags"] = 1008] = "NumericLiteralFlags";
+    TokenFlags[TokenFlags[0] = "None"] = 0;
+    TokenFlags[TokenFlags[1] = "PrecedingLineBreak"] = 1;
+    TokenFlags[TokenFlags[2] = "PrecedingJSDocComment"] = 2;
+    TokenFlags[TokenFlags[4] = "Unterminated"] = 4;
+    TokenFlags[TokenFlags[8] = "ExtendedUnicodeEscape"] = 8;
+    TokenFlags[TokenFlags[16] = "Scientific"] = 16;
+    TokenFlags[TokenFlags[32] = "Octal"] = 32;
+    TokenFlags[TokenFlags[64] = "HexSpecifier"] = 64;
+    TokenFlags[TokenFlags[128] = "BinarySpecifier"] = 128;
+    TokenFlags[TokenFlags[256] = "OctalSpecifier"] = 256;
+    TokenFlags[TokenFlags[512] = "ContainsSeparator"] = 512;
+    TokenFlags[TokenFlags[384] = "BinaryOrOctalSpecifier"] = 384;
+    TokenFlags[TokenFlags[1008] = "NumericLiteralFlags"] = 1008;
 })(TokenFlags || (TokenFlags = {}));
 var s = "Hello, world";
 console.log(s);
@@ -2698,9 +2698,9 @@ function f() {
 }
 
 ----------------------------------------------------------------------
-prepend: (1131-1416):: ../../../2/second-output.js texts:: 1
+prepend: (942-1227):: ../../../2/second-output.js texts:: 1
 >>--------------------------------------------------------------------
-text: (1131-1416)
+text: (942-1227)
 var N;
 (function (N) {
     function f() {
@@ -2718,7 +2718,7 @@ var C = (function () {
 }());
 
 ----------------------------------------------------------------------
-text: (1416-1452)
+text: (1227-1263)
 var c = new C();
 c.doSomething();
 
@@ -2775,33 +2775,33 @@ declare var c: C;
       "sections": [
         {
           "pos": 0,
-          "end": 1131,
+          "end": 942,
           "kind": "prepend",
           "data": "../../../first/bin/first-output.js",
           "texts": [
             {
               "pos": 0,
-              "end": 1131,
+              "end": 942,
               "kind": "text"
             }
           ]
         },
         {
-          "pos": 1131,
-          "end": 1416,
+          "pos": 942,
+          "end": 1227,
           "kind": "prepend",
           "data": "../../../2/second-output.js",
           "texts": [
             {
-              "pos": 1131,
-              "end": 1416,
+              "pos": 942,
+              "end": 1227,
               "kind": "text"
             }
           ]
         },
         {
-          "pos": 1416,
-          "end": 1452,
+          "pos": 1227,
+          "end": 1263,
           "kind": "text"
         }
       ]
@@ -2843,6 +2843,6 @@ declare var c: C;
     }
   },
   "version": "FakeTSVersion",
-  "size": 728
+  "size": 724
 }
 

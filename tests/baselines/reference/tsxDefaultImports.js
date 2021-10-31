@@ -18,7 +18,7 @@ let a = Def.E.one;
 exports.__esModule = true;
 var SomeEnum;
 (function (SomeEnum) {
-    SomeEnum[SomeEnum["one"] = 0] = "one";
+    SomeEnum[SomeEnum[0] = "one"] = 0;
 })(SomeEnum || (SomeEnum = {}));
 var SomeClass = /** @class */ (function () {
     function SomeClass() {

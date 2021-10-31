@@ -14,7 +14,7 @@ export { A as B };
 //// [a.js]
 var A;
 (function (A) {
-    A[A["Foo"] = 0] = "Foo";
+    A[A[0] = "Foo"] = 0;
 })(A || (A = {}));
 ;
 export { A };

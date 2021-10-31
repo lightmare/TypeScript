@@ -99,11 +99,11 @@ var onlyT;
     }
     var E;
     (function (E) {
-        E[E["A"] = 0] = "A";
+        E[E[0] = "A"] = 0;
     })(E || (E = {}));
     var F;
     (function (F) {
-        F[F["A"] = 0] = "A";
+        F[F[0] = "A"] = 0;
     })(F || (F = {}));
     function foo3(x, a, b) {
         var r;
@@ -133,11 +133,11 @@ var TU;
     }
     var E;
     (function (E) {
-        E[E["A"] = 0] = "A";
+        E[E[0] = "A"] = 0;
     })(E || (E = {}));
     var F;
     (function (F) {
-        F[F["A"] = 0] = "A";
+        F[F[0] = "A"] = 0;
     })(F || (F = {}));
     function foo3(x, a, b) {
         var r;

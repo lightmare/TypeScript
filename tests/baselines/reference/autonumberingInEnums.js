@@ -10,8 +10,8 @@ enum Foo {
 //// [autonumberingInEnums.js]
 var Foo;
 (function (Foo) {
-    Foo[Foo["a"] = 1] = "a";
+    Foo[Foo[1] = "a"] = 1;
 })(Foo || (Foo = {}));
 (function (Foo) {
-    Foo[Foo["b"] = 0] = "b"; // should work fine
+    Foo[Foo[0] = "b"] = 0; // should work fine
 })(Foo || (Foo = {}));

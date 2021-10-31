@@ -27,10 +27,10 @@ function f(x) {
 }
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 1] = "B";
-    E[E["C"] = 2] = "C";
-    E[E["non identifier"] = 3] = "non identifier";
+    E[E[0] = "A"] = 0;
+    E[E[1] = "B"] = 1;
+    E[E[2] = "C"] = 2;
+    E[E[3] = "non identifier"] = 3;
 })(E || (E = {}));
 var c1 = "abc";
 var c2 = 123;

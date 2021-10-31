@@ -15,8 +15,8 @@ U8.bit_2
 // other options are very close
 var U8;
 (function (U8) {
-    U8[U8["BIT_0"] = 1] = "BIT_0";
-    U8[U8["BIT_1"] = 2] = "BIT_1";
-    U8[U8["BIT_2"] = 4] = "BIT_2";
+    U8[U8[1] = "BIT_0"] = 1;
+    U8[U8[2] = "BIT_1"] = 2;
+    U8[U8[4] = "BIT_2"] = 4;
 })(U8 || (U8 = {}));
 U8.bit_2;

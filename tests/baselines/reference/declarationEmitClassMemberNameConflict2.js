@@ -24,11 +24,11 @@ class Foo {
 var Bar = 'bar';
 var Hello;
 (function (Hello) {
-    Hello[Hello["World"] = 0] = "World";
+    Hello[Hello[0] = "World"] = 0;
 })(Hello || (Hello = {}));
 var Hello1;
 (function (Hello1) {
-    Hello1[Hello1["World1"] = 0] = "World1";
+    Hello1[Hello1[0] = "World1"] = 0;
 })(Hello1 || (Hello1 = {}));
 var Foo = /** @class */ (function () {
     function Foo() {

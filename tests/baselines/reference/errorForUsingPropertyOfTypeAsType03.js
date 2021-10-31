@@ -31,9 +31,9 @@ var Test1;
 (function (Test1) {
     var Color;
     (function (Color) {
-        Color[Color["Red"] = 0] = "Red";
-        Color[Color["Green"] = 1] = "Green";
-        Color[Color["Blue"] = 2] = "Blue";
+        Color[Color[0] = "Red"] = 0;
+        Color[Color[1] = "Green"] = 1;
+        Color[Color[2] = "Blue"] = 2;
     })(Color || (Color = {}));
     var a1;
     var a2;

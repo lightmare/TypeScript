@@ -9,9 +9,9 @@ var x = e;
 //// [declFileEnumUsedAsValue.js]
 var e;
 (function (e) {
-    e[e["a"] = 0] = "a";
-    e[e["b"] = 1] = "b";
-    e[e["c"] = 2] = "c";
+    e[e[0] = "a"] = 0;
+    e[e[1] = "b"] = 1;
+    e[e[2] = "c"] = 2;
 })(e || (e = {}));
 var x = e;
 

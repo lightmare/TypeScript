@@ -16,7 +16,7 @@ var b = x;
 var c = x;
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 ;
 var d = x;

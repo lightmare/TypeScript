@@ -8,7 +8,7 @@ enum E {
 //// [enumWithoutInitializerAfterComputedMember.js]
 var E;
 (function (E) {
-    E[E["a"] = 0] = "a";
-    E[E["b"] = 0] = "b";
-    E[E["c"] = 1] = "c";
+    E[E[0] = "a"] = 0;
+    E[E[0] = "b"] = 0;
+    E[E[1] = "c"] = 1;
 })(E || (E = {}));

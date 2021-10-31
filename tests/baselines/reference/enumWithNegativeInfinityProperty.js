@@ -7,5 +7,5 @@ enum A {
 //// [enumWithNegativeInfinityProperty.js]
 var A;
 (function (A) {
-    A[A["-Infinity"] = 1] = "-Infinity";
+    A[A[1] = "-Infinity"] = 1;
 })(A || (A = {}));

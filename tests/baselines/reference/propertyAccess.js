@@ -180,10 +180,10 @@ var B = /** @class */ (function (_super) {
 }(A));
 var Compass;
 (function (Compass) {
-    Compass[Compass["North"] = 0] = "North";
-    Compass[Compass["South"] = 1] = "South";
-    Compass[Compass["East"] = 2] = "East";
-    Compass[Compass["West"] = 3] = "West";
+    Compass[Compass[0] = "North"] = 0;
+    Compass[Compass[1] = "South"] = 1;
+    Compass[Compass[2] = "East"] = 2;
+    Compass[Compass[3] = "West"] = 3;
 })(Compass || (Compass = {}));
 var numIndex = { 3: 'three', 'three': 'three' };
 var strIndex = { 'N': Compass.North, 'E': Compass.East };

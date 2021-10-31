@@ -15,7 +15,7 @@ exports.Color = void 0;
  */
 var Color;
 (function (Color) {
-    Color[Color["r"] = 0] = "r";
-    Color[Color["g"] = 1] = "g";
-    Color[Color["b"] = 2] = "b";
+    Color[Color[0] = "r"] = 0;
+    Color[Color[1] = "g"] = 1;
+    Color[Color[2] = "b"] = 2;
 })(Color = exports.Color || (exports.Color = {}));

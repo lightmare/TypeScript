@@ -53,8 +53,8 @@ const foo12 = { a: E5.a as const }
 //// [constantEnumAssert.js]
 var E1;
 (function (E1) {
-    E1[E1["a"] = 0] = "a";
-    E1[E1["b"] = 1] = "b";
+    E1[E1[0] = "a"] = 0;
+    E1[E1[1] = "b"] = 1;
 })(E1 || (E1 = {}));
 var E2;
 (function (E2) {
@@ -63,9 +63,9 @@ var E2;
 })(E2 || (E2 = {}));
 var E3;
 (function (E3) {
-    E3[E3["a"] = 1] = "a";
-    E3[E3["b"] = 2] = "b";
-    E3[E3["c"] = 4] = "c";
+    E3[E3[1] = "a"] = 1;
+    E3[E3[2] = "b"] = 2;
+    E3[E3[4] = "c"] = 4;
 })(E3 || (E3 = {}));
 var E5 = {
     a: 'a',

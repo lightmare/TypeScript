@@ -106,15 +106,15 @@ const fn3 = <Key extends keyof typeof myRecord2>(key: Key) => {
 "use strict";
 var NumericEnum1;
 (function (NumericEnum1) {
-    NumericEnum1[NumericEnum1["A"] = 0] = "A";
-    NumericEnum1[NumericEnum1["B"] = 1] = "B";
-    NumericEnum1[NumericEnum1["C"] = 2] = "C";
+    NumericEnum1[NumericEnum1[0] = "A"] = 0;
+    NumericEnum1[NumericEnum1[1] = "B"] = 1;
+    NumericEnum1[NumericEnum1[2] = "C"] = 2;
 })(NumericEnum1 || (NumericEnum1 = {}));
 var NumericEnum2;
 (function (NumericEnum2) {
-    NumericEnum2[NumericEnum2["A"] = 0] = "A";
-    NumericEnum2[NumericEnum2["B"] = 1] = "B";
-    NumericEnum2[NumericEnum2["C"] = 2] = "C";
+    NumericEnum2[NumericEnum2[0] = "A"] = 0;
+    NumericEnum2[NumericEnum2[1] = "B"] = 1;
+    NumericEnum2[NumericEnum2[2] = "C"] = 2;
 })(NumericEnum2 || (NumericEnum2 = {}));
 var StringEnum1;
 (function (StringEnum1) {

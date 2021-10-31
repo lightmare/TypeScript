@@ -73,25 +73,25 @@ var M1;
 (function (M1) {
     var EImpl1;
     (function (EImpl1) {
-        EImpl1[EImpl1["A"] = 0] = "A";
-        EImpl1[EImpl1["B"] = 1] = "B";
-        EImpl1[EImpl1["C"] = 2] = "C";
+        EImpl1[EImpl1[0] = "A"] = 0;
+        EImpl1[EImpl1[1] = "B"] = 1;
+        EImpl1[EImpl1[2] = "C"] = 2;
     })(EImpl1 || (EImpl1 = {}));
     (function (EImpl1) {
-        EImpl1[EImpl1["D"] = 1] = "D";
-        EImpl1[EImpl1["E"] = 2] = "E";
-        EImpl1[EImpl1["F"] = 3] = "F";
+        EImpl1[EImpl1[1] = "D"] = 1;
+        EImpl1[EImpl1[2] = "E"] = 2;
+        EImpl1[EImpl1[3] = "F"] = 3;
     })(EImpl1 || (EImpl1 = {}));
     var EConst1;
     (function (EConst1) {
-        EConst1[EConst1["A"] = 3] = "A";
-        EConst1[EConst1["B"] = 2] = "B";
-        EConst1[EConst1["C"] = 1] = "C";
+        EConst1[EConst1[3] = "A"] = 3;
+        EConst1[EConst1[2] = "B"] = 2;
+        EConst1[EConst1[1] = "C"] = 1;
     })(EConst1 = M1.EConst1 || (M1.EConst1 = {}));
     (function (EConst1) {
-        EConst1[EConst1["D"] = 7] = "D";
-        EConst1[EConst1["E"] = 9] = "E";
-        EConst1[EConst1["F"] = 8] = "F";
+        EConst1[EConst1[7] = "D"] = 7;
+        EConst1[EConst1[9] = "E"] = 9;
+        EConst1[EConst1[8] = "F"] = 8;
     })(EConst1 = M1.EConst1 || (M1.EConst1 = {}));
     var x = [EConst1.A, EConst1.B, EConst1.C, EConst1.D, EConst1.E, EConst1.F];
 })(M1 || (M1 = {}));
@@ -116,13 +116,13 @@ var M3;
 (function (M3) {
     var EInit;
     (function (EInit) {
-        EInit[EInit["A"] = 0] = "A";
-        EInit[EInit["B"] = 1] = "B";
+        EInit[EInit[0] = "A"] = 0;
+        EInit[EInit[1] = "B"] = 1;
     })(EInit || (EInit = {}));
     (function (EInit) {
-        EInit[EInit["C"] = 1] = "C";
-        EInit[EInit["D"] = 2] = "D";
-        EInit[EInit["E"] = 3] = "E";
+        EInit[EInit[1] = "C"] = 1;
+        EInit[EInit[2] = "D"] = 2;
+        EInit[EInit[3] = "E"] = 3;
     })(EInit || (EInit = {}));
 })(M3 || (M3 = {}));
 // Enums with same name but different root module
@@ -130,18 +130,18 @@ var M4;
 (function (M4) {
     var Color;
     (function (Color) {
-        Color[Color["Red"] = 0] = "Red";
-        Color[Color["Green"] = 1] = "Green";
-        Color[Color["Blue"] = 2] = "Blue";
+        Color[Color[0] = "Red"] = 0;
+        Color[Color[1] = "Green"] = 1;
+        Color[Color[2] = "Blue"] = 2;
     })(Color = M4.Color || (M4.Color = {}));
 })(M4 || (M4 = {}));
 var M5;
 (function (M5) {
     var Color;
     (function (Color) {
-        Color[Color["Red"] = 0] = "Red";
-        Color[Color["Green"] = 1] = "Green";
-        Color[Color["Blue"] = 2] = "Blue";
+        Color[Color[0] = "Red"] = 0;
+        Color[Color[1] = "Green"] = 1;
+        Color[Color[2] = "Blue"] = 2;
     })(Color = M5.Color || (M5.Color = {}));
 })(M5 || (M5 = {}));
 var M6;
@@ -150,9 +150,9 @@ var M6;
     (function (A) {
         var Color;
         (function (Color) {
-            Color[Color["Red"] = 0] = "Red";
-            Color[Color["Green"] = 1] = "Green";
-            Color[Color["Blue"] = 2] = "Blue";
+            Color[Color[0] = "Red"] = 0;
+            Color[Color[1] = "Green"] = 1;
+            Color[Color[2] = "Blue"] = 2;
         })(Color = A.Color || (A.Color = {}));
     })(A = M6.A || (M6.A = {}));
 })(M6 || (M6 = {}));
@@ -161,7 +161,7 @@ var M6;
     (function (A) {
         var Color;
         (function (Color) {
-            Color[Color["Yellow"] = 1] = "Yellow";
+            Color[Color[1] = "Yellow"] = 1;
         })(Color = A.Color || (A.Color = {}));
     })(A = M6.A || (M6.A = {}));
     var t = A.Color.Yellow;

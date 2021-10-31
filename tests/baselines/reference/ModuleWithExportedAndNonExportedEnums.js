@@ -16,13 +16,13 @@ var A;
 (function (A) {
     var Color;
     (function (Color) {
-        Color[Color["Red"] = 0] = "Red";
-        Color[Color["Blue"] = 1] = "Blue";
+        Color[Color[0] = "Red"] = 0;
+        Color[Color[1] = "Blue"] = 1;
     })(Color = A.Color || (A.Color = {}));
     var Day;
     (function (Day) {
-        Day[Day["Monday"] = 0] = "Monday";
-        Day[Day["Tuesday"] = 1] = "Tuesday";
+        Day[Day[0] = "Monday"] = 0;
+        Day[Day[1] = "Tuesday"] = 1;
     })(Day || (Day = {}));
 })(A || (A = {}));
 // not an error since exported

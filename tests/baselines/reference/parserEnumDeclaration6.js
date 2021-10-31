@@ -9,8 +9,8 @@ enum E {
 //// [parserEnumDeclaration6.js]
 var E;
 (function (E) {
-    E[E["A"] = 1] = "A";
-    E[E["B"] = 2] = "B";
-    E[E["C"] = 2] = "C";
-    E[E["D"] = 3] = "D";
+    E[E[1] = "A"] = 1;
+    E[E[2] = "B"] = 2;
+    E[E[2] = "C"] = 2;
+    E[E[3] = "D"] = 3;
 })(E || (E = {}));

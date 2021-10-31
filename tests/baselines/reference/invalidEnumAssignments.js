@@ -25,13 +25,13 @@ function f<T>(a: T) {
 //// [invalidEnumAssignments.js]
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 1] = "B";
+    E[E[0] = "A"] = 0;
+    E[E[1] = "B"] = 1;
 })(E || (E = {}));
 var E2;
 (function (E2) {
-    E2[E2["A"] = 0] = "A";
-    E2[E2["B"] = 1] = "B";
+    E2[E2[0] = "A"] = 0;
+    E2[E2[1] = "B"] = 1;
 })(E2 || (E2 = {}));
 var e;
 var e2;

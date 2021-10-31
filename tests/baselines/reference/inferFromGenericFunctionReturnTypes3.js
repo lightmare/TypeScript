@@ -293,15 +293,15 @@ const f1 = () => {
 let res = foldLeft(true, (acc, t) => acc && t); // Error
 var State;
 (function (State) {
-    State[State["A"] = 0] = "A";
-    State[State["B"] = 1] = "B";
+    State[State[0] = "A"] = 0;
+    State[State[1] = "B"] = 1;
 })(State || (State = {}));
 let x = bar(() => !!true ? [{ state: State.A }] : [{ state: State.B }]); // Error
 // Repros from #31443
 var Enum;
 (function (Enum) {
-    Enum[Enum["A"] = 0] = "A";
-    Enum[Enum["B"] = 1] = "B";
+    Enum[Enum[0] = "A"] = 0;
+    Enum[Enum[1] = "B"] = 1;
 })(Enum || (Enum = {}));
 class ClassWithConvert {
     constructor(val) { }

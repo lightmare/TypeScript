@@ -21,7 +21,7 @@ extractIndexer({
 var _a, _b, _c;
 var E;
 (function (E) {
-    E[E["x"] = 0] = "x";
+    E[E[0] = "x"] = 0;
 })(E || (E = {}));
 var a;
 extractIndexer((_a = {},

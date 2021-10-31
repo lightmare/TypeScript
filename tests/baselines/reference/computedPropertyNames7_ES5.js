@@ -10,7 +10,7 @@ var v = {
 var _a;
 var E;
 (function (E) {
-    E[E["member"] = 0] = "member";
+    E[E[0] = "member"] = 0;
 })(E || (E = {}));
 var v = (_a = {},
     _a[E.member] = 0,

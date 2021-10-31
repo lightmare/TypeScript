@@ -159,9 +159,9 @@ function foo<T, U>(t: T, u: U) {
 //// [comparisonOperatorWithNoRelationshipTypeParameter.js]
 var E;
 (function (E) {
-    E[E["a"] = 0] = "a";
-    E[E["b"] = 1] = "b";
-    E[E["c"] = 2] = "c";
+    E[E[0] = "a"] = 0;
+    E[E[1] = "b"] = 1;
+    E[E[2] = "c"] = 2;
 })(E || (E = {}));
 var a;
 var b;

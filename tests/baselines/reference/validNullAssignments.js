@@ -39,7 +39,7 @@ var e = null;
 e = null; // ok
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 E.A = null; // error
 var C = /** @class */ (function () {

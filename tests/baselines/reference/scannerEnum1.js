@@ -10,6 +10,6 @@ exports.__esModule = true;
 exports.CodeGenTarget = void 0;
 var CodeGenTarget;
 (function (CodeGenTarget) {
-    CodeGenTarget[CodeGenTarget["ES3"] = 0] = "ES3";
-    CodeGenTarget[CodeGenTarget["ES5"] = 1] = "ES5";
+    CodeGenTarget[CodeGenTarget[0] = "ES3"] = 0;
+    CodeGenTarget[CodeGenTarget[1] = "ES5"] = 1;
 })(CodeGenTarget = exports.CodeGenTarget || (exports.CodeGenTarget = {}));

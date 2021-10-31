@@ -6,6 +6,6 @@ const x: Bool.false = Bool.false;
 //// [parseEntityNameWithReservedWord.js]
 var Bool;
 (function (Bool) {
-    Bool[Bool["false"] = 0] = "false";
+    Bool[Bool[0] = "false"] = 0;
 })(Bool || (Bool = {}));
 var x = Bool["false"];

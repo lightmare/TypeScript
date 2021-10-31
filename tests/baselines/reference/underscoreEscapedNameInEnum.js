@@ -8,6 +8,6 @@ enum E {
 //// [underscoreEscapedNameInEnum.js]
 var E;
 (function (E) {
-    E[E["__foo"] = 1] = "__foo";
-    E[E["bar"] = 2] = "bar";
+    E[E[1] = "__foo"] = 1;
+    E[E[2] = "bar"] = 2;
 })(E || (E = {}));

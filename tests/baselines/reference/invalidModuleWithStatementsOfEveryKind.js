@@ -140,8 +140,8 @@ var Y4;
 (function (Y4) {
     var Color;
     (function (Color) {
-        Color[Color["Blue"] = 0] = "Blue";
-        Color[Color["Red"] = 1] = "Red";
+        Color[Color[0] = "Blue"] = 0;
+        Color[Color[1] = "Red"] = 1;
     })(Color || (Color = {}));
 })(Y4 || (Y4 = {}));
 var YY;
@@ -189,8 +189,8 @@ var YY4;
 (function (YY4) {
     var Color;
     (function (Color) {
-        Color[Color["Blue"] = 0] = "Blue";
-        Color[Color["Red"] = 1] = "Red";
+        Color[Color[0] = "Blue"] = 0;
+        Color[Color[1] = "Red"] = 1;
     })(Color || (Color = {}));
 })(YY4 || (YY4 = {}));
 var YYY;
@@ -238,7 +238,7 @@ var YYY4;
 (function (YYY4) {
     var Color;
     (function (Color) {
-        Color[Color["Blue"] = 0] = "Blue";
-        Color[Color["Red"] = 1] = "Red";
+        Color[Color[0] = "Blue"] = 0;
+        Color[Color[1] = "Red"] = 1;
     })(Color || (Color = {}));
 })(YYY4 || (YYY4 = {}));

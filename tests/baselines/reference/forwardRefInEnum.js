@@ -19,12 +19,12 @@ var E1;
 (function (E1) {
     // illegal case
     // forward reference to the element of the same enum
-    E1[E1["X"] = 0] = "X";
-    E1[E1["X1"] = 0] = "X1";
+    E1[E1[0] = "X"] = 0;
+    E1[E1[0] = "X1"] = 0;
     // forward reference to the element of the same enum
-    E1[E1["Y"] = 0] = "Y";
-    E1[E1["Y1"] = 0] = "Y1";
+    E1[E1[0] = "Y"] = 0;
+    E1[E1[0] = "Y1"] = 0;
 })(E1 || (E1 = {}));
 (function (E1) {
-    E1[E1["Z"] = 4] = "Z";
+    E1[E1[4] = "Z"] = 4;
 })(E1 || (E1 = {}));

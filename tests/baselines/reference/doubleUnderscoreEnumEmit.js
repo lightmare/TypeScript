@@ -22,10 +22,10 @@ namespace Bar {
 //// [doubleUnderscoreEnumEmit.js]
 var Foo;
 (function (Foo) {
-    Foo[Foo["__a"] = 1] = "__a";
-    Foo[Foo["(Anonymous function)"] = 2] = "(Anonymous function)";
-    Foo[Foo["(Anonymous class)"] = 4] = "(Anonymous class)";
-    Foo[Foo["__call"] = 10] = "__call";
+    Foo[Foo[1] = "__a"] = 1;
+    Foo[Foo[2] = "(Anonymous function)"] = 2;
+    Foo[Foo[4] = "(Anonymous class)"] = 4;
+    Foo[Foo[10] = "__call"] = 10;
 })(Foo || (Foo = {}));
 (function (Foo) {
     function ___call() {

@@ -48,10 +48,10 @@ export { C };
 })(C || (C = {}));
 export var E;
 (function (E) {
-    E[E["w"] = 1] = "w";
+    E[E[1] = "w"] = 1;
 })(E || (E = {}));
 (function (E) {
-    E[E["x"] = 2] = "x";
+    E[E[2] = "x"] = 2;
 })(E || (E = {}));
 (function (E) {
     E.y = 1;

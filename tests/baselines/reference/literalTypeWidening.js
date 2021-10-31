@@ -277,8 +277,8 @@ function test(obj) {
 }
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 1] = "B";
+    E[E[0] = "A"] = 0;
+    E[E[1] = "B"] = 1;
 })(E || (E = {}));
 var a = f(E.A);
 var b = a;

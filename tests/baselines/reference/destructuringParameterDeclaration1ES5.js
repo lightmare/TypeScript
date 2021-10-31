@@ -143,7 +143,7 @@ b7([["string"], 1, [[true, false]]]); // Shouldn't be an error
 // If the declaration specifies a binding pattern, the parameter type is the implied type of that binding pattern (section 5.1.3)
 var Foo;
 (function (Foo) {
-    Foo[Foo["a"] = 0] = "a";
+    Foo[Foo[0] = "a"] = 0;
 })(Foo || (Foo = {}));
 function c0(_a) {
     var _b = _a.z, x = _b.x, j = _b.y.j;

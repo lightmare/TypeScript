@@ -48,11 +48,11 @@ var r4 = foo(null, function (x) { return ''; }, function (x) { return ''; }); //
 var r5 = foo(new Object(), function (x) { return ''; }, function (x) { return ''; }); // Object => Object
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 var F;
 (function (F) {
-    F[F["A"] = 0] = "A";
+    F[F[0] = "A"] = 0;
 })(F || (F = {}));
 var r6 = foo(E.A, function (x) { return E.A; }, function (x) { return F.A; }); // number => number 
 function foo2(x, a, b) {

@@ -12,8 +12,8 @@ exports.__esModule = true;
 exports.SignatureFlags = void 0;
 var SignatureFlags;
 (function (SignatureFlags) {
-    SignatureFlags[SignatureFlags["None"] = 0] = "None";
-    SignatureFlags[SignatureFlags["IsIndexer"] = 1] = "IsIndexer";
-    SignatureFlags[SignatureFlags["IsStringIndexer"] = 2] = "IsStringIndexer";
-    SignatureFlags[SignatureFlags["IsNumberIndexer"] = 4] = "IsNumberIndexer";
+    SignatureFlags[SignatureFlags[0] = "None"] = 0;
+    SignatureFlags[SignatureFlags[1] = "IsIndexer"] = 1;
+    SignatureFlags[SignatureFlags[2] = "IsStringIndexer"] = 2;
+    SignatureFlags[SignatureFlags[4] = "IsNumberIndexer"] = 4;
 })(SignatureFlags = exports.SignatureFlags || (exports.SignatureFlags = {}));

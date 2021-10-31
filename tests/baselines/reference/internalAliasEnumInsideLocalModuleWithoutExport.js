@@ -21,9 +21,9 @@ var a;
 (function (a) {
     var weekend;
     (function (weekend) {
-        weekend[weekend["Friday"] = 0] = "Friday";
-        weekend[weekend["Saturday"] = 1] = "Saturday";
-        weekend[weekend["Sunday"] = 2] = "Sunday";
+        weekend[weekend[0] = "Friday"] = 0;
+        weekend[weekend[1] = "Saturday"] = 1;
+        weekend[weekend[2] = "Sunday"] = 2;
     })(weekend = a.weekend || (a.weekend = {}));
 })(a = exports.a || (exports.a = {}));
 var c;

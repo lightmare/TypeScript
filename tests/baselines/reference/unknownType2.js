@@ -313,9 +313,9 @@ if (u === aFunction) {
 }
 var NumberEnum;
 (function (NumberEnum) {
-    NumberEnum[NumberEnum["A"] = 0] = "A";
-    NumberEnum[NumberEnum["B"] = 1] = "B";
-    NumberEnum[NumberEnum["C"] = 2] = "C";
+    NumberEnum[NumberEnum[0] = "A"] = 0;
+    NumberEnum[NumberEnum[1] = "B"] = 1;
+    NumberEnum[NumberEnum[2] = "C"] = 2;
 })(NumberEnum || (NumberEnum = {}));
 var StringEnum;
 (function (StringEnum) {

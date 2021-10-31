@@ -16,13 +16,13 @@ var daysOfYear: typeof days;
 //// [declFileTypeofEnum.js]
 var days;
 (function (days) {
-    days[days["monday"] = 0] = "monday";
-    days[days["tuesday"] = 1] = "tuesday";
-    days[days["wednesday"] = 2] = "wednesday";
-    days[days["thursday"] = 3] = "thursday";
-    days[days["friday"] = 4] = "friday";
-    days[days["saturday"] = 5] = "saturday";
-    days[days["sunday"] = 6] = "sunday";
+    days[days[0] = "monday"] = 0;
+    days[days[1] = "tuesday"] = 1;
+    days[days[2] = "wednesday"] = 2;
+    days[days[3] = "thursday"] = 3;
+    days[days[4] = "friday"] = 4;
+    days[days[5] = "saturday"] = 5;
+    days[days[6] = "sunday"] = 6;
 })(days || (days = {}));
 var weekendDay = days.saturday;
 var daysOfMonth = days;

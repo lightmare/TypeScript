@@ -7,6 +7,6 @@ enum E {
 //// [es5-oldStyleOctalLiteralInEnums.js]
 var E;
 (function (E) {
-    E[E["x"] = -1] = "x";
-    E[E["y"] = 2] = "y";
+    E[E[-1] = "x"] = -1;
+    E[E[2] = "y"] = 2;
 })(E || (E = {}));

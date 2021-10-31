@@ -32,8 +32,8 @@ function Menu(data) {
 }
 var ListItemVariant;
 (function (ListItemVariant) {
-    ListItemVariant[ListItemVariant["OneLine"] = 0] = "OneLine";
-    ListItemVariant[ListItemVariant["Avatar"] = 1] = "Avatar";
+    ListItemVariant[ListItemVariant[0] = "OneLine"] = 0;
+    ListItemVariant[ListItemVariant[1] = "Avatar"] = 1;
 })(ListItemVariant || (ListItemVariant = {}));
 function ListItem(_data) {
     return null;

@@ -14,13 +14,13 @@ function foo1() {
     return E.A;
     var E;
     (function (E) {
-        E[E["A"] = 0] = "A";
+        E[E[0] = "A"] = 0;
     })(E || (E = {}));
 }
 function foo2() {
     return 0 /* A */;
     var E;
     (function (E) {
-        E[E["A"] = 0] = "A";
+        E[E[0] = "A"] = 0;
     })(E || (E = {}));
 }

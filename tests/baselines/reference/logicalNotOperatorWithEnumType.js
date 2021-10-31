@@ -25,9 +25,9 @@ var ResultIsBoolean5 = !!!(ENUM["B"] + ENUM.C);
 // ! operator on enum type
 var ENUM;
 (function (ENUM) {
-    ENUM[ENUM["A"] = 0] = "A";
-    ENUM[ENUM["B"] = 1] = "B";
-    ENUM[ENUM["C"] = 2] = "C";
+    ENUM[ENUM[0] = "A"] = 0;
+    ENUM[ENUM[1] = "B"] = 1;
+    ENUM[ENUM[2] = "C"] = 2;
 })(ENUM || (ENUM = {}));
 ;
 var ENUM1;

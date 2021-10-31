@@ -16,9 +16,9 @@ x = Colors.FancyPink;
 var Colors;
 (function (Colors) {
     /** Fancy name for 'blue'*/
-    Colors[Colors["Cornflower"] = 0] = "Cornflower"; /* blue */
+    Colors[Colors[0] = "Cornflower"] = 0; /* blue */
     /** Fancy name for 'pink'*/
-    Colors[Colors["FancyPink"] = 1] = "FancyPink";
+    Colors[Colors[1] = "FancyPink"] = 1;
 })(Colors || (Colors = {})); // trailing comment
 var x = Colors.Cornflower;
 x = Colors.FancyPink;

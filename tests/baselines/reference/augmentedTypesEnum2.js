@@ -23,13 +23,13 @@ class e2 { // error
 // enum then interface
 var e1;
 (function (e1) {
-    e1[e1["One"] = 0] = "One";
+    e1[e1[0] = "One"] = 0;
 })(e1 || (e1 = {})); // error
 // interface then enum works
 // enum then class
 var e2;
 (function (e2) {
-    e2[e2["One"] = 0] = "One";
+    e2[e2[0] = "One"] = 0;
 })(e2 || (e2 = {}));
 ; // error
 var e2 = /** @class */ (function () {

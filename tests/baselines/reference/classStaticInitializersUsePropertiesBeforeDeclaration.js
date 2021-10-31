@@ -29,7 +29,7 @@ var Foo = /** @class */ (function () {
 }());
 var Enum;
 (function (Enum) {
-    Enum[Enum["A"] = 0] = "A";
+    Enum[Enum[0] = "A"] = 0;
 })(Enum || (Enum = {}));
 var ObjLiteral = {
     A: 0

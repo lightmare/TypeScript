@@ -11,6 +11,6 @@ const x1: E.static = E.static;
 "use strict";
 var E;
 (function (E) {
-    E[E["static"] = 0] = "static";
+    E[E[0] = "static"] = 0;
 })(E || (E = {}));
 var x1 = E.static;

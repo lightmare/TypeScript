@@ -49,8 +49,8 @@ var TypeScript2;
     ;
     var PullSymbolVisibility;
     (function (PullSymbolVisibility) {
-        PullSymbolVisibility[PullSymbolVisibility["Private"] = 0] = "Private";
-        PullSymbolVisibility[PullSymbolVisibility["Public"] = 1] = "Public";
+        PullSymbolVisibility[PullSymbolVisibility[0] = "Private"] = 0;
+        PullSymbolVisibility[PullSymbolVisibility[1] = "Public"] = 1;
     })(PullSymbolVisibility = TypeScript2.PullSymbolVisibility || (TypeScript2.PullSymbolVisibility = {}));
     var PullSymbol = /** @class */ (function () {
         function PullSymbol(name, declKind) {

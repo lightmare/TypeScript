@@ -20,9 +20,9 @@ var c = EnumE.C;
 "use strict";
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 1] = "B";
-    E[E["C"] = 2] = "C";
+    E[E[0] = "A"] = 0;
+    E[E[1] = "B"] = 1;
+    E[E[2] = "C"] = 2;
 })(E || (E = {}));
 module.exports = E;
 //// [exportAssignmentEnum_B.js]

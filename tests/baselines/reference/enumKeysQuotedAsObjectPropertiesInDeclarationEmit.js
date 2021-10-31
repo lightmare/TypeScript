@@ -23,12 +23,12 @@ exports.__esModule = true;
 exports.DOMMouseButton = exports.MouseButton = void 0;
 var MouseButton;
 (function (MouseButton) {
-    MouseButton[MouseButton["LEFT_BUTTON"] = 1] = "LEFT_BUTTON";
-    MouseButton[MouseButton["RIGHT_BUTTON"] = 2] = "RIGHT_BUTTON";
-    MouseButton[MouseButton["MIDDLE_BUTTON"] = 4] = "MIDDLE_BUTTON";
-    MouseButton[MouseButton["XBUTTON1_BUTTON"] = 5] = "XBUTTON1_BUTTON";
-    MouseButton[MouseButton["XBUTTON2_BUTTON"] = 6] = "XBUTTON2_BUTTON";
-    MouseButton[MouseButton["NO_BUTTON"] = 0] = "NO_BUTTON";
+    MouseButton[MouseButton[1] = "LEFT_BUTTON"] = 1;
+    MouseButton[MouseButton[2] = "RIGHT_BUTTON"] = 2;
+    MouseButton[MouseButton[4] = "MIDDLE_BUTTON"] = 4;
+    MouseButton[MouseButton[5] = "XBUTTON1_BUTTON"] = 5;
+    MouseButton[MouseButton[6] = "XBUTTON2_BUTTON"] = 6;
+    MouseButton[MouseButton[0] = "NO_BUTTON"] = 0;
 })(MouseButton = exports.MouseButton || (exports.MouseButton = {}));
 exports.DOMMouseButton = {
     '-1': MouseButton.NO_BUTTON,

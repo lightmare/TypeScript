@@ -302,9 +302,9 @@ define("file1", ["require", "exports"], function (require, exports) {
         /*@internal*/ normalN.internalConst = 10;
         /*@internal*/ var internalEnum;
         (function (internalEnum) {
-            internalEnum[internalEnum["a"] = 0] = "a";
-            internalEnum[internalEnum["b"] = 1] = "b";
-            internalEnum[internalEnum["c"] = 2] = "c";
+            internalEnum[internalEnum[0] = "a"] = 0;
+            internalEnum[internalEnum[1] = "b"] = 1;
+            internalEnum[internalEnum[2] = "c"] = 2;
         })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
     })(normalN = exports.normalN || (exports.normalN = {}));
     /*@internal*/ var internalC = /** @class */ (function () {
@@ -340,9 +340,9 @@ define("file1", ["require", "exports"], function (require, exports) {
     /*@internal*/ exports.internalConst = 10;
     /*@internal*/ var internalEnum;
     (function (internalEnum) {
-        internalEnum[internalEnum["a"] = 0] = "a";
-        internalEnum[internalEnum["b"] = 1] = "b";
-        internalEnum[internalEnum["c"] = 2] = "c";
+        internalEnum[internalEnum[0] = "a"] = 0;
+        internalEnum[internalEnum[1] = "b"] = 1;
+        internalEnum[internalEnum[2] = "c"] = 2;
     })(internalEnum = exports.internalEnum || (exports.internalEnum = {}));
 });
 define("file2", ["require", "exports"], function (require, exports) {
@@ -362,7 +362,7 @@ var myVar = 30;
 //# sourceMappingURL=module.js.map
 
 //// [/src/app/module.js.map]
-{"version":3,"file":"module.js","sourceRoot":"","sources":["../lib/file0.ts","../lib/file1.ts","../lib/file2.ts","../lib/global.ts","file3.ts","file4.ts"],"names":[],"mappings":"AAAA,aAAa,CAAC,IAAM,MAAM,GAAG,EAAE,CAAC;;;;;ICAhC,aAAa,CAAc,QAAA,CAAC,GAAG,EAAE,CAAC;IAClC;QACI,aAAa,CAAC;QAAgB,CAAC;QAE/B,aAAa,CAAC,wBAAM,GAAN,cAAW,CAAC;QACZ,sBAAI,sBAAC;YAAnB,aAAa,MAAC,cAAU,OAAO,EAAE,CAAC,CAAC,CAAC;YACpC,aAAa,MAAC,UAAM,GAAW,IAAI,CAAC;;;WADA;QAExC,cAAC;IAAD,CAAC,AAND,IAMC;IANY,0BAAO;IAOpB,IAAiB,OAAO,CASvB;IATD,WAAiB,OAAO;QACpB,aAAa,CAAC;YAAA;YAAiB,CAAC;YAAD,QAAC;QAAD,CAAC,AAAlB,IAAkB;QAAL,SAAC,IAAI,CAAA;QAChC,aAAa,CAAC,SAAgB,GAAG,KAAI,CAAC;QAAR,WAAG,MAAK,CAAA;QACtC,aAAa,CAAC,IAAiB,aAAa,CAAsB;QAApD,WAAiB,aAAa;YAAG;gBAAA;gBAAgB,CAAC;gBAAD,QAAC;YAAD,CAAC,AAAjB,IAAiB;YAAJ,eAAC,IAAG,CAAA;QAAC,CAAC,EAAnC,aAAa,GAAb,qBAAa,KAAb,qBAAa,QAAsB;QAClE,aAAa,CAAC,IAAiB,SAAS,CAAwC;QAAlE,WAAiB,SAAS;YAAC,IAAA,SAAS,CAA8B;YAAvC,WAAA,SAAS;gBAAG;oBAAA;oBAAwB,CAAC;oBAAD,gBAAC;gBAAD,CAAC,AAAzB,IAAyB;gBAAZ,mBAAS,YAAG,CAAA;YAAC,CAAC,EAAvC,SAAS,GAAT,mBAAS,KAAT,mBAAS,QAA8B;QAAD,CAAC,EAAjD,SAAS,GAAT,iBAAS,KAAT,iBAAS,QAAwC;QAChF,aAAa,CAAe,kBAAU,GAAG,aAAa,CAAC,CAAC,CAAC;QAEzD,aAAa,CAAc,qBAAa,GAAG,EAAE,CAAC;QAC9C,aAAa,CAAC,IAAY,YAAwB;QAApC,WAAY,YAAY;YAAG,yCAAC,CAAA;YAAE,yCAAC,CAAA;YAAE,yCAAC,CAAA;QAAC,CAAC,EAAxB,YAAY,GAAZ,oBAAY,KAAZ,oBAAY,QAAY;IACtD,CAAC,EATgB,OAAO,GAAP,eAAO,KAAP,eAAO,QASvB;IACD,aAAa,CAAC;QAAA;QAAwB,CAAC;QAAD,gBAAC;IAAD,CAAC,AAAzB,IAAyB;IAAZ,8BAAS;IACpC,aAAa,CAAC,SAAgB,WAAW,KAAI,CAAC;IAAhC,kCAAgC;IAC9C,aAAa,CAAC,IAAiB,iBAAiB,CAA8B;IAAhE,WAAiB,iBAAiB;QAAG;YAAA;YAAwB,CAAC;YAAD,gBAAC;QAAD,CAAC,AAAzB,IAAyB;QAAZ,2BAAS,YAAG,CAAA;IAAC,CAAC,EAA/C,iBAAiB,GAAjB,yBAAiB,KAAjB,yBAAiB,QAA8B;IAC9E,aAAa,CAAC,IAAiB,aAAa,CAAwC;IAAtE,WAAiB,aAAa;QAAC,IAAA,SAAS,CAA8B;QAAvC,WAAA,SAAS;YAAG;gBAAA;gBAAwB,CAAC;gBAAD,gBAAC;YAAD,CAAC,AAAzB,IAAyB;YAAZ,mBAAS,YAAG,CAAA;QAAC,CAAC,EAAvC,SAAS,GAAT,uBAAS,KAAT,uBAAS,QAA8B;IAAD,CAAC,EAArD,aAAa,GAAb,qBAAa,KAAb,qBAAa,QAAwC;IACpF,aAAa,CAAe,QAAA,cAAc,GAAG,iBAAiB,CAAC,SAAS,CAAC;IAEzE,aAAa,CAAc,QAAA,aAAa,GAAG,EAAE,CAAC;IAC9C,aAAa,CAAC,IAAY,YAAwB;IAApC,WAAY,YAAY;QAAG,yCAAC,CAAA;QAAE,yCAAC,CAAA;QAAE,yCAAC,CAAA;IAAC,CAAC,EAAxB,YAAY,GAAZ,oBAAY,KAAZ,oBAAY,QAAY;;;;;;ICzBrC,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,WAAW,GAAG,EAAE,CAAC;;;;;ICAV,QAAA,CAAC,GAAG,EAAE,CAAC;;ACApB,IAAM,KAAK,GAAG,EAAE,CAAC"}
+{"version":3,"file":"module.js","sourceRoot":"","sources":["../lib/file0.ts","../lib/file1.ts","../lib/file2.ts","../lib/global.ts","file3.ts","file4.ts"],"names":[],"mappings":"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"}
 
 //// [/src/app/module.js.map.baseline.txt]
 ===================================================================
@@ -1125,7 +1125,7 @@ sourceFile:../lib/file1.ts
 1 >^^^^^^^^
 2 >        ^^^^^^^^^^^
 3 >                   ^^^^^^^^^^^^
-4 >                               ^^^^^^^^^^^^^^^^^^^^^^^^->
+4 >                               ^^^^^^^^^^^^^^^^^^^^^^->
 1 >
 2 >        export enum 
 3 >                   internalEnum
@@ -1133,41 +1133,41 @@ sourceFile:../lib/file1.ts
 2 >Emitted(54, 20) Source(17, 31) + SourceIndex(1)
 3 >Emitted(54, 32) Source(17, 43) + SourceIndex(1)
 ---
->>>            internalEnum[internalEnum["a"] = 0] = "a";
+>>>            internalEnum[internalEnum[0] = "a"] = 0;
 1->^^^^^^^^^^^^
-2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                     ^
-4 >                                                      ^->
+2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                   ^
+4 >                                                    ^->
 1-> { 
 2 >            a
-3 >                                                     
+3 >                                                   
 1->Emitted(55, 13) Source(17, 46) + SourceIndex(1)
-2 >Emitted(55, 54) Source(17, 47) + SourceIndex(1)
-3 >Emitted(55, 55) Source(17, 47) + SourceIndex(1)
+2 >Emitted(55, 52) Source(17, 47) + SourceIndex(1)
+3 >Emitted(55, 53) Source(17, 47) + SourceIndex(1)
 ---
->>>            internalEnum[internalEnum["b"] = 1] = "b";
+>>>            internalEnum[internalEnum[1] = "b"] = 1;
 1->^^^^^^^^^^^^
-2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                     ^
-4 >                                                      ^->
+2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                   ^
+4 >                                                    ^->
 1->, 
 2 >            b
-3 >                                                     
+3 >                                                   
 1->Emitted(56, 13) Source(17, 49) + SourceIndex(1)
-2 >Emitted(56, 54) Source(17, 50) + SourceIndex(1)
-3 >Emitted(56, 55) Source(17, 50) + SourceIndex(1)
+2 >Emitted(56, 52) Source(17, 50) + SourceIndex(1)
+3 >Emitted(56, 53) Source(17, 50) + SourceIndex(1)
 ---
->>>            internalEnum[internalEnum["c"] = 2] = "c";
+>>>            internalEnum[internalEnum[2] = "c"] = 2;
 1->^^^^^^^^^^^^
-2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                     ^
-4 >                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^->
+2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                   ^
+4 >                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
 1->, 
 2 >            c
-3 >                                                     
+3 >                                                   
 1->Emitted(57, 13) Source(17, 52) + SourceIndex(1)
-2 >Emitted(57, 54) Source(17, 53) + SourceIndex(1)
-3 >Emitted(57, 55) Source(17, 53) + SourceIndex(1)
+2 >Emitted(57, 52) Source(17, 53) + SourceIndex(1)
+3 >Emitted(57, 53) Source(17, 53) + SourceIndex(1)
 ---
 >>>        })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
 1->^^^^^^^^
@@ -1711,7 +1711,7 @@ sourceFile:../lib/file1.ts
 1 >^^^^
 2 >    ^^^^^^^^^^^
 3 >               ^^^^^^^^^^^^
-4 >                           ^^^^^^^^^^^^^^^^^^^^^^^^->
+4 >                           ^^^^^^^^^^^^^^^^^^^^^^->
 1 >
 2 >    export enum 
 3 >               internalEnum
@@ -1719,41 +1719,41 @@ sourceFile:../lib/file1.ts
 2 >Emitted(92, 16) Source(26, 27) + SourceIndex(1)
 3 >Emitted(92, 28) Source(26, 39) + SourceIndex(1)
 ---
->>>        internalEnum[internalEnum["a"] = 0] = "a";
+>>>        internalEnum[internalEnum[0] = "a"] = 0;
 1->^^^^^^^^
-2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                 ^
-4 >                                                  ^->
+2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                               ^
+4 >                                                ^->
 1-> { 
 2 >        a
-3 >                                                 
+3 >                                               
 1->Emitted(93, 9) Source(26, 42) + SourceIndex(1)
-2 >Emitted(93, 50) Source(26, 43) + SourceIndex(1)
-3 >Emitted(93, 51) Source(26, 43) + SourceIndex(1)
+2 >Emitted(93, 48) Source(26, 43) + SourceIndex(1)
+3 >Emitted(93, 49) Source(26, 43) + SourceIndex(1)
 ---
->>>        internalEnum[internalEnum["b"] = 1] = "b";
+>>>        internalEnum[internalEnum[1] = "b"] = 1;
 1->^^^^^^^^
-2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                 ^
-4 >                                                  ^->
+2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                               ^
+4 >                                                ^->
 1->, 
 2 >        b
-3 >                                                 
+3 >                                               
 1->Emitted(94, 9) Source(26, 45) + SourceIndex(1)
-2 >Emitted(94, 50) Source(26, 46) + SourceIndex(1)
-3 >Emitted(94, 51) Source(26, 46) + SourceIndex(1)
+2 >Emitted(94, 48) Source(26, 46) + SourceIndex(1)
+3 >Emitted(94, 49) Source(26, 46) + SourceIndex(1)
 ---
->>>        internalEnum[internalEnum["c"] = 2] = "c";
+>>>        internalEnum[internalEnum[2] = "c"] = 2;
 1->^^^^^^^^
-2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                 ^
-4 >                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^->
+2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                               ^
+4 >                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
 1->, 
 2 >        c
-3 >                                                 
+3 >                                               
 1->Emitted(95, 9) Source(26, 48) + SourceIndex(1)
-2 >Emitted(95, 50) Source(26, 49) + SourceIndex(1)
-3 >Emitted(95, 51) Source(26, 49) + SourceIndex(1)
+2 >Emitted(95, 48) Source(26, 49) + SourceIndex(1)
+3 >Emitted(95, 49) Source(26, 49) + SourceIndex(1)
 ---
 >>>    })(internalEnum = exports.internalEnum || (exports.internalEnum = {}));
 1->^^^^
@@ -1896,15 +1896,15 @@ sourceFile:file4.ts
 >>>//# sourceMappingURL=module.js.map
 
 //// [/src/app/module.tsbuildinfo]
-{"bundle":{"commonSourceDirectory":"./","sourceFiles":["./file3.ts","./file4.ts"],"js":{"sections":[{"pos":0,"end":4396,"kind":"prepend","data":"../lib/module.js","texts":[{"pos":0,"end":4396,"kind":"text"}]},{"pos":4396,"end":4622,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":191,"kind":"prepend","data":"../lib/module.d.ts","texts":[{"pos":0,"end":191,"kind":"text"}]},{"pos":191,"end":273,"kind":"text"}]}},"version":"FakeTSVersion"}
+{"bundle":{"commonSourceDirectory":"./","sourceFiles":["./file3.ts","./file4.ts"],"js":{"sections":[{"pos":0,"end":4384,"kind":"prepend","data":"../lib/module.js","texts":[{"pos":0,"end":4384,"kind":"text"}]},{"pos":4384,"end":4610,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":191,"kind":"prepend","data":"../lib/module.d.ts","texts":[{"pos":0,"end":191,"kind":"text"}]},{"pos":191,"end":273,"kind":"text"}]}},"version":"FakeTSVersion"}
 
 //// [/src/app/module.tsbuildinfo.baseline.txt]
 ======================================================================
 File:: /src/app/module.js
 ----------------------------------------------------------------------
-prepend: (0-4396):: ../lib/module.js texts:: 1
+prepend: (0-4384):: ../lib/module.js texts:: 1
 >>--------------------------------------------------------------------
-text: (0-4396)
+text: (0-4384)
 /*@internal*/ var myGlob = 20;
 define("file1", ["require", "exports"], function (require, exports) {
     "use strict";
@@ -1959,9 +1959,9 @@ define("file1", ["require", "exports"], function (require, exports) {
         /*@internal*/ normalN.internalConst = 10;
         /*@internal*/ var internalEnum;
         (function (internalEnum) {
-            internalEnum[internalEnum["a"] = 0] = "a";
-            internalEnum[internalEnum["b"] = 1] = "b";
-            internalEnum[internalEnum["c"] = 2] = "c";
+            internalEnum[internalEnum[0] = "a"] = 0;
+            internalEnum[internalEnum[1] = "b"] = 1;
+            internalEnum[internalEnum[2] = "c"] = 2;
         })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
     })(normalN = exports.normalN || (exports.normalN = {}));
     /*@internal*/ var internalC = /** @class */ (function () {
@@ -1997,9 +1997,9 @@ define("file1", ["require", "exports"], function (require, exports) {
     /*@internal*/ exports.internalConst = 10;
     /*@internal*/ var internalEnum;
     (function (internalEnum) {
-        internalEnum[internalEnum["a"] = 0] = "a";
-        internalEnum[internalEnum["b"] = 1] = "b";
-        internalEnum[internalEnum["c"] = 2] = "c";
+        internalEnum[internalEnum[0] = "a"] = 0;
+        internalEnum[internalEnum[1] = "b"] = 1;
+        internalEnum[internalEnum[2] = "c"] = 2;
     })(internalEnum = exports.internalEnum || (exports.internalEnum = {}));
 });
 define("file2", ["require", "exports"], function (require, exports) {
@@ -2011,7 +2011,7 @@ define("file2", ["require", "exports"], function (require, exports) {
 var globalConst = 10;
 
 ----------------------------------------------------------------------
-text: (4396-4622)
+text: (4384-4610)
 define("file3", ["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
@@ -2059,20 +2059,20 @@ declare const myVar = 30;
       "sections": [
         {
           "pos": 0,
-          "end": 4396,
+          "end": 4384,
           "kind": "prepend",
           "data": "../lib/module.js",
           "texts": [
             {
               "pos": 0,
-              "end": 4396,
+              "end": 4384,
               "kind": "text"
             }
           ]
         },
         {
-          "pos": 4396,
-          "end": 4622,
+          "pos": 4384,
+          "end": 4610,
           "kind": "text"
         }
       ]
@@ -2899,9 +2899,9 @@ define("file1", ["require", "exports"], function (require, exports) {
         /*@internal*/ normalN.internalConst = 10;
         /*@internal*/ var internalEnum;
         (function (internalEnum) {
-            internalEnum[internalEnum["a"] = 0] = "a";
-            internalEnum[internalEnum["b"] = 1] = "b";
-            internalEnum[internalEnum["c"] = 2] = "c";
+            internalEnum[internalEnum[0] = "a"] = 0;
+            internalEnum[internalEnum[1] = "b"] = 1;
+            internalEnum[internalEnum[2] = "c"] = 2;
         })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
     })(normalN = exports.normalN || (exports.normalN = {}));
     /*@internal*/ var internalC = /** @class */ (function () {
@@ -2937,9 +2937,9 @@ define("file1", ["require", "exports"], function (require, exports) {
     /*@internal*/ exports.internalConst = 10;
     /*@internal*/ var internalEnum;
     (function (internalEnum) {
-        internalEnum[internalEnum["a"] = 0] = "a";
-        internalEnum[internalEnum["b"] = 1] = "b";
-        internalEnum[internalEnum["c"] = 2] = "c";
+        internalEnum[internalEnum[0] = "a"] = 0;
+        internalEnum[internalEnum[1] = "b"] = 1;
+        internalEnum[internalEnum[2] = "c"] = 2;
     })(internalEnum = exports.internalEnum || (exports.internalEnum = {}));
 });
 define("file2", ["require", "exports"], function (require, exports) {
@@ -2952,7 +2952,7 @@ var globalConst = 10;
 //# sourceMappingURL=module.js.map
 
 //// [/src/lib/module.js.map]
-{"version":3,"file":"module.js","sourceRoot":"","sources":["file0.ts","file1.ts","file2.ts","global.ts"],"names":[],"mappings":"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"}
+{"version":3,"file":"module.js","sourceRoot":"","sources":["file0.ts","file1.ts","file2.ts","global.ts"],"names":[],"mappings":"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"}
 
 //// [/src/lib/module.js.map.baseline.txt]
 ===================================================================
@@ -3715,7 +3715,7 @@ sourceFile:file1.ts
 1 >^^^^^^^^
 2 >        ^^^^^^^^^^^
 3 >                   ^^^^^^^^^^^^
-4 >                               ^^^^^^^^^^^^^^^^^^^^^^^^->
+4 >                               ^^^^^^^^^^^^^^^^^^^^^^->
 1 >
 2 >        export enum 
 3 >                   internalEnum
@@ -3723,41 +3723,41 @@ sourceFile:file1.ts
 2 >Emitted(54, 20) Source(17, 31) + SourceIndex(1)
 3 >Emitted(54, 32) Source(17, 43) + SourceIndex(1)
 ---
->>>            internalEnum[internalEnum["a"] = 0] = "a";
+>>>            internalEnum[internalEnum[0] = "a"] = 0;
 1->^^^^^^^^^^^^
-2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                     ^
-4 >                                                      ^->
+2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                   ^
+4 >                                                    ^->
 1-> { 
 2 >            a
-3 >                                                     
+3 >                                                   
 1->Emitted(55, 13) Source(17, 46) + SourceIndex(1)
-2 >Emitted(55, 54) Source(17, 47) + SourceIndex(1)
-3 >Emitted(55, 55) Source(17, 47) + SourceIndex(1)
+2 >Emitted(55, 52) Source(17, 47) + SourceIndex(1)
+3 >Emitted(55, 53) Source(17, 47) + SourceIndex(1)
 ---
->>>            internalEnum[internalEnum["b"] = 1] = "b";
+>>>            internalEnum[internalEnum[1] = "b"] = 1;
 1->^^^^^^^^^^^^
-2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                     ^
-4 >                                                      ^->
+2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                   ^
+4 >                                                    ^->
 1->, 
 2 >            b
-3 >                                                     
+3 >                                                   
 1->Emitted(56, 13) Source(17, 49) + SourceIndex(1)
-2 >Emitted(56, 54) Source(17, 50) + SourceIndex(1)
-3 >Emitted(56, 55) Source(17, 50) + SourceIndex(1)
+2 >Emitted(56, 52) Source(17, 50) + SourceIndex(1)
+3 >Emitted(56, 53) Source(17, 50) + SourceIndex(1)
 ---
->>>            internalEnum[internalEnum["c"] = 2] = "c";
+>>>            internalEnum[internalEnum[2] = "c"] = 2;
 1->^^^^^^^^^^^^
-2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                     ^
-4 >                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^->
+2 >            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                                   ^
+4 >                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
 1->, 
 2 >            c
-3 >                                                     
+3 >                                                   
 1->Emitted(57, 13) Source(17, 52) + SourceIndex(1)
-2 >Emitted(57, 54) Source(17, 53) + SourceIndex(1)
-3 >Emitted(57, 55) Source(17, 53) + SourceIndex(1)
+2 >Emitted(57, 52) Source(17, 53) + SourceIndex(1)
+3 >Emitted(57, 53) Source(17, 53) + SourceIndex(1)
 ---
 >>>        })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
 1->^^^^^^^^
@@ -4301,7 +4301,7 @@ sourceFile:file1.ts
 1 >^^^^
 2 >    ^^^^^^^^^^^
 3 >               ^^^^^^^^^^^^
-4 >                           ^^^^^^^^^^^^^^^^^^^^^^^^->
+4 >                           ^^^^^^^^^^^^^^^^^^^^^^->
 1 >
 2 >    export enum 
 3 >               internalEnum
@@ -4309,41 +4309,41 @@ sourceFile:file1.ts
 2 >Emitted(92, 16) Source(26, 27) + SourceIndex(1)
 3 >Emitted(92, 28) Source(26, 39) + SourceIndex(1)
 ---
->>>        internalEnum[internalEnum["a"] = 0] = "a";
+>>>        internalEnum[internalEnum[0] = "a"] = 0;
 1->^^^^^^^^
-2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                 ^
-4 >                                                  ^->
+2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                               ^
+4 >                                                ^->
 1-> { 
 2 >        a
-3 >                                                 
+3 >                                               
 1->Emitted(93, 9) Source(26, 42) + SourceIndex(1)
-2 >Emitted(93, 50) Source(26, 43) + SourceIndex(1)
-3 >Emitted(93, 51) Source(26, 43) + SourceIndex(1)
+2 >Emitted(93, 48) Source(26, 43) + SourceIndex(1)
+3 >Emitted(93, 49) Source(26, 43) + SourceIndex(1)
 ---
->>>        internalEnum[internalEnum["b"] = 1] = "b";
+>>>        internalEnum[internalEnum[1] = "b"] = 1;
 1->^^^^^^^^
-2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                 ^
-4 >                                                  ^->
+2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                               ^
+4 >                                                ^->
 1->, 
 2 >        b
-3 >                                                 
+3 >                                               
 1->Emitted(94, 9) Source(26, 45) + SourceIndex(1)
-2 >Emitted(94, 50) Source(26, 46) + SourceIndex(1)
-3 >Emitted(94, 51) Source(26, 46) + SourceIndex(1)
+2 >Emitted(94, 48) Source(26, 46) + SourceIndex(1)
+3 >Emitted(94, 49) Source(26, 46) + SourceIndex(1)
 ---
->>>        internalEnum[internalEnum["c"] = 2] = "c";
+>>>        internalEnum[internalEnum[2] = "c"] = 2;
 1->^^^^^^^^
-2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3 >                                                 ^
-4 >                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^->
+2 >        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                                               ^
+4 >                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
 1->, 
 2 >        c
-3 >                                                 
+3 >                                               
 1->Emitted(95, 9) Source(26, 48) + SourceIndex(1)
-2 >Emitted(95, 50) Source(26, 49) + SourceIndex(1)
-3 >Emitted(95, 51) Source(26, 49) + SourceIndex(1)
+2 >Emitted(95, 48) Source(26, 49) + SourceIndex(1)
+3 >Emitted(95, 49) Source(26, 49) + SourceIndex(1)
 ---
 >>>    })(internalEnum = exports.internalEnum || (exports.internalEnum = {}));
 1->^^^^
@@ -4432,13 +4432,13 @@ sourceFile:global.ts
 >>>//# sourceMappingURL=module.js.map
 
 //// [/src/lib/module.tsbuildinfo]
-{"bundle":{"commonSourceDirectory":"./","sourceFiles":["./file0.ts","./file1.ts","./file2.ts","./global.ts"],"js":{"sections":[{"pos":0,"end":4396,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":26,"kind":"internal"},{"pos":28,"end":54,"kind":"text"},{"pos":54,"end":78,"kind":"internal"},{"pos":80,"end":108,"kind":"text"},{"pos":108,"end":233,"kind":"internal"},{"pos":235,"end":274,"kind":"text"},{"pos":274,"end":742,"kind":"internal"},{"pos":744,"end":751,"kind":"text"},{"pos":751,"end":1240,"kind":"internal"},{"pos":1242,"end":1333,"kind":"text"}]}},"version":"FakeTSVersion"}
+{"bundle":{"commonSourceDirectory":"./","sourceFiles":["./file0.ts","./file1.ts","./file2.ts","./global.ts"],"js":{"sections":[{"pos":0,"end":4384,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":26,"kind":"internal"},{"pos":28,"end":54,"kind":"text"},{"pos":54,"end":78,"kind":"internal"},{"pos":80,"end":108,"kind":"text"},{"pos":108,"end":233,"kind":"internal"},{"pos":235,"end":274,"kind":"text"},{"pos":274,"end":742,"kind":"internal"},{"pos":744,"end":751,"kind":"text"},{"pos":751,"end":1240,"kind":"internal"},{"pos":1242,"end":1333,"kind":"text"}]}},"version":"FakeTSVersion"}
 
 //// [/src/lib/module.tsbuildinfo.baseline.txt]
 ======================================================================
 File:: /src/lib/module.js
 ----------------------------------------------------------------------
-text: (0-4396)
+text: (0-4384)
 /*@internal*/ var myGlob = 20;
 define("file1", ["require", "exports"], function (require, exports) {
     "use strict";
@@ -4493,9 +4493,9 @@ define("file1", ["require", "exports"], function (require, exports) {
         /*@internal*/ normalN.internalConst = 10;
         /*@internal*/ var internalEnum;
         (function (internalEnum) {
-            internalEnum[internalEnum["a"] = 0] = "a";
-            internalEnum[internalEnum["b"] = 1] = "b";
-            internalEnum[internalEnum["c"] = 2] = "c";
+            internalEnum[internalEnum[0] = "a"] = 0;
+            internalEnum[internalEnum[1] = "b"] = 1;
+            internalEnum[internalEnum[2] = "c"] = 2;
         })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
     })(normalN = exports.normalN || (exports.normalN = {}));
     /*@internal*/ var internalC = /** @class */ (function () {
@@ -4531,9 +4531,9 @@ define("file1", ["require", "exports"], function (require, exports) {
     /*@internal*/ exports.internalConst = 10;
     /*@internal*/ var internalEnum;
     (function (internalEnum) {
-        internalEnum[internalEnum["a"] = 0] = "a";
-        internalEnum[internalEnum["b"] = 1] = "b";
-        internalEnum[internalEnum["c"] = 2] = "c";
+        internalEnum[internalEnum[0] = "a"] = 0;
+        internalEnum[internalEnum[1] = "b"] = 1;
+        internalEnum[internalEnum[2] = "c"] = 2;
     })(internalEnum = exports.internalEnum || (exports.internalEnum = {}));
 });
 define("file2", ["require", "exports"], function (require, exports) {
@@ -4643,7 +4643,7 @@ declare const globalConst = 10;
       "sections": [
         {
           "pos": 0,
-          "end": 4396,
+          "end": 4384,
           "kind": "text"
         }
       ]

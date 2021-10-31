@@ -71,8 +71,8 @@ var __assign = (this && this.__assign) || function () {
 };
 var E;
 (function (E) {
-    E[E["v1"] = 0] = "v1";
-    E[E["v2"] = 1] = "v2";
+    E[E[0] = "v1"] = 0;
+    E[E[1] = "v2"] = 1;
 })(E || (E = {}));
 ;
 function f(p1, p2) {

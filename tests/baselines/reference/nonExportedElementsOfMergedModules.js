@@ -21,7 +21,7 @@ var One;
 (function (One) {
     var A;
     (function (A) {
-        A[A["X"] = 0] = "X";
+        A[A[0] = "X"] = 0;
     })(A || (A = {}));
     var B;
     (function (B) {
@@ -30,7 +30,7 @@ var One;
 (function (One) {
     var A;
     (function (A) {
-        A[A["Y"] = 0] = "Y";
+        A[A[0] = "Y"] = 0;
     })(A || (A = {}));
     var B;
     (function (B) {

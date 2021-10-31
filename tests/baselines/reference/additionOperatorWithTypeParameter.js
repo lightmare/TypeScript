@@ -42,8 +42,8 @@ function foo<T, U>(t: T, u: U) {
 // type parameter type is not a valid operand of addition operator
 var E;
 (function (E) {
-    E[E["a"] = 0] = "a";
-    E[E["b"] = 1] = "b";
+    E[E[0] = "a"] = 0;
+    E[E[1] = "b"] = 1;
 })(E || (E = {}));
 function foo(t, u) {
     var a;

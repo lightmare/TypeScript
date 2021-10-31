@@ -159,9 +159,9 @@ var __extends = (this && this.__extends) || (function () {
 function f1() {
     var E;
     (function (E) {
-        E[E["A"] = 0] = "A";
-        E[E["B"] = 1] = "B";
-        E[E["C"] = 2] = "C";
+        E[E[0] = "A"] = 0;
+        E[E[1] = "B"] = 1;
+        E[E[2] = "C"] = 2;
     })(E || (E = {}));
     var C = /** @class */ (function () {
         function C() {
@@ -176,9 +176,9 @@ function f2() {
     function g() {
         var E;
         (function (E) {
-            E[E["A"] = 0] = "A";
-            E[E["B"] = 1] = "B";
-            E[E["C"] = 2] = "C";
+            E[E[0] = "A"] = 0;
+            E[E[1] = "B"] = 1;
+            E[E[2] = "C"] = 2;
         })(E || (E = {}));
         var C = /** @class */ (function () {
             function C() {
@@ -195,9 +195,9 @@ function f3(b) {
     if (true) {
         var E = void 0;
         (function (E) {
-            E[E["A"] = 0] = "A";
-            E[E["B"] = 1] = "B";
-            E[E["C"] = 2] = "C";
+            E[E[0] = "A"] = 0;
+            E[E[1] = "B"] = 1;
+            E[E[2] = "C"] = 2;
         })(E || (E = {}));
         if (b) {
             var C = /** @class */ (function () {
@@ -225,9 +225,9 @@ function f5() {
     var z1 = function () {
         var E;
         (function (E) {
-            E[E["A"] = 0] = "A";
-            E[E["B"] = 1] = "B";
-            E[E["C"] = 2] = "C";
+            E[E[0] = "A"] = 0;
+            E[E[1] = "B"] = 1;
+            E[E[2] = "C"] = 2;
         })(E || (E = {}));
         var C = /** @class */ (function () {
             function C() {
@@ -239,9 +239,9 @@ function f5() {
     var z2 = function () {
         var E;
         (function (E) {
-            E[E["A"] = 0] = "A";
-            E[E["B"] = 1] = "B";
-            E[E["C"] = 2] = "C";
+            E[E[0] = "A"] = 0;
+            E[E[1] = "B"] = 1;
+            E[E[2] = "C"] = 2;
         })(E || (E = {}));
         var C = /** @class */ (function () {
             function C() {
@@ -255,9 +255,9 @@ var A = /** @class */ (function () {
     function A() {
         var E;
         (function (E) {
-            E[E["A"] = 0] = "A";
-            E[E["B"] = 1] = "B";
-            E[E["C"] = 2] = "C";
+            E[E[0] = "A"] = 0;
+            E[E[1] = "B"] = 1;
+            E[E[2] = "C"] = 2;
         })(E || (E = {}));
         var C = /** @class */ (function () {
             function C() {
@@ -268,9 +268,9 @@ var A = /** @class */ (function () {
     A.prototype.m = function () {
         var E;
         (function (E) {
-            E[E["A"] = 0] = "A";
-            E[E["B"] = 1] = "B";
-            E[E["C"] = 2] = "C";
+            E[E[0] = "A"] = 0;
+            E[E[1] = "B"] = 1;
+            E[E[2] = "C"] = 2;
         })(E || (E = {}));
         var C = /** @class */ (function () {
             function C() {
@@ -283,9 +283,9 @@ var A = /** @class */ (function () {
         get: function () {
             var E;
             (function (E) {
-                E[E["A"] = 0] = "A";
-                E[E["B"] = 1] = "B";
-                E[E["C"] = 2] = "C";
+                E[E[0] = "A"] = 0;
+                E[E[1] = "B"] = 1;
+                E[E[2] = "C"] = 2;
             })(E || (E = {}));
             var C = /** @class */ (function () {
                 function C() {

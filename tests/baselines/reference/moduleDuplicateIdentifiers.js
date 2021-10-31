@@ -71,10 +71,10 @@ exports.Pot = 2;
 exports.Pot = 42; // Shouldn't error
 var Utensils;
 (function (Utensils) {
-    Utensils[Utensils["Spoon"] = 0] = "Spoon";
-    Utensils[Utensils["Fork"] = 1] = "Fork";
-    Utensils[Utensils["Knife"] = 2] = "Knife";
+    Utensils[Utensils[0] = "Spoon"] = 0;
+    Utensils[Utensils[1] = "Fork"] = 1;
+    Utensils[Utensils[2] = "Knife"] = 2;
 })(Utensils = exports.Utensils || (exports.Utensils = {}));
 (function (Utensils) {
-    Utensils[Utensils["Spork"] = 3] = "Spork";
+    Utensils[Utensils[3] = "Spork"] = 3;
 })(Utensils = exports.Utensils || (exports.Utensils = {}));

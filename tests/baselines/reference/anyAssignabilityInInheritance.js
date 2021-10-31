@@ -115,7 +115,7 @@ var r3 = foo3(a); // any
 var r3 = foo3(a); // any
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 var r3 = foo3(a); // any
 function f() { }

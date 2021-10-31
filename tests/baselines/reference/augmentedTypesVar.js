@@ -63,7 +63,7 @@ var x4a = /** @class */ (function () {
 var x5 = 1;
 var x5;
 (function (x5) {
-    x5[x5["One"] = 0] = "One";
+    x5[x5[0] = "One"] = 0;
 })(x5 || (x5 = {})); // error
 // var then module
 var x6 = 1;

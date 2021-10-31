@@ -71,15 +71,15 @@ var E5;
 })(E5 || (E5 = {}));
 var E9;
 (function (E9) {
-    E9[E9["A"] = 0] = "A";
-    E9[E9["B"] = 0] = "B";
+    E9[E9[0] = "A"] = 0;
+    E9[E9[0] = "B"] = 0;
 })(E9 || (E9 = {}));
 //Enum with computed member intializer of different enum type
 // Bug 707850: This should be allowed
 var E10;
 (function (E10) {
-    E10[E10["A"] = 0] = "A";
-    E10[E10["B"] = 0] = "B";
+    E10[E10[0] = "A"] = 0;
+    E10[E10[0] = "B"] = 0;
 })(E10 || (E10 = {}));
 // Enum with computed member intializer of other types
 var E11;
@@ -94,31 +94,31 @@ var E11;
 var E12;
 (function (E12) {
     E12["A"] = "";
-    E12[E12["B"] = 0] = "B";
-    E12[E12["C"] = 0] = "C";
-    E12[E12["D"] = 0] = "D";
-    E12[E12["E"] = 0] = "E";
-    E12[E12["F"] = 0] = "F";
+    E12[E12[0] = "B"] = 0;
+    E12[E12[0] = "C"] = 0;
+    E12[E12[0] = "D"] = 0;
+    E12[E12[0] = "E"] = 0;
+    E12[E12[0] = "F"] = 0;
 })(E12 || (E12 = {}));
 // Enum with incorrect syntax
 var E13;
 (function (E13) {
-    E13[E13["postComma"] = 0] = "postComma";
-    E13[E13["postValueComma"] = 1] = "postValueComma";
-    E13[E13["postSemicolon"] = 2] = "postSemicolon";
-    E13[E13["postColonValueComma"] = 3] = "postColonValueComma";
-    E13[E13[2] = 4] = 2;
-    E13[E13["postColonValueSemicolon"] = 5] = "postColonValueSemicolon";
-    E13[E13[3] = 6] = 3;
+    E13[E13[0] = "postComma"] = 0;
+    E13[E13[1] = "postValueComma"] = 1;
+    E13[E13[2] = "postSemicolon"] = 2;
+    E13[E13[3] = "postColonValueComma"] = 3;
+    E13[E13[4] = 2] = 4;
+    E13[E13[5] = "postColonValueSemicolon"] = 5;
+    E13[E13[6] = 3] = 6;
 })(E13 || (E13 = {}));
 ;
 var E14;
 (function (E14) {
-    E14[E14["a"] = 0] = "a";
-    E14[E14["b"] = 1] = "b";
-    E14[E14["any"] = 2] = "any";
-    E14[E14["hello"] = 3] = "hello";
-    E14[E14[1] = 4] = 1;
-    E14[E14["c"] = 5] = "c";
-    E14[E14["d"] = 6] = "d";
+    E14[E14[0] = "a"] = 0;
+    E14[E14[1] = "b"] = 1;
+    E14[E14[2] = "any"] = 2;
+    E14[E14[3] = "hello"] = 3;
+    E14[E14[4] = 1] = 4;
+    E14[E14[5] = "c"] = 5;
+    E14[E14[6] = "d"] = 6;
 })(E14 || (E14 = {}));

@@ -9,5 +9,5 @@ enum E {
 //// [enumsWithMultipleDeclarations3.js]
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));

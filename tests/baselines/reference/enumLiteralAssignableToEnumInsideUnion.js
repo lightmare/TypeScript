@@ -34,32 +34,32 @@ var X;
 (function (X) {
     var Foo;
     (function (Foo) {
-        Foo[Foo["A"] = 0] = "A";
-        Foo[Foo["B"] = 1] = "B";
+        Foo[Foo[0] = "A"] = 0;
+        Foo[Foo[1] = "B"] = 1;
     })(Foo = X.Foo || (X.Foo = {}));
 })(X || (X = {}));
 var Y;
 (function (Y) {
     var Foo;
     (function (Foo) {
-        Foo[Foo["A"] = 0] = "A";
-        Foo[Foo["B"] = 1] = "B";
+        Foo[Foo[0] = "A"] = 0;
+        Foo[Foo[1] = "B"] = 1;
     })(Foo = Y.Foo || (Y.Foo = {}));
 })(Y || (Y = {}));
 var Z;
 (function (Z) {
     var Foo;
     (function (Foo) {
-        Foo[Foo["A"] = 2] = "A";
-        Foo[Foo["B"] = 4] = "B";
+        Foo[Foo[2] = "A"] = 2;
+        Foo[Foo[4] = "B"] = 4;
     })(Foo = Z.Foo || (Z.Foo = {}));
 })(Z || (Z = {}));
 var Ka;
 (function (Ka) {
     var Foo;
     (function (Foo) {
-        Foo[Foo["A"] = 1024] = "A";
-        Foo[Foo["B"] = 2048] = "B";
+        Foo[Foo[1024] = "A"] = 1024;
+        Foo[Foo[2048] = "B"] = 2048;
     })(Foo = Ka.Foo || (Ka.Foo = {}));
 })(Ka || (Ka = {}));
 var e0 = Y.Foo.A; // ok

@@ -10,8 +10,8 @@ e1.e1;
 //// [typeofEnum.js]
 var E;
 (function (E) {
-    E[E["e1"] = 0] = "e1";
-    E[E["e2"] = 1] = "e2";
+    E[E[0] = "e1"] = 0;
+    E[E[1] = "e2"] = 1;
 })(E || (E = {}));
 var e1;
 e1.e1;

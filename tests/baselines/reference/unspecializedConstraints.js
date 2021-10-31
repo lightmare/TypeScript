@@ -258,8 +258,8 @@ var ts;
     }(Symbol));
     var PropertyFlags;
     (function (PropertyFlags) {
-        PropertyFlags[PropertyFlags["Optional"] = 1] = "Optional";
-        PropertyFlags[PropertyFlags["Private"] = 2] = "Private";
+        PropertyFlags[PropertyFlags[1] = "Optional"] = 1;
+        PropertyFlags[PropertyFlags[2] = "Private"] = 2;
     })(PropertyFlags || (PropertyFlags = {}));
     var Signature = /** @class */ (function (_super) {
         __extends(Signature, _super);
@@ -300,8 +300,8 @@ var ts;
     }(Symbol));
     var ParameterFlags;
     (function (ParameterFlags) {
-        ParameterFlags[ParameterFlags["Optional"] = 1] = "Optional";
-        ParameterFlags[ParameterFlags["Rest"] = 2] = "Rest";
+        ParameterFlags[ParameterFlags[1] = "Optional"] = 1;
+        ParameterFlags[ParameterFlags[2] = "Rest"] = 2;
     })(ParameterFlags || (ParameterFlags = {}));
     var hasOwnProperty = Object.prototype.hasOwnProperty;
     function getProperty(map, key) {

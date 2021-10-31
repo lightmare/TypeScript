@@ -13,7 +13,7 @@ exports.__esModule = true;
 exports.E = void 0;
 var E;
 (function (E) {
-    E[E["X"] = 0] = "X";
+    E[E[0] = "X"] = 0;
 })(E = exports.E || (exports.E = {}));
 //// [f2.js]
 "use strict";

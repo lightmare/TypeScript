@@ -11,7 +11,7 @@ define(["require", "exports"], function (require, exports) {
     "use strict";
     var foo;
     (function (foo) {
-        foo[foo["A"] = 0] = "A";
+        foo[foo[0] = "A"] = 0;
     })(foo || (foo = {}));
     return foo;
 });

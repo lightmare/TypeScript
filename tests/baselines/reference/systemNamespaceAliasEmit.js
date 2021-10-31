@@ -24,8 +24,8 @@ System.register([], function (exports_1, context_1) {
             exports_1("ns", ns);
             exports_1("FooBar", ns);
             (function (AnEnum) {
-                AnEnum[AnEnum["ONE"] = 0] = "ONE";
-                AnEnum[AnEnum["TWO"] = 1] = "TWO";
+                AnEnum[AnEnum[0] = "ONE"] = 0;
+                AnEnum[AnEnum[1] = "TWO"] = 1;
             })(AnEnum || (AnEnum = {}));
             exports_1("AnEnum", AnEnum);
             exports_1("BarEnum", AnEnum);

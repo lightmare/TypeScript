@@ -134,7 +134,7 @@ interface I20 {
 // enums are only subtypes of number, any and no other types
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 var A = /** @class */ (function () {
     function A() {
@@ -148,7 +148,7 @@ var A2 = /** @class */ (function () {
 }());
 var E2;
 (function (E2) {
-    E2[E2["A"] = 0] = "A";
+    E2[E2[0] = "A"] = 0;
 })(E2 || (E2 = {}));
 function f() { }
 (function (f) {

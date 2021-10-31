@@ -6,5 +6,5 @@ async enum E {
 //// [asyncEnum_es5.js]
 var E;
 (function (E) {
-    E[E["Value"] = 0] = "Value";
+    E[E[0] = "Value"] = 0;
 })(E || (E = {}));

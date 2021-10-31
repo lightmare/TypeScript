@@ -110,8 +110,8 @@ var A;
     })(Module || (Module = {}));
     var Color;
     (function (Color) {
-        Color[Color["Blue"] = 0] = "Blue";
-        Color[Color["Red"] = 1] = "Red";
+        Color[Color[0] = "Blue"] = 0;
+        Color[Color[1] = "Red"] = 1;
     })(Color || (Color = {}));
     var x = 12;
     function F(s) {
@@ -163,8 +163,8 @@ var Y;
     })(Module = Y.Module || (Y.Module = {}));
     var Color;
     (function (Color) {
-        Color[Color["Blue"] = 0] = "Blue";
-        Color[Color["Red"] = 1] = "Red";
+        Color[Color[0] = "Blue"] = 0;
+        Color[Color[1] = "Red"] = 1;
     })(Color = Y.Color || (Y.Color = {}));
     Y.x = 12;
     function F(s) {

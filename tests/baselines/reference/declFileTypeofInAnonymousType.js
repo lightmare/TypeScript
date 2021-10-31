@@ -32,9 +32,9 @@ var m1;
     m1.c = c;
     var e;
     (function (e) {
-        e[e["weekday"] = 0] = "weekday";
-        e[e["weekend"] = 1] = "weekend";
-        e[e["holiday"] = 2] = "holiday";
+        e[e[0] = "weekday"] = 0;
+        e[e[1] = "weekend"] = 1;
+        e[e[2] = "holiday"] = 2;
     })(e = m1.e || (m1.e = {}));
 })(m1 || (m1 = {}));
 var a;

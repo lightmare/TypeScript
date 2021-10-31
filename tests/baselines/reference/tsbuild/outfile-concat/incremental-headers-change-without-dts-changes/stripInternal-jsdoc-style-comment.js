@@ -704,7 +704,7 @@ sourceFile:../../third_part1.ts
 >>>//# sourceMappingURL=third-output.d.ts.map
 
 //// [/src/third/thirdjs/output/third-output.tsbuildinfo]
-{"bundle":{"commonSourceDirectory":"../..","sourceFiles":["../../third_part1.ts"],"js":{"sections":[{"pos":0,"end":110,"kind":"prepend","data":"../../../first/bin/first-output.js","texts":[{"pos":0,"end":110,"kind":"text"}]},{"pos":110,"end":3163,"kind":"prepend","data":"../../../2/second-output.js","texts":[{"pos":110,"end":3163,"kind":"text"}]},{"pos":3163,"end":3199,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":157,"kind":"prepend","data":"../../../first/bin/first-output.d.ts","texts":[{"pos":0,"end":157,"kind":"text"}]},{"pos":157,"end":317,"kind":"prepend","data":"../../../2/second-output.d.ts","texts":[{"pos":157,"end":317,"kind":"text"}]},{"pos":317,"end":336,"kind":"text"}]}},"version":"FakeTSVersion"}
+{"bundle":{"commonSourceDirectory":"../..","sourceFiles":["../../third_part1.ts"],"js":{"sections":[{"pos":0,"end":110,"kind":"prepend","data":"../../../first/bin/first-output.js","texts":[{"pos":0,"end":110,"kind":"text"}]},{"pos":110,"end":3151,"kind":"prepend","data":"../../../2/second-output.js","texts":[{"pos":110,"end":3151,"kind":"text"}]},{"pos":3151,"end":3187,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":157,"kind":"prepend","data":"../../../first/bin/first-output.d.ts","texts":[{"pos":0,"end":157,"kind":"text"}]},{"pos":157,"end":317,"kind":"prepend","data":"../../../2/second-output.d.ts","texts":[{"pos":157,"end":317,"kind":"text"}]},{"pos":317,"end":336,"kind":"text"}]}},"version":"FakeTSVersion"}
 
 //// [/src/third/thirdjs/output/third-output.tsbuildinfo.baseline.txt]
 ======================================================================
@@ -721,9 +721,9 @@ function f() {
 }
 
 ----------------------------------------------------------------------
-prepend: (110-3163):: ../../../2/second-output.js texts:: 1
+prepend: (110-3151):: ../../../2/second-output.js texts:: 1
 >>--------------------------------------------------------------------
-text: (110-3163)
+text: (110-3151)
 var N;
 (function (N) {
     function f() {
@@ -778,9 +778,9 @@ var normalN;
     normalN.internalConst = 10;
     var internalEnum;
     (function (internalEnum) {
-        internalEnum[internalEnum["a"] = 0] = "a";
-        internalEnum[internalEnum["b"] = 1] = "b";
-        internalEnum[internalEnum["c"] = 2] = "c";
+        internalEnum[internalEnum[0] = "a"] = 0;
+        internalEnum[internalEnum[1] = "b"] = 1;
+        internalEnum[internalEnum[2] = "c"] = 2;
     })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
 })(normalN || (normalN = {}));
 var internalC = (function () {
@@ -814,9 +814,9 @@ var internalImport = internalNamespace.someClass;
 var internalConst = 10;
 var internalEnum;
 (function (internalEnum) {
-    internalEnum[internalEnum["a"] = 0] = "a";
-    internalEnum[internalEnum["b"] = 1] = "b";
-    internalEnum[internalEnum["c"] = 2] = "c";
+    internalEnum[internalEnum[0] = "a"] = 0;
+    internalEnum[internalEnum[1] = "b"] = 1;
+    internalEnum[internalEnum[2] = "c"] = 2;
 })(internalEnum || (internalEnum = {}));
 var C = (function () {
     function C() {
@@ -828,7 +828,7 @@ var C = (function () {
 }());
 
 ----------------------------------------------------------------------
-text: (3163-3199)
+text: (3151-3187)
 var c = new C();
 c.doSomething();
 
@@ -894,20 +894,20 @@ declare var c: C;
         },
         {
           "pos": 110,
-          "end": 3163,
+          "end": 3151,
           "kind": "prepend",
           "data": "../../../2/second-output.js",
           "texts": [
             {
               "pos": 110,
-              "end": 3163,
+              "end": 3151,
               "kind": "text"
             }
           ]
         },
         {
-          "pos": 3163,
-          "end": 3199,
+          "pos": 3151,
+          "end": 3187,
           "kind": "text"
         }
       ]

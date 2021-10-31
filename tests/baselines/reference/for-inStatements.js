@@ -163,8 +163,8 @@ for (var x in M) { }
 for (var x in M.X) { }
 var Color;
 (function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Blue"] = 1] = "Blue";
+    Color[Color[0] = "Red"] = 0;
+    Color[Color[1] = "Blue"] = 1;
 })(Color || (Color = {}));
 for (var x in Color) { }
 for (var x in Color.Blue) { }

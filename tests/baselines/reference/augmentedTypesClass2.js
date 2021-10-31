@@ -52,7 +52,7 @@ var c33 = /** @class */ (function () {
     return c33;
 }());
 (function (c33) {
-    c33[c33["One"] = 0] = "One";
+    c33[c33[0] = "One"] = 0;
 })(c33 || (c33 = {}));
 ;
 // class then import

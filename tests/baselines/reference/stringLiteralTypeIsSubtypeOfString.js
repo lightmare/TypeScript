@@ -148,7 +148,7 @@ function f12(x) { }
 function f13(x) { }
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 function f14(x) { }
 function f15(x) { }

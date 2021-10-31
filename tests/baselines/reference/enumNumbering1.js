@@ -11,9 +11,9 @@ enum Test {
 //// [enumNumbering1.js]
 var Test;
 (function (Test) {
-    Test[Test["A"] = 0] = "A";
-    Test[Test["B"] = 1] = "B";
+    Test[Test[0] = "A"] = 0;
+    Test[Test[1] = "B"] = 1;
     Test[Test["C"] = Math.floor(Math.random() * 1000)] = "C";
-    Test[Test["D"] = 10] = "D";
-    Test[Test["E"] = 11] = "E"; // Error but shouldn't be
+    Test[Test[10] = "D"] = 10;
+    Test[Test[11] = "E"] = 11; // Error but shouldn't be
 })(Test || (Test = {}));

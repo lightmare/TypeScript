@@ -28,7 +28,7 @@ var M;
 (function (M) {
     var MyEnum;
     (function (MyEnum) {
-        MyEnum[MyEnum["BAR"] = 0] = "BAR";
+        MyEnum[MyEnum[0] = "BAR"] = 0;
     })(MyEnum = M.MyEnum || (M.MyEnum = {}));
     M.object2 = {
         foo: MyEnum.BAR
@@ -38,7 +38,7 @@ var N;
 (function (N) {
     var MyEnum;
     (function (MyEnum) {
-        MyEnum[MyEnum["FOO"] = 0] = "FOO";
+        MyEnum[MyEnum[0] = "FOO"] = 0;
     })(MyEnum = N.MyEnum || (N.MyEnum = {}));
     ;
     N.object1 = {

@@ -91,7 +91,7 @@ var E;
 (function (E) {
     var Color;
     (function (Color) {
-        Color[Color["Red"] = 0] = "Red";
+        Color[Color[0] = "Red"] = 0;
     })(Color = E.Color || (E.Color = {}));
     function fn() { }
     E.fn = fn;
@@ -112,7 +112,7 @@ var F;
 (function (F) {
     var Color;
     (function (Color) {
-        Color[Color["Red"] = 0] = "Red";
+        Color[Color[0] = "Red"] = 0;
     })(Color || (Color = {}));
     function fn() { }
     var C = /** @class */ (function () {

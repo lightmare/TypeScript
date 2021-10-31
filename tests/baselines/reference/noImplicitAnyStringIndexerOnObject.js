@@ -160,8 +160,8 @@ o[k2];
 o[sym];
 var NumEnum;
 (function (NumEnum) {
-    NumEnum[NumEnum["a"] = 0] = "a";
-    NumEnum[NumEnum["b"] = 1] = "b";
+    NumEnum[NumEnum[0] = "a"] = 0;
+    NumEnum[NumEnum[1] = "b"] = 1;
 })(NumEnum || (NumEnum = {}));
 var numEnumKey;
 o[numEnumKey];

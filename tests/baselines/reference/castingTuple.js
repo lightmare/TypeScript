@@ -86,11 +86,11 @@ var F = /** @class */ (function (_super) {
 ;
 var E1;
 (function (E1) {
-    E1[E1["one"] = 0] = "one";
+    E1[E1[0] = "one"] = 0;
 })(E1 || (E1 = {}));
 var E2;
 (function (E2) {
-    E2[E2["one"] = 0] = "one";
+    E2[E2[0] = "one"] = 0;
 })(E2 || (E2 = {}));
 // no error
 var numStrTuple = [5, "foo"];

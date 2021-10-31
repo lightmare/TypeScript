@@ -284,8 +284,8 @@ function foo6(x) {
 // Repro from #27493
 var Types;
 (function (Types) {
-    Types[Types["Str"] = 1] = "Str";
-    Types[Types["Num"] = 2] = "Num";
+    Types[Types[1] = "Str"] = 1;
+    Types[Types[2] = "Num"] = 2;
 })(Types || (Types = {}));
 function func2(inst) {
     while (true) {

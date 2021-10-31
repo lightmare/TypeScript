@@ -10,5 +10,5 @@ var X = /** @class */ (function () {
     return X;
 }());
 (function (X) {
-    X[X["MyVal"] = 0] = "MyVal";
+    X[X[0] = "MyVal"] = 0;
 })(X || (X = {}));

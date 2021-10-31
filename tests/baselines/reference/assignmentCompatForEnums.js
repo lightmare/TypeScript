@@ -17,8 +17,8 @@ function foo() {
 //// [assignmentCompatForEnums.js]
 var TokenType;
 (function (TokenType) {
-    TokenType[TokenType["One"] = 0] = "One";
-    TokenType[TokenType["Two"] = 1] = "Two";
+    TokenType[TokenType[0] = "One"] = 0;
+    TokenType[TokenType[1] = "Two"] = 1;
 })(TokenType || (TokenType = {}));
 ;
 var list = {};

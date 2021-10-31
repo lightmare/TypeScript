@@ -49,7 +49,7 @@ var C = /** @class */ (function () {
 C = null; // Error
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 E = null; // Error
 E.A = null; // OK per spec, Error per implementation (509581)

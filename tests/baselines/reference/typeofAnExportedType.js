@@ -78,7 +78,7 @@ var M;
 exports.Z = M;
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E = exports.E || (exports.E = {}));
 function foo() { }
 exports.foo = foo;

@@ -58,11 +58,11 @@ module Others {
 // enums assignable to number, any, Object, errors unless otherwise noted
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 var F;
 (function (F) {
-    F[F["B"] = 0] = "B";
+    F[F[0] = "B"] = 0;
 })(F || (F = {}));
 var e = E.A;
 var f = F.B;

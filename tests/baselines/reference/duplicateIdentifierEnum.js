@@ -42,7 +42,7 @@ enum E {
 // Test the error message when attempting to merge an enum with a class, an interface, or a function.
 var A;
 (function (A) {
-    A[A["bar"] = 0] = "bar";
+    A[A[0] = "bar"] = 0;
 })(A || (A = {}));
 var A = /** @class */ (function () {
     function A() {
@@ -54,7 +54,7 @@ function C() {
 }
 var D;
 (function (D) {
-    D[D["bar"] = 0] = "bar";
+    D[D[0] = "bar"] = 0;
 })(D || (D = {}));
 var E = /** @class */ (function () {
     function E() {
@@ -68,5 +68,5 @@ function D() {
 }
 var E;
 (function (E) {
-    E[E["bar"] = 0] = "bar";
+    E[E[0] = "bar"] = 0;
 })(E || (E = {}));

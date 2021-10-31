@@ -182,9 +182,9 @@ aa = append(aa, 1);
 //// [literalTypes2.js]
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 1] = "B";
-    E[E["C"] = 2] = "C";
+    E[E[0] = "A"] = 0;
+    E[E[1] = "B"] = 1;
+    E[E[2] = "C"] = 2;
 })(E || (E = {}));
 var cond;
 function f1(p1, p2, p3, p4) {

@@ -72,7 +72,7 @@ var A;
 A = exports.A || (exports.A = {});
 var B;
 (function (B) {
-    B[B["Member"] = 0] = "Member";
+    B[B[0] = "Member"] = 0;
 })(B = exports.B || (exports.B = {}));
 var C;
 C || (C = {});
@@ -88,9 +88,9 @@ F = exports.F || (exports.F = {});
 exports.FF = F;
 var G;
 (function (G) {
-    G[G["A"] = 1] = "A";
-    G[G["B"] = 2] = "B";
-    G[G["C"] = 3] = "C";
+    G[G[1] = "A"] = 1;
+    G[G[2] = "B"] = 2;
+    G[G[3] = "C"] = 3;
 })(G = exports.G || (exports.G = {}));
 var H;
 (function (H) {
@@ -100,16 +100,16 @@ var H;
 var I;
 (function (I) {
     I["A"] = "a";
-    I[I["B"] = 0] = "B";
-    I[I["C"] = 1] = "C";
+    I[I[0] = "B"] = 0;
+    I[I[1] = "C"] = 1;
 })(I = exports.I || (exports.I = {}));
 var K;
 (function (K) {
-    K[K["None"] = 0] = "None";
-    K[K["A"] = 1] = "A";
-    K[K["B"] = 2] = "B";
-    K[K["C"] = 4] = "C";
-    K[K["Mask"] = 7] = "Mask";
+    K[K[0] = "None"] = 0;
+    K[K[1] = "A"] = 1;
+    K[K[2] = "B"] = 2;
+    K[K[4] = "C"] = 4;
+    K[K[7] = "Mask"] = 7;
 })(K = exports.K || (exports.K = {}));
 
 

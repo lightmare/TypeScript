@@ -12,9 +12,9 @@ test + ''
 //// [enumMapBackIntoItself.js]
 var TShirtSize;
 (function (TShirtSize) {
-    TShirtSize[TShirtSize["Small"] = 0] = "Small";
-    TShirtSize[TShirtSize["Medium"] = 1] = "Medium";
-    TShirtSize[TShirtSize["Large"] = 2] = "Large";
+    TShirtSize[TShirtSize[0] = "Small"] = 0;
+    TShirtSize[TShirtSize[1] = "Medium"] = 1;
+    TShirtSize[TShirtSize[2] = "Large"] = 2;
 })(TShirtSize || (TShirtSize = {}));
 var mySize = TShirtSize.Large;
 var test = TShirtSize[mySize];

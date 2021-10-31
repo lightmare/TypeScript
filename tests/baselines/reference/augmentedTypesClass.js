@@ -24,5 +24,5 @@ var c4 = /** @class */ (function () {
     return c4;
 }());
 (function (c4) {
-    c4[c4["One"] = 0] = "One";
+    c4[c4[0] = "One"] = 0;
 })(c4 || (c4 = {})); // error

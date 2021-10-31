@@ -9,7 +9,7 @@ enum foo {
 //// [enumCodeGenNewLines1.js]
 var foo;
 (function (foo) {
-    foo[foo["b"] = 1] = "b";
-    foo[foo["c"] = 2] = "c";
-    foo[foo["d"] = 3] = "d";
+    foo[foo[1] = "b"] = 1;
+    foo[foo[2] = "c"] = 2;
+    foo[foo[3] = "d"] = 3;
 })(foo || (foo = {}));

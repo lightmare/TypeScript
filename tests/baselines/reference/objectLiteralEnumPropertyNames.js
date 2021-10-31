@@ -85,8 +85,8 @@ var uz = (_e = {},
     _e);
 var Nums;
 (function (Nums) {
-    Nums[Nums["A"] = 0] = "A";
-    Nums[Nums["B"] = 1] = "B";
+    Nums[Nums[0] = "A"] = 0;
+    Nums[Nums[1] = "B"] = 1;
 })(Nums || (Nums = {}));
 var n = (_f = {},
     _f[Nums.A] = 1,

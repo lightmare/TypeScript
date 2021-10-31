@@ -40,7 +40,7 @@ function foo4(x) { }
 function foo5(x) { }
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 function foo6(x) { }
 function foo7(x) { }

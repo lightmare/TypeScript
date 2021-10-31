@@ -49,8 +49,8 @@ var entries4 = Object.entries(a); // [string, string][]
 var values4 = Object.values(a); // string[]
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 1] = "B";
+    E[E[0] = "A"] = 0;
+    E[E[1] = "B"] = 1;
 })(E || (E = {}));
 var entries5 = Object.entries(E); // [string, any][]
 var values5 = Object.values(E); // any[]

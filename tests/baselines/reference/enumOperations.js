@@ -19,7 +19,7 @@ enumType >>>anyType;
 //// [enumOperations.js]
 var Enum;
 (function (Enum) {
-    Enum[Enum["None"] = 0] = "None";
+    Enum[Enum[0] = "None"] = 0;
 })(Enum || (Enum = {}));
 var enumType = Enum.None;
 var numberType = 0;

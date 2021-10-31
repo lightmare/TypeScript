@@ -47,14 +47,14 @@ function f2(v: E2) {
 // Literal enum type
 var E1;
 (function (E1) {
-    E1[E1["a"] = 1] = "a";
-    E1[E1["b"] = 2] = "b";
+    E1[E1[1] = "a"] = 1;
+    E1[E1[2] = "b"] = 2;
 })(E1 || (E1 = {}));
 // Numeric enum type
 var E2;
 (function (E2) {
-    E2[E2["a"] = 1] = "a";
-    E2[E2["b"] = 2] = "b";
+    E2[E2[1] = "a"] = 1;
+    E2[E2[2] = "b"] = 2;
 })(E2 || (E2 = {}));
 function f1(v) {
     if (v !== 0) { // Error

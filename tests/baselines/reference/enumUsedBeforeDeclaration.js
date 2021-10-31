@@ -11,7 +11,7 @@ var v = Color.Green;
 var v2 = 1 /* Green */;
 var Color;
 (function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
+    Color[Color[0] = "Red"] = 0;
+    Color[Color[1] = "Green"] = 1;
+    Color[Color[2] = "Blue"] = 2;
 })(Color || (Color = {}));

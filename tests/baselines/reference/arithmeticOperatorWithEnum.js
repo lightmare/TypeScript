@@ -154,8 +154,8 @@ var rj12 = 1 | E.b;
 // operands of an enum type are treated as having the primitive type Number.
 var E;
 (function (E) {
-    E[E["a"] = 0] = "a";
-    E[E["b"] = 1] = "b";
+    E[E[0] = "a"] = 0;
+    E[E[1] = "b"] = 1;
 })(E || (E = {}));
 var a;
 var b;

@@ -110,7 +110,7 @@ var A4;
     (function (A) {
         var E;
         (function (E) {
-            E[E["X"] = 0] = "X";
+            E[E[0] = "X"] = 0;
         })(E || (E = {}));
     })(A || (A = {}));
 })(A4 || (A4 = {}));
@@ -141,7 +141,7 @@ function f3() {
     } while (true);
     var E;
     (function (E) {
-        E[E["X"] = 1] = "X";
+        E[E[1] = "X"] = 1;
     })(E || (E = {}));
 }
 function f4() {
@@ -150,6 +150,6 @@ function f4() {
     }
     var E;
     (function (E) {
-        E[E["X"] = 1] = "X";
+        E[E[1] = "X"] = 1;
     })(E || (E = {}));
 }

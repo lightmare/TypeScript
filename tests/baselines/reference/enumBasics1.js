@@ -40,9 +40,9 @@ enum E2 { // should error for continued autonumbering
 //// [enumBasics1.js]
 var E;
 (function (E) {
-    E[E["A"] = 1] = "A";
-    E[E["B"] = 2] = "B";
-    E[E["C"] = 3] = "C";
+    E[E[1] = "A"] = 1;
+    E[E[2] = "B"] = 2;
+    E[E[3] = "C"] = 3;
 })(E || (E = {}));
 /*
 var a: E;
@@ -66,10 +66,10 @@ var e = E; // shouldn't error
 E.A.A; // should error
 var E2;
 (function (E2) {
-    E2[E2["A"] = 0] = "A";
-    E2[E2["B"] = 1] = "B";
+    E2[E2[0] = "A"] = 0;
+    E2[E2[1] = "B"] = 1;
 })(E2 || (E2 = {}));
 (function (E2) {
-    E2[E2["C"] = 0] = "C";
-    E2[E2["D"] = 1] = "D";
+    E2[E2[0] = "C"] = 0;
+    E2[E2[1] = "D"] = 1;
 })(E2 || (E2 = {}));

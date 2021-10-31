@@ -13,10 +13,10 @@ var y: { readonly a: E; readonly b: E; readonly [x: number]: string; readonly [x
 //// [typeOfEnumAndVarRedeclarations.js]
 var E;
 (function (E) {
-    E[E["a"] = 0] = "a";
+    E[E[0] = "a"] = 0;
 })(E || (E = {}));
 (function (E) {
-    E[E["b"] = 1] = "b";
+    E[E[1] = "b"] = 1;
 })(E || (E = {}));
 var x = E;
 var x; // Shouldnt error

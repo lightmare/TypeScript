@@ -57,9 +57,9 @@ var M;
 (function (M) {
     var Color;
     (function (Color) {
-        Color[Color["Green"] = 0] = "Green";
-        Color[Color["Blue"] = 1] = "Blue";
-        Color[Color["Brown"] = 2] = "Brown";
+        Color[Color[0] = "Green"] = 0;
+        Color[Color[1] = "Blue"] = 1;
+        Color[Color[2] = "Brown"] = 2;
     })(Color = M.Color || (M.Color = {}));
     function CompareEyes(a, b) {
         return a.color - b.color;

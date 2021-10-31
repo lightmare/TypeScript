@@ -19,8 +19,8 @@ exports.__esModule = true;
 exports.Enum = void 0;
 var Enum;
 (function (Enum) {
-    Enum[Enum["A"] = 0] = "A";
-    Enum[Enum["B"] = 1] = "B";
+    Enum[Enum[0] = "A"] = 0;
+    Enum[Enum[1] = "B"] = 1;
 })(Enum = exports.Enum || (exports.Enum = {}));
 //// [alias.js]
 "use strict";

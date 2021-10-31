@@ -23,9 +23,9 @@ exports.__esModule = true;
 exports.fooFunc = exports.ConstFooEnum = void 0;
 var ConstFooEnum;
 (function (ConstFooEnum) {
-    ConstFooEnum[ConstFooEnum["Some"] = 0] = "Some";
-    ConstFooEnum[ConstFooEnum["Values"] = 1] = "Values";
-    ConstFooEnum[ConstFooEnum["Here"] = 2] = "Here";
+    ConstFooEnum[ConstFooEnum[0] = "Some"] = 0;
+    ConstFooEnum[ConstFooEnum[1] = "Values"] = 1;
+    ConstFooEnum[ConstFooEnum[2] = "Here"] = 2;
 })(ConstFooEnum = exports.ConstFooEnum || (exports.ConstFooEnum = {}));
 ;
 function fooFunc() { }

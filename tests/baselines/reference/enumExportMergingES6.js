@@ -13,11 +13,11 @@ export enum Animals {
 //// [enumExportMergingES6.js]
 export var Animals;
 (function (Animals) {
-    Animals[Animals["Cat"] = 1] = "Cat";
+    Animals[Animals[1] = "Cat"] = 1;
 })(Animals || (Animals = {}));
 (function (Animals) {
-    Animals[Animals["Dog"] = 2] = "Dog";
+    Animals[Animals[2] = "Dog"] = 2;
 })(Animals || (Animals = {}));
 (function (Animals) {
-    Animals[Animals["CatDog"] = 3] = "CatDog";
+    Animals[Animals[3] = "CatDog"] = 3;
 })(Animals || (Animals = {}));

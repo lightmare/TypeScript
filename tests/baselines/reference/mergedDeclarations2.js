@@ -13,10 +13,10 @@ module Foo {
 //// [mergedDeclarations2.js]
 var Foo;
 (function (Foo) {
-    Foo[Foo["b"] = 0] = "b";
+    Foo[Foo[0] = "b"] = 0;
 })(Foo || (Foo = {}));
 (function (Foo) {
-    Foo[Foo["a"] = 0] = "a";
+    Foo[Foo[0] = "a"] = 0;
 })(Foo || (Foo = {}));
 (function (Foo) {
     Foo.x = b;

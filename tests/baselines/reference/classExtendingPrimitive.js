@@ -94,7 +94,7 @@ var C7 = /** @class */ (function (_super) {
 }(Undefined));
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 var C8 = /** @class */ (function (_super) {
     __extends(C8, _super);

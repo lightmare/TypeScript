@@ -20,7 +20,7 @@ var x16 = E.x + undefined
 //// [operatorAddNullUndefined.js]
 var E;
 (function (E) {
-    E[E["x"] = 0] = "x";
+    E[E[0] = "x"] = 0;
 })(E || (E = {}));
 var x1 = null + null;
 var x2 = null + undefined;

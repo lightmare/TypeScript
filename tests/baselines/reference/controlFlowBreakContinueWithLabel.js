@@ -19,8 +19,8 @@ user;
 "use strict";
 var User;
 (function (User) {
-    User[User["A"] = 0] = "A";
-    User[User["B"] = 1] = "B";
+    User[User[0] = "A"] = 0;
+    User[User[1] = "B"] = 1;
 })(User || (User = {}));
 var user = User.A;
 label: while (true) {

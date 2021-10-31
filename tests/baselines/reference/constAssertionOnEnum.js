@@ -30,15 +30,15 @@ export enum Foo { X }
 //// [enum.js]
 export var Foo;
 (function (Foo) {
-    Foo[Foo["A"] = 0] = "A";
-    Foo[Foo["B"] = 1] = "B";
+    Foo[Foo[0] = "A"] = 0;
+    Foo[Foo[1] = "B"] = 1;
 })(Foo || (Foo = {}));
 //// [test.js]
 import { Foo } from './enum';
 var Bar;
 (function (Bar) {
-    Bar[Bar["A"] = 0] = "A";
-    Bar[Bar["B"] = 1] = "B";
+    Bar[Bar[0] = "A"] = 0;
+    Bar[Bar[1] = "B"] = 1;
 })(Bar || (Bar = {}));
 let foo = Foo.A;
 let bar = Bar.A;
@@ -48,13 +48,13 @@ var ns;
 (function (ns) {
     let Foo;
     (function (Foo) {
-        Foo[Foo["X"] = 0] = "X";
+        Foo[Foo[0] = "X"] = 0;
     })(Foo = ns.Foo || (ns.Foo = {}));
     ns.Foo.X;
 })(ns || (ns = {}));
 //// [more.js]
 export var Foo;
 (function (Foo) {
-    Foo[Foo["X"] = 0] = "X";
+    Foo[Foo[0] = "X"] = 0;
 })(Foo || (Foo = {}));
 (Foo).X;

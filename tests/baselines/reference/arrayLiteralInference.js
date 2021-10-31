@@ -50,11 +50,11 @@ export var AppType;
 })(AppType || (AppType = {}));
 export var AppStyle;
 (function (AppStyle) {
-    AppStyle[AppStyle["Tree"] = 0] = "Tree";
-    AppStyle[AppStyle["TreeEntity"] = 1] = "TreeEntity";
-    AppStyle[AppStyle["Standard"] = 2] = "Standard";
-    AppStyle[AppStyle["MiniApp"] = 3] = "MiniApp";
-    AppStyle[AppStyle["PivotTable"] = 4] = "PivotTable";
+    AppStyle[AppStyle[0] = "Tree"] = 0;
+    AppStyle[AppStyle[1] = "TreeEntity"] = 1;
+    AppStyle[AppStyle[2] = "Standard"] = 2;
+    AppStyle[AppStyle[3] = "MiniApp"] = 3;
+    AppStyle[AppStyle[4] = "PivotTable"] = 4;
 })(AppStyle || (AppStyle = {}));
 const appTypeStylesWithError = new Map([
     [AppType.Standard, [AppStyle.Standard, AppStyle.MiniApp]],

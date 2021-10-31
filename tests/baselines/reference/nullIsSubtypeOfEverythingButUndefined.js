@@ -135,7 +135,7 @@ var r12 = true ? c2 : null;
 var r12 = true ? null : c2;
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
+    E[E[0] = "A"] = 0;
 })(E || (E = {}));
 var r13 = true ? E : null;
 var r13 = true ? null : E;

@@ -561,13 +561,13 @@ rest: string[];
 }
 var Weekdays;
 (function (Weekdays) {
-    Weekdays[Weekdays["Monday"] = 0] = "Monday";
-    Weekdays[Weekdays["Tuesday"] = 1] = "Tuesday";
-    Weekdays[Weekdays["Weekend"] = 2] = "Weekend";
+    Weekdays[Weekdays[0] = "Monday"] = 0;
+    Weekdays[Weekdays[1] = "Tuesday"] = 1;
+    Weekdays[Weekdays[2] = "Weekend"] = 2;
 })(Weekdays || (Weekdays = {}));
 var Fruit;
 (function (Fruit) {
-    Fruit[Fruit["Apple"] = 0] = "Apple";
-    Fruit[Fruit["Pear"] = 1] = "Pear";
+    Fruit[Fruit[0] = "Apple"] = 0;
+    Fruit[Fruit[1] = "Pear"] = 1;
 })(Fruit || (Fruit = {}));
 TypeScriptAllInOne.Program.Main();

@@ -103,8 +103,8 @@ var M3;
 (function (M3) {
     var Color;
     (function (Color) {
-        Color[Color["Blue"] = 0] = "Blue";
-        Color[Color["Red"] = 1] = "Red";
+        Color[Color[0] = "Blue"] = 0;
+        Color[Color[1] = "Red"] = 1;
     })(Color = M3.Color || (M3.Color = {}));
 })(M3 || (M3 = {}));
 var m3;

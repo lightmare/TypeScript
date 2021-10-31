@@ -45,8 +45,8 @@ var C = /** @class */ (function () {
 }());
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 0] = "B";
+    E[E[0] = "A"] = 0;
+    E[E[0] = "B"] = 0;
 })(E || (E = {}));
 ;
 var N;

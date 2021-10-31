@@ -20,7 +20,7 @@ extractIndexer({
 //// [computedPropertyNames48_ES6.js]
 var E;
 (function (E) {
-    E[E["x"] = 0] = "x";
+    E[E[0] = "x"] = 0;
 })(E || (E = {}));
 var a;
 extractIndexer({

@@ -286,8 +286,8 @@ function f3(x) {
 // Repro from #11572
 var E;
 (function (E) {
-    E[E["A"] = 0] = "A";
-    E[E["B"] = 1] = "B";
+    E[E[0] = "A"] = 0;
+    E[E[1] = "B"] = 1;
 })(E || (E = {}));
 function f(e) {
     switch (e) {
@@ -337,8 +337,8 @@ function areaWrapped(s) {
 // Repro from #13241
 var MyEnum;
 (function (MyEnum) {
-    MyEnum[MyEnum["A"] = 0] = "A";
-    MyEnum[MyEnum["B"] = 1] = "B";
+    MyEnum[MyEnum[0] = "A"] = 0;
+    MyEnum[MyEnum[1] = "B"] = 1;
 })(MyEnum || (MyEnum = {}));
 function thisGivesError(e) {
     var s;
@@ -376,8 +376,8 @@ function good2(e) {
 // Repro from #18362
 var Level;
 (function (Level) {
-    Level[Level["One"] = 0] = "One";
-    Level[Level["Two"] = 1] = "Two";
+    Level[Level[0] = "One"] = 0;
+    Level[Level[1] = "Two"] = 1;
 })(Level || (Level = {}));
 var doSomethingWithLevel = function (level) {
     var next;
@@ -435,8 +435,8 @@ function test4(value) {
 // Repro from #34661
 var Animal;
 (function (Animal) {
-    Animal[Animal["DOG"] = 0] = "DOG";
-    Animal[Animal["CAT"] = 1] = "CAT";
+    Animal[Animal[0] = "DOG"] = 0;
+    Animal[Animal[1] = "CAT"] = 1;
 })(Animal || (Animal = {}));
 function expression() {
     var _a;

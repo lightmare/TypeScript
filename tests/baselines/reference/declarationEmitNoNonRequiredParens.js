@@ -13,9 +13,9 @@ exports.__esModule = true;
 exports.bar = exports.Test = void 0;
 var Test;
 (function (Test) {
-    Test[Test["A"] = 0] = "A";
-    Test[Test["B"] = 1] = "B";
-    Test[Test["C"] = 2] = "C";
+    Test[Test[0] = "A"] = 0;
+    Test[Test[1] = "B"] = 1;
+    Test[Test[2] = "C"] = 2;
 })(Test = exports.Test || (exports.Test = {}));
 exports.bar = null;
 

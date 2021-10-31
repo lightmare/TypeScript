@@ -36,10 +36,10 @@ var A;
     var o;
 })(A || (A = {}));
 (function (A) {
-    A[A["b"] = 0] = "b";
+    A[A[0] = "b"] = 0;
 })(A || (A = {}));
 (function (A) {
-    A[A["c"] = 0] = "c";
+    A[A[0] = "c"] = 0;
 })(A || (A = {}));
 (function (A) {
     var p;

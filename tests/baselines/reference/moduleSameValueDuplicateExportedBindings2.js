@@ -19,8 +19,8 @@ exports.__esModule = true;
 exports.Animals = void 0;
 var Animals;
 (function (Animals) {
-    Animals[Animals["Cat"] = 0] = "Cat";
-    Animals[Animals["Dog"] = 1] = "Dog";
+    Animals[Animals[0] = "Cat"] = 0;
+    Animals[Animals[1] = "Dog"] = 1;
 })(Animals = exports.Animals || (exports.Animals = {}));
 ;
 //// [b.js]

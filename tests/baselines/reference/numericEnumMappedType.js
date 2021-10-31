@@ -42,9 +42,9 @@ const x: E.ONE = e;
 // Repro from #31771
 var E1;
 (function (E1) {
-    E1[E1["ONE"] = 0] = "ONE";
-    E1[E1["TWO"] = 1] = "TWO";
-    E1[E1["THREE"] = 2] = "THREE";
+    E1[E1[0] = "ONE"] = 0;
+    E1[E1[1] = "TWO"] = 1;
+    E1[E1[2] = "THREE"] = 2;
 })(E1 || (E1 = {}));
 var b1 = {};
 var b2 = {};

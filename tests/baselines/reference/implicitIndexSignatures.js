@@ -98,8 +98,8 @@ function f4() {
 function f5() {
     var E1;
     (function (E1) {
-        E1[E1["A"] = 0] = "A";
-        E1[E1["B"] = 1] = "B";
+        E1[E1[0] = "A"] = 0;
+        E1[E1[1] = "B"] = 1;
     })(E1 || (E1 = {}));
     var E2;
     (function (E2) {
@@ -108,7 +108,7 @@ function f5() {
     })(E2 || (E2 = {}));
     var E3;
     (function (E3) {
-        E3[E3["A"] = 0] = "A";
+        E3[E3[0] = "A"] = 0;
         E3["B"] = "B";
     })(E3 || (E3 = {}));
     var v1 = getStringIndexValue(E1);
