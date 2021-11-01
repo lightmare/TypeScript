@@ -20,10 +20,10 @@ define(["require", "exports"], function (require, exports) {
     exports.__esModule = true;
     exports.CharCode = void 0;
     var CharCode;
-    (function (CharCode) {
-        CharCode[CharCode[0] = "A"] = 0;
-        CharCode[CharCode[1] = "B"] = 1;
-    })(CharCode = exports.CharCode || (exports.CharCode = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+        this[this[1] = "B"] = 1;
+    }.call(CharCode = exports.CharCode || (exports.CharCode = {})));
 });
 //// [file.js]
 define(["require", "exports"], function (require, exports) {

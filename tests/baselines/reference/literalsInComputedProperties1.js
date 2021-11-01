@@ -79,14 +79,14 @@ z[2].toExponential();
 z[3].toExponential();
 z[4].toExponential();
 var X;
-(function (X) {
-    X[X[1] = 1] = 1;
-    X[X[2] = 2] = 2;
-    X[X[3] = "3"] = 3;
-    X[X[4] = "4"] = 4;
-    X[X[5] = "foo"] = 5;
-    X[X[6] = "bar"] = 6;
-})(X || (X = {}));
+(function () {
+    this[this[1] = 1] = 1;
+    this[this[2] = 2] = 2;
+    this[this[3] = "3"] = 3;
+    this[this[4] = "4"] = 4;
+    this[this[5] = "foo"] = 5;
+    this[this[6] = "bar"] = 6;
+}.call(X || (X = {})));
 var a = X["foo"];
 var a0 = X["bar"];
 // TODO: make sure that enum still disallow template literals as member names

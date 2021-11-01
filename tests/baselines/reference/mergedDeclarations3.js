@@ -43,10 +43,10 @@ M.foo.z // error
 var M;
 (function (M) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Red"] = 0;
-        Color[Color[1] = "Green"] = 1;
-    })(Color = M.Color || (M.Color = {}));
+    (function () {
+        this[this[0] = "Red"] = 0;
+        this[this[1] = "Green"] = 1;
+    }.call(Color = M.Color || (M.Color = {})));
 })(M || (M = {}));
 (function (M) {
     var Color;

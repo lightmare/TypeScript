@@ -107,11 +107,11 @@ var M;
     M.exhibitBug = exhibitBug;
 })(M || (M = {}));
 var E;
-(function (E) {
-    E[E["A"] = (function () {
+(function () {
+    this[this["A"] = (function () {
         function localFunction() { }
         var x;
         x = localFunction;
         return 0;
     })()] = "A";
-})(E || (E = {}));
+}.call(E || (E = {})));

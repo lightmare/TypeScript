@@ -57,13 +57,13 @@ module Others {
 //// [enumAssignability.js]
 // enums assignable to number, any, Object, errors unless otherwise noted
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var F;
-(function (F) {
-    F[F[0] = "B"] = 0;
-})(F || (F = {}));
+(function () {
+    this[this[0] = "B"] = 0;
+}.call(F || (F = {})));
 var e = E.A;
 var f = F.B;
 e = f;

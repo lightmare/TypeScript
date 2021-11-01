@@ -158,9 +158,9 @@ b6(["string", 1, 2]); // Shouldn't be an error
 b7([["string"], 1, [[true, false]]]); // Shouldn't be an error
 // If the declaration specifies a binding pattern, the parameter type is the implied type of that binding pattern (section 5.1.3)
 var Foo;
-(function (Foo) {
-    Foo[Foo[0] = "a"] = 0;
-})(Foo || (Foo = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+}.call(Foo || (Foo = {})));
 function c0(_a) {
     var _b = _a.z, x = _b.x, j = _b.y.j;
 }

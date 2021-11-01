@@ -283,10 +283,10 @@ function foo6(x) {
 }
 // Repro from #27493
 var Types;
-(function (Types) {
-    Types[Types[1] = "Str"] = 1;
-    Types[Types[2] = "Num"] = 2;
-})(Types || (Types = {}));
+(function () {
+    this[this[1] = "Str"] = 1;
+    this[this[2] = "Num"] = 2;
+}.call(Types || (Types = {})));
 function func2(inst) {
     while (true) {
         switch (inst.type) {

@@ -35,10 +35,10 @@ const flags: TypeFlag = SymbolFlags.Type;
 "use strict";
 exports.__esModule = true;
 var SyntaxKind;
-(function (SyntaxKind) {
-    SyntaxKind[SyntaxKind[0] = "ImportClause"] = 0;
-    SyntaxKind[SyntaxKind[1] = "ExportDeclaration"] = 1;
-})(SyntaxKind || (SyntaxKind = {}));
+(function () {
+    this[this[0] = "ImportClause"] = 0;
+    this[this[1] = "ExportDeclaration"] = 1;
+}.call(SyntaxKind || (SyntaxKind = {})));
 //// [b.js]
 "use strict";
 exports.__esModule = true;

@@ -6,8 +6,8 @@ enum E {
 
 //// [enumNegativeLiteral1.js]
 var E;
-(function (E) {
-    E[E[-5] = "a"] = -5;
-    E[E[-4] = "b"] = -4;
-    E[E[-3] = "c"] = -3;
-})(E || (E = {}));
+(function () {
+    this[this[-5] = "a"] = -5;
+    this[this[-4] = "b"] = -4;
+    this[this[-3] = "c"] = -3;
+}.call(E || (E = {})));

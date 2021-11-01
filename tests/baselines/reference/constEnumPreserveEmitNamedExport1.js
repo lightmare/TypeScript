@@ -13,9 +13,9 @@ export { A };
 
 //// [a.js]
 var A;
-(function (A) {
-    A[A[0] = "Foo"] = 0;
-})(A || (A = {}));
+(function () {
+    this[this[0] = "Foo"] = 0;
+}.call(A || (A = {})));
 ;
 export { A };
 //// [b.js]

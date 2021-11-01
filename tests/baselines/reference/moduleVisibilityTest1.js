@@ -85,11 +85,11 @@ var M;
         InnerMod.someExportedInnerFunc = someExportedInnerFunc;
     })(InnerMod = M.InnerMod || (M.InnerMod = {}));
     var E;
-    (function (E) {
-        E[E[0] = "A"] = 0;
-        E[E[1] = "B"] = 1;
-        E[E[2] = "C"] = 2;
-    })(E = M.E || (M.E = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+        this[this[1] = "B"] = 1;
+        this[this[2] = "C"] = 2;
+    }.call(E = M.E || (M.E = {})));
     M.x = 5;
     var y = M.x + M.x;
     var B = /** @class */ (function () {

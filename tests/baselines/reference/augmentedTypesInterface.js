@@ -44,8 +44,8 @@ var i2 = /** @class */ (function () {
     return i2;
 }());
 var i3;
-(function (i3) {
-    i3[i3[0] = "One"] = 0;
-})(i3 || (i3 = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(i3 || (i3 = {})));
 ; // error
 //import i4 = require('');  // error

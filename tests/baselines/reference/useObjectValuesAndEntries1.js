@@ -48,10 +48,10 @@ var a = ["a", "b", "c"];
 var entries4 = Object.entries(a); // [string, string][]
 var values4 = Object.values(a); // string[]
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[1] = "B"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(E || (E = {})));
 var entries5 = Object.entries(E); // [string, any][]
 var values5 = Object.values(E); // any[]
 var i = {};

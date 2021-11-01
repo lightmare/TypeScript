@@ -122,10 +122,10 @@ export enum PubSubRecordIsStoredInRedisAsA {
 // A *self-contained* demonstration of the problem follows...
 // Test this by running `tsc --target es6` on the command-line, rather than through another build tool such as Gulp, Webpack, etc.
 export var PubSubRecordIsStoredInRedisAsA;
-(function (PubSubRecordIsStoredInRedisAsA) {
-    PubSubRecordIsStoredInRedisAsA["redisHash"] = "redisHash";
-    PubSubRecordIsStoredInRedisAsA["jsonEncodedRedisString"] = "jsonEncodedRedisString";
-})(PubSubRecordIsStoredInRedisAsA || (PubSubRecordIsStoredInRedisAsA = {}));
+(function () {
+    this["redisHash"] = "redisHash";
+    this["jsonEncodedRedisString"] = "jsonEncodedRedisString";
+}.call(PubSubRecordIsStoredInRedisAsA || (PubSubRecordIsStoredInRedisAsA = {})));
 const buildNameFieldConstructor = (soFar) => ("name" in soFar ? {} : {
     name: (instance = undefined) => buildPubSubRecordType(Object.assign({}, soFar, { name: instance }))
 });

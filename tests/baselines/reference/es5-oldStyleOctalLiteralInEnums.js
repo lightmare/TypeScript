@@ -6,7 +6,7 @@ enum E {
 
 //// [es5-oldStyleOctalLiteralInEnums.js]
 var E;
-(function (E) {
-    E[E[-1] = "x"] = -1;
-    E[E[2] = "y"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[-1] = "x"] = -1;
+    this[this[2] = "y"] = 2;
+}.call(E || (E = {})));

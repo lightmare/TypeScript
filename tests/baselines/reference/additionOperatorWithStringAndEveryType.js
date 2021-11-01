@@ -40,11 +40,11 @@ var r20 = x + [];
 
 //// [additionOperatorWithStringAndEveryType.js]
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-    E[E[1] = "b"] = 1;
-    E[E[2] = "c"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(E || (E = {})));
 var a;
 var b;
 var c;

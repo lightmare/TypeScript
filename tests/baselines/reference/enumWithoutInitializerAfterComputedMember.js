@@ -7,8 +7,8 @@ enum E {
 
 //// [enumWithoutInitializerAfterComputedMember.js]
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-    E[E[0] = "b"] = 0;
-    E[E[1] = "c"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[0] = "b"] = 0;
+    this[this[1] = "c"] = 1;
+}.call(E || (E = {})));

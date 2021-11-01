@@ -11,10 +11,10 @@ console.log(aVal, bVal);
 
 //// [destructuringObjectBindingPatternAndAssignment7.js]
 var K;
-(function (K) {
-    K["a"] = "a";
-    K["b"] = "b";
-})(K || (K = {}));
+(function () {
+    this["a"] = "a";
+    this["b"] = "b";
+}.call(K || (K = {})));
 var _a = (function () {
     var _a;
     return _a = {}, _a[K.a] = 1, _a[K.b] = 1, _a;

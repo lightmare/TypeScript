@@ -6,7 +6,7 @@ enum E {
 
 //// [parserEnumDeclaration1.js]
 var E;
-(function (E) {
-    E[E[1] = "Foo"] = 1;
-    E[E[2] = "Bar"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[1] = "Foo"] = 1;
+    this[this[2] = "Bar"] = 2;
+}.call(E || (E = {})));

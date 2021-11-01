@@ -10,7 +10,7 @@ const x1: E.static = E.static;
 //// [strictModeEnumMemberNameReserved.js]
 "use strict";
 var E;
-(function (E) {
-    E[E[0] = "static"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "static"] = 0;
+}.call(E || (E = {})));
 var x1 = E.static;

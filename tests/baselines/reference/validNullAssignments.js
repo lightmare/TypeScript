@@ -38,9 +38,9 @@ var d = null;
 var e = null;
 e = null; // ok
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 E.A = null; // error
 var C = /** @class */ (function () {
     function C() {

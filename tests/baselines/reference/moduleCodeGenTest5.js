@@ -46,12 +46,12 @@ var C2 = /** @class */ (function () {
     return C2;
 }());
 var E1;
-(function (E1) {
-    E1[E1[0] = "A"] = 0;
-})(E1 = exports.E1 || (exports.E1 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E1 = exports.E1 || (exports.E1 = {})));
 var u = E1.A;
 var E2;
-(function (E2) {
-    E2[E2[0] = "B"] = 0;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[0] = "B"] = 0;
+}.call(E2 || (E2 = {})));
 var v = E2.B;

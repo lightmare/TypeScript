@@ -30,13 +30,13 @@ function f1(x) { return "foo"; }
 function f2(x) { return 10; }
 function f3(x) { return true; }
 var E1;
-(function (E1) {
-    E1[E1[0] = "one"] = 0;
-})(E1 || (E1 = {}));
+(function () {
+    this[this[0] = "one"] = 0;
+}.call(E1 || (E1 = {})));
 var E2;
-(function (E2) {
-    E2[E2[0] = "two"] = 0;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[0] = "two"] = 0;
+}.call(E2 || (E2 = {})));
 var t1;
 var t2;
 var t3;

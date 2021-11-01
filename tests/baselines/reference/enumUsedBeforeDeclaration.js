@@ -10,8 +10,8 @@ const enum ConstColor { Red, Green, Blue }
 var v = Color.Green;
 var v2 = 1 /* Green */;
 var Color;
-(function (Color) {
-    Color[Color[0] = "Red"] = 0;
-    Color[Color[1] = "Green"] = 1;
-    Color[Color[2] = "Blue"] = 2;
-})(Color || (Color = {}));
+(function () {
+    this[this[0] = "Red"] = 0;
+    this[this[1] = "Green"] = 1;
+    this[this[2] = "Blue"] = 2;
+}.call(Color || (Color = {})));

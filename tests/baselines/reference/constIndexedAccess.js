@@ -38,9 +38,9 @@ var n1 = test[1 /* one */];
 var s2 = test[0 /* "zero" */];
 var n2 = test[1 /* "one" */];
 var numbersNotConst;
-(function (numbersNotConst) {
-    numbersNotConst[numbersNotConst[0] = "zero"] = 0;
-    numbersNotConst[numbersNotConst[1] = "one"] = 1;
-})(numbersNotConst || (numbersNotConst = {}));
+(function () {
+    this[this[0] = "zero"] = 0;
+    this[this[1] = "one"] = 1;
+}.call(numbersNotConst || (numbersNotConst = {})));
 var s3 = test[numbersNotConst.zero];
 var n3 = test[numbersNotConst.one];

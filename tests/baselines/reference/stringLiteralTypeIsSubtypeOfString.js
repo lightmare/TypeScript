@@ -147,9 +147,9 @@ function f11(x) { }
 function f12(x) { }
 function f13(x) { }
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 function f14(x) { }
 function f15(x) { }
 function f16(x) { }

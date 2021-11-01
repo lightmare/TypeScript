@@ -97,20 +97,20 @@ function f4() {
 }
 function f5() {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "A"] = 0;
-        E1[E1[1] = "B"] = 1;
-    })(E1 || (E1 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+        this[this[1] = "B"] = 1;
+    }.call(E1 || (E1 = {})));
     var E2;
-    (function (E2) {
-        E2["A"] = "A";
-        E2["B"] = "B";
-    })(E2 || (E2 = {}));
+    (function () {
+        this["A"] = "A";
+        this["B"] = "B";
+    }.call(E2 || (E2 = {})));
     var E3;
-    (function (E3) {
-        E3[E3[0] = "A"] = 0;
-        E3["B"] = "B";
-    })(E3 || (E3 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+        this["B"] = "B";
+    }.call(E3 || (E3 = {})));
     var v1 = getStringIndexValue(E1);
     var v2 = getStringIndexValue(E2);
     var v3 = getStringIndexValue(E3);

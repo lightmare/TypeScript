@@ -11,9 +11,9 @@ define(["require", "exports"], function (require, exports) {
     var foo;
     (function (foo) {
         var E;
-        (function (E) {
-            E[E[0] = "X"] = 0;
-        })(E || (E = {}));
+        (function () {
+            this[this[0] = "X"] = 0;
+        }.call(E || (E = {})));
     })(foo || (foo = {}));
     return foo;
 });

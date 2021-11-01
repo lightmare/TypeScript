@@ -66,59 +66,59 @@ var boolean;
 boolean || (boolean = {});
 // Enum with computed member initializer of type Number
 var E5;
-(function (E5) {
-    E5[E5["C"] = new Number(30)] = "C";
-})(E5 || (E5 = {}));
+(function () {
+    this[this["C"] = new Number(30)] = "C";
+}.call(E5 || (E5 = {})));
 var E9;
-(function (E9) {
-    E9[E9[0] = "A"] = 0;
-    E9[E9[0] = "B"] = 0;
-})(E9 || (E9 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[0] = "B"] = 0;
+}.call(E9 || (E9 = {})));
 //Enum with computed member intializer of different enum type
 // Bug 707850: This should be allowed
 var E10;
-(function (E10) {
-    E10[E10[0] = "A"] = 0;
-    E10[E10[0] = "B"] = 0;
-})(E10 || (E10 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[0] = "B"] = 0;
+}.call(E10 || (E10 = {})));
 // Enum with computed member intializer of other types
 var E11;
-(function (E11) {
-    E11[E11["A"] = true] = "A";
-    E11[E11["B"] = new Date()] = "B";
-    E11[E11["C"] = window] = "C";
-    E11[E11["D"] = {}] = "D";
-    E11[E11["E"] = (function () { return 'foo'; })()] = "E";
-})(E11 || (E11 = {}));
+(function () {
+    this[this["A"] = true] = "A";
+    this[this["B"] = new Date()] = "B";
+    this[this["C"] = window] = "C";
+    this[this["D"] = {}] = "D";
+    this[this["E"] = (function () { return 'foo'; })()] = "E";
+}.call(E11 || (E11 = {})));
 // Enum with string valued member and computed member initializers
 var E12;
-(function (E12) {
-    E12["A"] = "";
-    E12[E12[0] = "B"] = 0;
-    E12[E12[0] = "C"] = 0;
-    E12[E12[0] = "D"] = 0;
-    E12[E12[0] = "E"] = 0;
-    E12[E12[0] = "F"] = 0;
-})(E12 || (E12 = {}));
+(function () {
+    this["A"] = "";
+    this[this[0] = "B"] = 0;
+    this[this[0] = "C"] = 0;
+    this[this[0] = "D"] = 0;
+    this[this[0] = "E"] = 0;
+    this[this[0] = "F"] = 0;
+}.call(E12 || (E12 = {})));
 // Enum with incorrect syntax
 var E13;
-(function (E13) {
-    E13[E13[0] = "postComma"] = 0;
-    E13[E13[1] = "postValueComma"] = 1;
-    E13[E13[2] = "postSemicolon"] = 2;
-    E13[E13[3] = "postColonValueComma"] = 3;
-    E13[E13[4] = 2] = 4;
-    E13[E13[5] = "postColonValueSemicolon"] = 5;
-    E13[E13[6] = 3] = 6;
-})(E13 || (E13 = {}));
+(function () {
+    this[this[0] = "postComma"] = 0;
+    this[this[1] = "postValueComma"] = 1;
+    this[this[2] = "postSemicolon"] = 2;
+    this[this[3] = "postColonValueComma"] = 3;
+    this[this[4] = 2] = 4;
+    this[this[5] = "postColonValueSemicolon"] = 5;
+    this[this[6] = 3] = 6;
+}.call(E13 || (E13 = {})));
 ;
 var E14;
-(function (E14) {
-    E14[E14[0] = "a"] = 0;
-    E14[E14[1] = "b"] = 1;
-    E14[E14[2] = "any"] = 2;
-    E14[E14[3] = "hello"] = 3;
-    E14[E14[4] = 1] = 4;
-    E14[E14[5] = "c"] = 5;
-    E14[E14[6] = "d"] = 6;
-})(E14 || (E14 = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "any"] = 2;
+    this[this[3] = "hello"] = 3;
+    this[this[4] = 1] = 4;
+    this[this[5] = "c"] = 5;
+    this[this[6] = "d"] = 6;
+}.call(E14 || (E14 = {})));

@@ -276,9 +276,9 @@ function test(obj) {
     return __assign({ a: 'hello' }, rest);
 }
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[1] = "B"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(E || (E = {})));
 var a = f(E.A);
 var b = a;

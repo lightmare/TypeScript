@@ -86,10 +86,10 @@ var Y;
     var Y;
     (function (Y_3) {
         var Y;
-        (function (Y) {
-            Y[Y[0] = "Red"] = 0;
-            Y[Y[1] = "Blue"] = 1;
-        })(Y = Y_3.Y || (Y_3.Y = {}));
+        (function () {
+            this[this[0] = "Red"] = 0;
+            this[this[1] = "Blue"] = 1;
+        }.call(Y = Y_3.Y || (Y_3.Y = {})));
     })(Y = Y_2.Y || (Y_2.Y = {}));
 })(Y || (Y = {}));
 // no collision, since interface doesn't

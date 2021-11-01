@@ -6,7 +6,7 @@ enum Color {
 
 //// [collisionCodeGenEnumWithEnumMemberConflict.js]
 var Color;
-(function (Color) {
-    Color[Color[0] = "Color"] = 0;
-    Color[Color[0] = "Thing"] = 0;
-})(Color || (Color = {}));
+(function () {
+    this[this[0] = "Color"] = 0;
+    this[this[0] = "Thing"] = 0;
+}.call(Color || (Color = {})));

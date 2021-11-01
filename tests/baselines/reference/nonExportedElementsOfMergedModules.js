@@ -20,18 +20,18 @@ module One {
 var One;
 (function (One) {
     var A;
-    (function (A) {
-        A[A[0] = "X"] = 0;
-    })(A || (A = {}));
+    (function () {
+        this[this[0] = "X"] = 0;
+    }.call(A || (A = {})));
     var B;
     (function (B) {
     })(B || (B = {}));
 })(One || (One = {}));
 (function (One) {
     var A;
-    (function (A) {
-        A[A[0] = "Y"] = 0;
-    })(A || (A = {}));
+    (function () {
+        this[this[0] = "Y"] = 0;
+    }.call(A || (A = {})));
     var B;
     (function (B) {
     })(B || (B = {}));

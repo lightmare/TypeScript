@@ -15,9 +15,9 @@ var x = f.Mode.Open;
 exports.__esModule = true;
 exports.Mode = void 0;
 var Mode;
-(function (Mode) {
-    Mode[Mode[0] = "Open"] = 0;
-})(Mode = exports.Mode || (exports.Mode = {}));
+(function () {
+    this[this[0] = "Open"] = 0;
+}.call(Mode = exports.Mode || (exports.Mode = {})));
 //// [enumFromExternalModule_1.js]
 "use strict";
 exports.__esModule = true;

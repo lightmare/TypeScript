@@ -131,11 +131,11 @@ var rf10 = undefined || undefined; // undefined || undefined is any
 // by the type of the left operand and the result is of the best common type of the two
 // operand types.
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-    E[E[1] = "b"] = 1;
-    E[E[2] = "c"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(E || (E = {})));
 var a1;
 var a2;
 var a3;

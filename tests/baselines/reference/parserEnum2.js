@@ -11,9 +11,9 @@
 exports.__esModule = true;
 exports.SignatureFlags = void 0;
 var SignatureFlags;
-(function (SignatureFlags) {
-    SignatureFlags[SignatureFlags[0] = "None"] = 0;
-    SignatureFlags[SignatureFlags[1] = "IsIndexer"] = 1;
-    SignatureFlags[SignatureFlags[2] = "IsStringIndexer"] = 2;
-    SignatureFlags[SignatureFlags[4] = "IsNumberIndexer"] = 4;
-})(SignatureFlags = exports.SignatureFlags || (exports.SignatureFlags = {}));
+(function () {
+    this[this[0] = "None"] = 0;
+    this[this[1] = "IsIndexer"] = 1;
+    this[this[2] = "IsStringIndexer"] = 2;
+    this[this[4] = "IsNumberIndexer"] = 4;
+}.call(SignatureFlags = exports.SignatureFlags || (exports.SignatureFlags = {})));

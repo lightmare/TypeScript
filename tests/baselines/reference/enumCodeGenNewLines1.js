@@ -8,8 +8,8 @@ enum foo {
 
 //// [enumCodeGenNewLines1.js]
 var foo;
-(function (foo) {
-    foo[foo[1] = "b"] = 1;
-    foo[foo[2] = "c"] = 2;
-    foo[foo[3] = "d"] = 3;
-})(foo || (foo = {}));
+(function () {
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+    this[this[3] = "d"] = 3;
+}.call(foo || (foo = {})));

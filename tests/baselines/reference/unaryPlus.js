@@ -16,10 +16,10 @@ var z = ~"3"; // should be valid
 var a = +1;
 var b = +"";
 var E;
-(function (E) {
-    E[E[0] = "some"] = 0;
-    E[E[1] = "thing"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "some"] = 0;
+    this[this[1] = "thing"] = 1;
+}.call(E || (E = {})));
 ;
 var c = +E.some;
 // also allowed, used to be errors

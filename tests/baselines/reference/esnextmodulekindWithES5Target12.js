@@ -47,12 +47,12 @@ export { C };
     C.x = 1;
 })(C || (C = {}));
 export var E;
-(function (E) {
-    E[E[1] = "w"] = 1;
-})(E || (E = {}));
-(function (E) {
-    E[E[2] = "x"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[1] = "w"] = 1;
+}.call(E || (E = {})));
+(function () {
+    this[this[2] = "x"] = 2;
+}.call(E || (E = {})));
 (function (E) {
     E.y = 1;
 })(E || (E = {}));

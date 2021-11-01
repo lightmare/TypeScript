@@ -38,26 +38,26 @@ module e6b { export var y = 2; } // should be error
 //// [augmentedTypesEnum.js]
 // enum then var
 var e1111;
-(function (e1111) {
-    e1111[e1111[0] = "One"] = 0;
-})(e1111 || (e1111 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e1111 || (e1111 = {}))); // error
 var e1111 = 1; // error
 // enum then function
 var e2;
-(function (e2) {
-    e2[e2[0] = "One"] = 0;
-})(e2 || (e2 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e2 || (e2 = {}))); // error
 function e2() { } // error
 var e3;
-(function (e3) {
-    e3[e3[0] = "One"] = 0;
-})(e3 || (e3 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e3 || (e3 = {}))); // error
 var e3 = function () { }; // error
 // enum then class
 var e4;
-(function (e4) {
-    e4[e4[0] = "One"] = 0;
-})(e4 || (e4 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e4 || (e4 = {}))); // error
 var e4 = /** @class */ (function () {
     function e4() {
     }
@@ -66,35 +66,35 @@ var e4 = /** @class */ (function () {
 }()); // error
 // enum then enum
 var e5;
-(function (e5) {
-    e5[e5[0] = "One"] = 0;
-})(e5 || (e5 = {}));
-(function (e5) {
-    e5[e5[0] = "Two"] = 0;
-})(e5 || (e5 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e5 || (e5 = {})));
+(function () {
+    this[this[0] = "Two"] = 0;
+}.call(e5 || (e5 = {}))); // error
 var e5a;
-(function (e5a) {
-    e5a[e5a[0] = "One"] = 0;
-})(e5a || (e5a = {})); // error
-(function (e5a) {
-    e5a[e5a[0] = "One"] = 0;
-})(e5a || (e5a = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e5a || (e5a = {}))); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e5a || (e5a = {}))); // error
 // enum then internal module
 var e6;
-(function (e6) {
-    e6[e6[0] = "One"] = 0;
-})(e6 || (e6 = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e6 || (e6 = {})));
 var e6a;
-(function (e6a) {
-    e6a[e6a[0] = "One"] = 0;
-})(e6a || (e6a = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e6a || (e6a = {})));
 (function (e6a) {
     var y = 2;
 })(e6a || (e6a = {})); // should be error
 var e6b;
-(function (e6b) {
-    e6b[e6b[0] = "One"] = 0;
-})(e6b || (e6b = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e6b || (e6b = {})));
 (function (e6b) {
     e6b.y = 2;
 })(e6b || (e6b = {})); // should be error

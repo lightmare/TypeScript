@@ -35,12 +35,12 @@ var A;
 (function (A) {
     var o;
 })(A || (A = {}));
-(function (A) {
-    A[A[0] = "b"] = 0;
-})(A || (A = {}));
-(function (A) {
-    A[A[0] = "c"] = 0;
-})(A || (A = {}));
+(function () {
+    this[this[0] = "b"] = 0;
+}.call(A || (A = {})));
+(function () {
+    this[this[0] = "c"] = 0;
+}.call(A || (A = {})));
 (function (A) {
     var p;
 })(A || (A = {}));

@@ -90,9 +90,9 @@ var D;
 var E;
 (function (E) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Red"] = 0;
-    })(Color = E.Color || (E.Color = {}));
+    (function () {
+        this[this[0] = "Red"] = 0;
+    }.call(Color = E.Color || (E.Color = {})));
     function fn() { }
     E.fn = fn;
     var C = /** @class */ (function () {
@@ -111,9 +111,9 @@ var E;
 var F;
 (function (F) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Red"] = 0;
-    })(Color || (Color = {}));
+    (function () {
+        this[this[0] = "Red"] = 0;
+    }.call(Color || (Color = {})));
     function fn() { }
     var C = /** @class */ (function () {
         function C() {

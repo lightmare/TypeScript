@@ -9,10 +9,10 @@ export const enum E2 {
 
 //// [es6modulekindWithES5Target5.js]
 export var E1;
-(function (E1) {
-    E1[E1[0] = "value1"] = 0;
-})(E1 || (E1 = {}));
+(function () {
+    this[this[0] = "value1"] = 0;
+}.call(E1 || (E1 = {})));
 export var E2;
-(function (E2) {
-    E2[E2[0] = "value1"] = 0;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[0] = "value1"] = 0;
+}.call(E2 || (E2 = {})));

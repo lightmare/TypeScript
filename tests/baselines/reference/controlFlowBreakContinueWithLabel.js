@@ -18,10 +18,10 @@ user;
 //// [controlFlowBreakContinueWithLabel.js]
 "use strict";
 var User;
-(function (User) {
-    User[User[0] = "A"] = 0;
-    User[User[1] = "B"] = 1;
-})(User || (User = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(User || (User = {})));
 var user = User.A;
 label: while (true) {
     switch (user) {

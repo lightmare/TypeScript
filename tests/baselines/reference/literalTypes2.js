@@ -181,11 +181,11 @@ aa = append(aa, 1);
 
 //// [literalTypes2.js]
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[1] = "B"] = 1;
-    E[E[2] = "C"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(E || (E = {})));
 var cond;
 function f1(p1, p2, p3, p4) {
     if (p1 === void 0) { p1 = 1; }

@@ -560,14 +560,14 @@ rest: string[];
     { }
 }
 var Weekdays;
-(function (Weekdays) {
-    Weekdays[Weekdays[0] = "Monday"] = 0;
-    Weekdays[Weekdays[1] = "Tuesday"] = 1;
-    Weekdays[Weekdays[2] = "Weekend"] = 2;
-})(Weekdays || (Weekdays = {}));
+(function () {
+    this[this[0] = "Monday"] = 0;
+    this[this[1] = "Tuesday"] = 1;
+    this[this[2] = "Weekend"] = 2;
+}.call(Weekdays || (Weekdays = {})));
 var Fruit;
-(function (Fruit) {
-    Fruit[Fruit[0] = "Apple"] = 0;
-    Fruit[Fruit[1] = "Pear"] = 1;
-})(Fruit || (Fruit = {}));
+(function () {
+    this[this[0] = "Apple"] = 0;
+    this[this[1] = "Pear"] = 1;
+}.call(Fruit || (Fruit = {})));
 TypeScriptAllInOne.Program.Main();

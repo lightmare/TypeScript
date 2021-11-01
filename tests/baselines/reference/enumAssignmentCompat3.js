@@ -93,52 +93,52 @@ merged2 = abc; // ok
 var First;
 (function (First) {
     var E;
-    (function (E) {
-        E[E[0] = "a"] = 0;
-        E[E[1] = "b"] = 1;
-        E[E[2] = "c"] = 2;
-    })(E = First.E || (First.E = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+    }.call(E = First.E || (First.E = {})));
 })(First || (First = {}));
 var Abc;
 (function (Abc) {
     var E;
-    (function (E) {
-        E[E[0] = "a"] = 0;
-        E[E[1] = "b"] = 1;
-        E[E[2] = "c"] = 2;
-    })(E = Abc.E || (Abc.E = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+    }.call(E = Abc.E || (Abc.E = {})));
     var Nope;
-    (function (Nope) {
-        Nope[Nope[0] = "a"] = 0;
-        Nope[Nope[1] = "b"] = 1;
-        Nope[Nope[2] = "c"] = 2;
-    })(Nope = Abc.Nope || (Abc.Nope = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+    }.call(Nope = Abc.Nope || (Abc.Nope = {})));
 })(Abc || (Abc = {}));
 var Abcd;
 (function (Abcd) {
     var E;
-    (function (E) {
-        E[E[0] = "a"] = 0;
-        E[E[1] = "b"] = 1;
-        E[E[2] = "c"] = 2;
-        E[E[3] = "d"] = 3;
-    })(E = Abcd.E || (Abcd.E = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+        this[this[3] = "d"] = 3;
+    }.call(E = Abcd.E || (Abcd.E = {})));
 })(Abcd || (Abcd = {}));
 var Ab;
 (function (Ab) {
     var E;
-    (function (E) {
-        E[E[0] = "a"] = 0;
-        E[E[1] = "b"] = 1;
-    })(E = Ab.E || (Ab.E = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+    }.call(E = Ab.E || (Ab.E = {})));
 })(Ab || (Ab = {}));
 var Cd;
 (function (Cd) {
     var E;
-    (function (E) {
-        E[E[0] = "c"] = 0;
-        E[E[1] = "d"] = 1;
-    })(E = Cd.E || (Cd.E = {}));
+    (function () {
+        this[this[0] = "c"] = 0;
+        this[this[1] = "d"] = 1;
+    }.call(E = Cd.E || (Cd.E = {})));
 })(Cd || (Cd = {}));
 var Decl;
 (function (Decl) {
@@ -146,23 +146,23 @@ var Decl;
 var Merged;
 (function (Merged) {
     var E;
-    (function (E) {
-        E[E[0] = "a"] = 0;
-        E[E[1] = "b"] = 1;
-    })(E = Merged.E || (Merged.E = {}));
-    (function (E) {
-        E[E[3] = "c"] = 3;
-        E[E[4] = "d"] = 4;
-    })(E = Merged.E || (Merged.E = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+    }.call(E = Merged.E || (Merged.E = {})));
+    (function () {
+        this[this[3] = "c"] = 3;
+        this[this[4] = "d"] = 4;
+    }.call(E = Merged.E || (Merged.E = {})));
 })(Merged || (Merged = {}));
 var Merged2;
 (function (Merged2) {
     var E;
-    (function (E) {
-        E[E[0] = "a"] = 0;
-        E[E[1] = "b"] = 1;
-        E[E[2] = "c"] = 2;
-    })(E = Merged2.E || (Merged2.E = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+    }.call(E = Merged2.E || (Merged2.E = {})));
     (function (E) {
         E.d = 5;
     })(E = Merged2.E || (Merged2.E = {}));

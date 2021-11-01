@@ -29,8 +29,8 @@ const enum bar {
 var package;
 package || (package = {});
 var foo;
-(function (foo) {
-    foo[foo[0] = "public"] = 0;
-    foo[foo[1] = "private"] = 1;
-    foo[foo[2] = "pacakge"] = 2;
-})(foo || (foo = {}));
+(function () {
+    this[this[0] = "public"] = 0;
+    this[this[1] = "private"] = 1;
+    this[this[2] = "pacakge"] = 2;
+}.call(foo || (foo = {})));

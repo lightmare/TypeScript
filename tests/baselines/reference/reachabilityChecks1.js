@@ -109,9 +109,9 @@ var A4;
     var A;
     (function (A) {
         var E;
-        (function (E) {
-            E[E[0] = "X"] = 0;
-        })(E || (E = {}));
+        (function () {
+            this[this[0] = "X"] = 0;
+        }.call(E || (E = {})));
     })(A || (A = {}));
 })(A4 || (A4 = {}));
 function f1(x) {
@@ -140,16 +140,16 @@ function f3() {
     do {
     } while (true);
     var E;
-    (function (E) {
-        E[E[1] = "X"] = 1;
-    })(E || (E = {}));
+    (function () {
+        this[this[1] = "X"] = 1;
+    }.call(E || (E = {})));
 }
 function f4() {
     if (true) {
         throw new Error();
     }
     var E;
-    (function (E) {
-        E[E[1] = "X"] = 1;
-    })(E || (E = {}));
+    (function () {
+        this[this[1] = "X"] = 1;
+    }.call(E || (E = {})));
 }

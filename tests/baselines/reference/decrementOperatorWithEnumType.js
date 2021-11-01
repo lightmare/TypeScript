@@ -16,11 +16,11 @@ ENUM1[A]--;
 //// [decrementOperatorWithEnumType.js]
 // -- operator on enum type
 var ENUM1;
-(function (ENUM1) {
-    ENUM1[ENUM1[0] = "A"] = 0;
-    ENUM1[ENUM1[1] = "B"] = 1;
-    ENUM1[ENUM1[2] = ""] = 2;
-})(ENUM1 || (ENUM1 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = ""] = 2;
+}.call(ENUM1 || (ENUM1 = {})));
 ;
 // expression
 var ResultIsNumber1 = --ENUM1["A"];

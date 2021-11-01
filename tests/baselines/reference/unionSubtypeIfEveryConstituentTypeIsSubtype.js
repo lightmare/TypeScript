@@ -145,10 +145,10 @@ interface I20 {
 
 //// [unionSubtypeIfEveryConstituentTypeIsSubtype.js]
 var e;
-(function (e) {
-    e[e[0] = "e1"] = 0;
-    e[e[1] = "e2"] = 1;
-})(e || (e = {}));
+(function () {
+    this[this[0] = "e1"] = 0;
+    this[this[1] = "e2"] = 1;
+}.call(e || (e = {})));
 var A = /** @class */ (function () {
     function A() {
     }
@@ -160,9 +160,9 @@ var A2 = /** @class */ (function () {
     return A2;
 }());
 var E2;
-(function (E2) {
-    E2[E2[0] = "A"] = 0;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E2 || (E2 = {})));
 function f() { }
 (function (f) {
     f.bar = 1;

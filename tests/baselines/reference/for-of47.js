@@ -11,9 +11,9 @@ for ({x, y: y = E.x} of array) {
 var x, y;
 var array = [{ x: "", y: true }];
 var E;
-(function (E) {
-    E[E[0] = "x"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "x"] = 0;
+}.call(E || (E = {})));
 for ({ x, y: y = E.x } of array) {
     x;
     y;

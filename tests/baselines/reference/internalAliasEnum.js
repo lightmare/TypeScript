@@ -17,11 +17,11 @@ module c {
 var a;
 (function (a) {
     var weekend;
-    (function (weekend) {
-        weekend[weekend[0] = "Friday"] = 0;
-        weekend[weekend[1] = "Saturday"] = 1;
-        weekend[weekend[2] = "Sunday"] = 2;
-    })(weekend = a.weekend || (a.weekend = {}));
+    (function () {
+        this[this[0] = "Friday"] = 0;
+        this[this[1] = "Saturday"] = 1;
+        this[this[2] = "Sunday"] = 2;
+    }.call(weekend = a.weekend || (a.weekend = {})));
 })(a || (a = {}));
 var c;
 (function (c) {

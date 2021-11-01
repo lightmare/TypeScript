@@ -23,13 +23,13 @@ class Foo {
 //// [declarationEmitClassMemberNameConflict2.js]
 var Bar = 'bar';
 var Hello;
-(function (Hello) {
-    Hello[Hello[0] = "World"] = 0;
-})(Hello || (Hello = {}));
+(function () {
+    this[this[0] = "World"] = 0;
+}.call(Hello || (Hello = {})));
 var Hello1;
-(function (Hello1) {
-    Hello1[Hello1[0] = "World1"] = 0;
-})(Hello1 || (Hello1 = {}));
+(function () {
+    this[this[0] = "World1"] = 0;
+}.call(Hello1 || (Hello1 = {})));
 var Foo = /** @class */ (function () {
     function Foo() {
         // Same names + string => OK

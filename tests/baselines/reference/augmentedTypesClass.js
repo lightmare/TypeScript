@@ -23,6 +23,6 @@ var c4 = /** @class */ (function () {
     c4.prototype.foo = function () { };
     return c4;
 }());
-(function (c4) {
-    c4[c4[0] = "One"] = 0;
-})(c4 || (c4 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(c4 || (c4 = {}))); // error

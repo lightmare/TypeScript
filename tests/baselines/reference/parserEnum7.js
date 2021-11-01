@@ -5,8 +5,8 @@ enum E {
 
 //// [parserEnum7.js]
 var E;
-(function (E) {
-    E[E[0] = 1] = 0;
-    E[E[1] = 2] = 1;
-    E[E[2] = 3] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[0] = 1] = 0;
+    this[this[1] = 2] = 1;
+    this[this[2] = 3] = 2;
+}.call(E || (E = {})));

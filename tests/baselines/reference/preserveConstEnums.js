@@ -5,7 +5,7 @@ const enum E {
 
 //// [preserveConstEnums.js]
 var E;
-(function (E) {
-    E[E[1] = "Value"] = 1;
-    E[E[1] = "Value2"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[1] = "Value"] = 1;
+    this[this[1] = "Value2"] = 1;
+}.call(E || (E = {})));

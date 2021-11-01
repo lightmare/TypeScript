@@ -139,11 +139,11 @@ var arr = [function (n) { return ''; }];
 var arr; // Incorrect error here (bug 829597)
 // Arrow function as enum value
 var E;
-(function (E) {
+(function () {
     var _this = this;
-    E[E["x"] = function () { return 4; }] = "x";
-    E[E["y"] = (function () { return _this; }).length] = "y"; // error, can't use this in enum
-})(E || (E = {}));
+    this[this["x"] = function () { return 4; }] = "x";
+    this[this["y"] = (function () { return _this; }).length] = "y"; // error, can't use this in enum
+}.call(E || (E = {})));
 // Arrow function as module variable initializer
 var M;
 (function (M) {
@@ -181,11 +181,11 @@ var M2;
     var arr; // Incorrect error here (bug 829597)
     // Arrow function as enum value
     var E;
-    (function (E) {
+    (function () {
         var _this = this;
-        E[E["x"] = function () { return 4; }] = "x";
-        E[E["y"] = (function () { return _this; }).length] = "y";
-    })(E || (E = {}));
+        this[this["x"] = function () { return 4; }] = "x";
+        this[this["y"] = (function () { return _this; }).length] = "y";
+    }.call(E || (E = {})));
     // Arrow function as module variable initializer
     var M;
     (function (M) {

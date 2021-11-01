@@ -5,6 +5,6 @@ enum E {
 
 //// [enumWithParenthesizedInitializer1.js]
 var E;
-(function (E) {
-    E[E[-3] = "e"] = -3;
-})(E || (E = {}));
+(function () {
+    this[this[-3] = "e"] = -3;
+}.call(E || (E = {})));

@@ -102,7 +102,7 @@ var ErrClass3 = /** @class */ (function (_super) {
 }(this));
 //'this' as a computed enum value
 var SomeEnum;
-(function (SomeEnum) {
-    SomeEnum[SomeEnum["A"] = this] = "A";
-    SomeEnum[SomeEnum["B"] = this.spaaaace] = "B"; // Also should not be allowed
-})(SomeEnum || (SomeEnum = {}));
+(function () {
+    this[this["A"] = this] = "A";
+    this[this["B"] = this.spaaaace] = "B"; // Also should not be allowed
+}.call(SomeEnum || (SomeEnum = {})));

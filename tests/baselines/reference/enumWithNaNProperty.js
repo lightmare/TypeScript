@@ -6,6 +6,6 @@ enum A {
 
 //// [enumWithNaNProperty.js]
 var A;
-(function (A) {
-    A[A[1] = "NaN"] = 1;
-})(A || (A = {}));
+(function () {
+    this[this[1] = "NaN"] = 1;
+}.call(A || (A = {})));

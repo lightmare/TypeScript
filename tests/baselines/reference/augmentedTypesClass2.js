@@ -51,9 +51,9 @@ var c33 = /** @class */ (function () {
     };
     return c33;
 }());
-(function (c33) {
-    c33[c33[0] = "One"] = 0;
-})(c33 || (c33 = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(c33 || (c33 = {})));
 ;
 // class then import
 var c44 = /** @class */ (function () {

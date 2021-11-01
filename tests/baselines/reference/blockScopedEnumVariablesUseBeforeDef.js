@@ -13,9 +13,9 @@ function foo2() {
 function foo1() {
     return E.A;
     var E;
-    (function (E) {
-        E[E[0] = "A"] = 0;
-    })(E || (E = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E || (E = {})));
 }
 function foo2() {
     return 0 /* A */;

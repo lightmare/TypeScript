@@ -37,38 +37,38 @@ enum e5 {
 
 //// [declFileEnums.js]
 var e1;
-(function (e1) {
-    e1[e1[0] = "a"] = 0;
-    e1[e1[1] = "b"] = 1;
-    e1[e1[2] = "c"] = 2;
-})(e1 || (e1 = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(e1 || (e1 = {})));
 var e2;
-(function (e2) {
-    e2[e2[10] = "a"] = 10;
-    e2[e2[12] = "b"] = 12;
-    e2[e2[10] = "c"] = 10;
-})(e2 || (e2 = {}));
+(function () {
+    this[this[10] = "a"] = 10;
+    this[this[12] = "b"] = 12;
+    this[this[10] = "c"] = 10;
+}.call(e2 || (e2 = {})));
 var e3;
-(function (e3) {
-    e3[e3[10] = "a"] = 10;
-    e3[e3["b"] = Math.PI] = "b";
-    e3[e3[13] = "c"] = 13;
-})(e3 || (e3 = {}));
+(function () {
+    this[this[10] = "a"] = 10;
+    this[this["b"] = Math.PI] = "b";
+    this[this[13] = "c"] = 13;
+}.call(e3 || (e3 = {})));
 var e4;
-(function (e4) {
-    e4[e4[0] = "a"] = 0;
-    e4[e4[1] = "b"] = 1;
-    e4[e4[2] = "c"] = 2;
-    e4[e4[10] = "d"] = 10;
-    e4[e4[11] = "e"] = 11;
-})(e4 || (e4 = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+    this[this[10] = "d"] = 10;
+    this[this[11] = "e"] = 11;
+}.call(e4 || (e4 = {})));
 var e5;
-(function (e5) {
-    e5[e5[0] = "Friday"] = 0;
-    e5[e5[1] = "Saturday"] = 1;
-    e5[e5[2] = "Sunday"] = 2;
-    e5[e5[3] = "Weekend days"] = 3;
-})(e5 || (e5 = {}));
+(function () {
+    this[this[0] = "Friday"] = 0;
+    this[this[1] = "Saturday"] = 1;
+    this[this[2] = "Sunday"] = 2;
+    this[this[3] = "Weekend days"] = 3;
+}.call(e5 || (e5 = {})));
 
 
 //// [declFileEnums.d.ts]

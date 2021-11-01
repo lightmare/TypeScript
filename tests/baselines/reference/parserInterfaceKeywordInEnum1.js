@@ -9,6 +9,6 @@ enum Bar {
 //// [parserInterfaceKeywordInEnum1.js]
 "use strict";
 var Bar;
-(function (Bar) {
-    Bar[Bar[0] = "interface"] = 0;
-})(Bar || (Bar = {}));
+(function () {
+    this[this[0] = "interface"] = 0;
+}.call(Bar || (Bar = {})));

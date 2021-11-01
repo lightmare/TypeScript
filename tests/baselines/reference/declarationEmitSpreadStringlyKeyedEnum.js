@@ -18,15 +18,15 @@ var __assign = (this && this.__assign) || function () {
 exports.__esModule = true;
 exports.SpotifyAgeGroupEnum = void 0;
 var AgeGroups;
-(function (AgeGroups) {
-    AgeGroups[AgeGroups[0] = "0-17"] = 0;
-    AgeGroups[AgeGroups[1] = "18-22"] = 1;
-    AgeGroups[AgeGroups[2] = "23-27"] = 2;
-    AgeGroups[AgeGroups[3] = "28-34"] = 3;
-    AgeGroups[AgeGroups[4] = "35-44"] = 4;
-    AgeGroups[AgeGroups[5] = "45-59"] = 5;
-    AgeGroups[AgeGroups[6] = "60-150"] = 6;
-})(AgeGroups || (AgeGroups = {}));
+(function () {
+    this[this[0] = "0-17"] = 0;
+    this[this[1] = "18-22"] = 1;
+    this[this[2] = "23-27"] = 2;
+    this[this[3] = "28-34"] = 3;
+    this[this[4] = "35-44"] = 4;
+    this[this[5] = "45-59"] = 5;
+    this[this[6] = "60-150"] = 6;
+}.call(AgeGroups || (AgeGroups = {})));
 exports.SpotifyAgeGroupEnum = __assign({}, AgeGroups);
 
 

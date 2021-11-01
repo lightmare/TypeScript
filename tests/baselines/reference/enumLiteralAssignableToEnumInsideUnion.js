@@ -33,34 +33,34 @@ const e5: Ka.Foo | boolean = Z.Foo.A; // ok
 var X;
 (function (X) {
     var Foo;
-    (function (Foo) {
-        Foo[Foo[0] = "A"] = 0;
-        Foo[Foo[1] = "B"] = 1;
-    })(Foo = X.Foo || (X.Foo = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+        this[this[1] = "B"] = 1;
+    }.call(Foo = X.Foo || (X.Foo = {})));
 })(X || (X = {}));
 var Y;
 (function (Y) {
     var Foo;
-    (function (Foo) {
-        Foo[Foo[0] = "A"] = 0;
-        Foo[Foo[1] = "B"] = 1;
-    })(Foo = Y.Foo || (Y.Foo = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+        this[this[1] = "B"] = 1;
+    }.call(Foo = Y.Foo || (Y.Foo = {})));
 })(Y || (Y = {}));
 var Z;
 (function (Z) {
     var Foo;
-    (function (Foo) {
-        Foo[Foo[2] = "A"] = 2;
-        Foo[Foo[4] = "B"] = 4;
-    })(Foo = Z.Foo || (Z.Foo = {}));
+    (function () {
+        this[this[2] = "A"] = 2;
+        this[this[4] = "B"] = 4;
+    }.call(Foo = Z.Foo || (Z.Foo = {})));
 })(Z || (Z = {}));
 var Ka;
 (function (Ka) {
     var Foo;
-    (function (Foo) {
-        Foo[Foo[1024] = "A"] = 1024;
-        Foo[Foo[2048] = "B"] = 2048;
-    })(Foo = Ka.Foo || (Ka.Foo = {}));
+    (function () {
+        this[this[1024] = "A"] = 1024;
+        this[this[2048] = "B"] = 2048;
+    }.call(Foo = Ka.Foo || (Ka.Foo = {})));
 })(Ka || (Ka = {}));
 var e0 = Y.Foo.A; // ok
 var e1 = Z.Foo.A; // not legal, Z is computed

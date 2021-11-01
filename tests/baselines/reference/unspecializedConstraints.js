@@ -257,10 +257,10 @@ var ts;
         return Property;
     }(Symbol));
     var PropertyFlags;
-    (function (PropertyFlags) {
-        PropertyFlags[PropertyFlags[1] = "Optional"] = 1;
-        PropertyFlags[PropertyFlags[2] = "Private"] = 2;
-    })(PropertyFlags || (PropertyFlags = {}));
+    (function () {
+        this[this[1] = "Optional"] = 1;
+        this[this[2] = "Private"] = 2;
+    }.call(PropertyFlags || (PropertyFlags = {})));
     var Signature = /** @class */ (function (_super) {
         __extends(Signature, _super);
         function Signature(typeParameters, parameters, returnType) {
@@ -299,10 +299,10 @@ var ts;
         return Parameter;
     }(Symbol));
     var ParameterFlags;
-    (function (ParameterFlags) {
-        ParameterFlags[ParameterFlags[1] = "Optional"] = 1;
-        ParameterFlags[ParameterFlags[2] = "Rest"] = 2;
-    })(ParameterFlags || (ParameterFlags = {}));
+    (function () {
+        this[this[1] = "Optional"] = 1;
+        this[this[2] = "Rest"] = 2;
+    }.call(ParameterFlags || (ParameterFlags = {})));
     var hasOwnProperty = Object.prototype.hasOwnProperty;
     function getProperty(map, key) {
         if (!hasOwnProperty.call(map, key))

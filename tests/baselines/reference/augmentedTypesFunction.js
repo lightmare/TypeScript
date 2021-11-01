@@ -63,9 +63,9 @@ var y3a = /** @class */ (function () {
 }()); // error
 // function then enum
 function y4() { } // error
-(function (y4) {
-    y4[y4[0] = "One"] = 0;
-})(y4 || (y4 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(y4 || (y4 = {}))); // error
 // function then internal module
 function y5() { }
 function y5a() { }

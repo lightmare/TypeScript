@@ -126,9 +126,9 @@ b2("string", { x: 200, y: "string" });
 b2("string", { x: 200, y: true });
 // If the declaration specifies a binding pattern, the parameter type is the implied type of that binding pattern (section 5.1.3)
 var Foo;
-(function (Foo) {
-    Foo[Foo[0] = "a"] = 0;
-})(Foo || (Foo = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+}.call(Foo || (Foo = {})));
 function c0({ z: { x, y: { j } } }) { }
 function c1({ z } = { z: 10 }) { }
 function c2({ z = 10 }) { }

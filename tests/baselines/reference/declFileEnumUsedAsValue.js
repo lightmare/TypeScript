@@ -8,11 +8,11 @@ var x = e;
 
 //// [declFileEnumUsedAsValue.js]
 var e;
-(function (e) {
-    e[e[0] = "a"] = 0;
-    e[e[1] = "b"] = 1;
-    e[e[2] = "c"] = 2;
-})(e || (e = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(e || (e = {})));
 var x = e;
 
 

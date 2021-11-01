@@ -22,15 +22,15 @@ class e2 { // error
 //// [augmentedTypesEnum2.js]
 // enum then interface
 var e1;
-(function (e1) {
-    e1[e1[0] = "One"] = 0;
-})(e1 || (e1 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e1 || (e1 = {}))); // error
 // interface then enum works
 // enum then class
 var e2;
-(function (e2) {
-    e2[e2[0] = "One"] = 0;
-})(e2 || (e2 = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(e2 || (e2 = {})));
 ; // error
 var e2 = /** @class */ (function () {
     function e2() {

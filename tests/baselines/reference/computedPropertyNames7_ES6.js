@@ -8,9 +8,9 @@ var v = {
 
 //// [computedPropertyNames7_ES6.js]
 var E;
-(function (E) {
-    E[E[0] = "member"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "member"] = 0;
+}.call(E || (E = {})));
 var v = {
     [E.member]: 0
 };

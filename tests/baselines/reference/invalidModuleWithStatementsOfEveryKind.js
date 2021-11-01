@@ -139,10 +139,10 @@ var Y3;
 var Y4;
 (function (Y4) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Blue"] = 0;
-        Color[Color[1] = "Red"] = 1;
-    })(Color || (Color = {}));
+    (function () {
+        this[this[0] = "Blue"] = 0;
+        this[this[1] = "Red"] = 1;
+    }.call(Color || (Color = {})));
 })(Y4 || (Y4 = {}));
 var YY;
 (function (YY) {
@@ -188,10 +188,10 @@ var YY3;
 var YY4;
 (function (YY4) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Blue"] = 0;
-        Color[Color[1] = "Red"] = 1;
-    })(Color || (Color = {}));
+    (function () {
+        this[this[0] = "Blue"] = 0;
+        this[this[1] = "Red"] = 1;
+    }.call(Color || (Color = {})));
 })(YY4 || (YY4 = {}));
 var YYY;
 (function (YYY) {
@@ -237,8 +237,8 @@ var YYY3;
 var YYY4;
 (function (YYY4) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Blue"] = 0;
-        Color[Color[1] = "Red"] = 1;
-    })(Color || (Color = {}));
+    (function () {
+        this[this[0] = "Blue"] = 0;
+        this[this[1] = "Red"] = 1;
+    }.call(Color || (Color = {})));
 })(YYY4 || (YYY4 = {}));

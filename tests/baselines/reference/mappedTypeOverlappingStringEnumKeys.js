@@ -40,15 +40,15 @@ const catMap: CatMap = {
 //// [mappedTypeOverlappingStringEnumKeys.js]
 // #37859
 var TerrestrialAnimalTypes;
-(function (TerrestrialAnimalTypes) {
-    TerrestrialAnimalTypes["CAT"] = "cat";
-    TerrestrialAnimalTypes["DOG"] = "dog";
-})(TerrestrialAnimalTypes || (TerrestrialAnimalTypes = {}));
+(function () {
+    this["CAT"] = "cat";
+    this["DOG"] = "dog";
+}.call(TerrestrialAnimalTypes || (TerrestrialAnimalTypes = {})));
 ;
 var AlienAnimalTypes;
-(function (AlienAnimalTypes) {
-    AlienAnimalTypes["CAT"] = "cat";
-})(AlienAnimalTypes || (AlienAnimalTypes = {}));
+(function () {
+    this["CAT"] = "cat";
+}.call(AlienAnimalTypes || (AlienAnimalTypes = {})));
 ;
 var catMap = {
     cat: [

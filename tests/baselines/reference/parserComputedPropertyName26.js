@@ -7,7 +7,7 @@ enum E {
 
 //// [parserComputedPropertyName26.js]
 var E;
-(function (E) {
+(function () {
     // No ASI
-    E[E[e] = 0[e2] = 1] = e;
-})(E || (E = {}));
+    this[this[e] = 0[e2] = 1] = e;
+}.call(E || (E = {})));

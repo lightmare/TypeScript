@@ -18,9 +18,9 @@ const snb: string | number | boolean = item[e];
 
 //// [stringEnumInElementAccess01.js]
 var E;
-(function (E) {
-    E["A"] = "a";
-    E["B"] = "b";
-    E["C"] = "c";
-})(E || (E = {}));
+(function () {
+    this["A"] = "a";
+    this["B"] = "b";
+    this["C"] = "c";
+}.call(E || (E = {})));
 var snb = item[e];

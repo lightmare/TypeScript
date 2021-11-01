@@ -93,9 +93,9 @@ var C7 = /** @class */ (function (_super) {
     return C7;
 }(Undefined));
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var C8 = /** @class */ (function (_super) {
     __extends(C8, _super);
     function C8() {

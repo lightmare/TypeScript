@@ -71,9 +71,9 @@ exports.K = exports.I = exports.H = exports.G = exports.F = exports.FF = exports
 var A;
 A = exports.A || (exports.A = {});
 var B;
-(function (B) {
-    B[B[0] = "Member"] = 0;
-})(B = exports.B || (exports.B = {}));
+(function () {
+    this[this[0] = "Member"] = 0;
+}.call(B = exports.B || (exports.B = {})));
 var C;
 C || (C = {});
 exports.C = C;
@@ -87,30 +87,30 @@ var F;
 F = exports.F || (exports.F = {});
 exports.FF = F;
 var G;
-(function (G) {
-    G[G[1] = "A"] = 1;
-    G[G[2] = "B"] = 2;
-    G[G[3] = "C"] = 3;
-})(G = exports.G || (exports.G = {}));
+(function () {
+    this[this[1] = "A"] = 1;
+    this[this[2] = "B"] = 2;
+    this[this[3] = "C"] = 3;
+}.call(G = exports.G || (exports.G = {})));
 var H;
-(function (H) {
-    H["A"] = "a";
-    H["B"] = "b";
-})(H = exports.H || (exports.H = {}));
+(function () {
+    this["A"] = "a";
+    this["B"] = "b";
+}.call(H = exports.H || (exports.H = {})));
 var I;
-(function (I) {
-    I["A"] = "a";
-    I[I[0] = "B"] = 0;
-    I[I[1] = "C"] = 1;
-})(I = exports.I || (exports.I = {}));
+(function () {
+    this["A"] = "a";
+    this[this[0] = "B"] = 0;
+    this[this[1] = "C"] = 1;
+}.call(I = exports.I || (exports.I = {})));
 var K;
-(function (K) {
-    K[K[0] = "None"] = 0;
-    K[K[1] = "A"] = 1;
-    K[K[2] = "B"] = 2;
-    K[K[4] = "C"] = 4;
-    K[K[7] = "Mask"] = 7;
-})(K = exports.K || (exports.K = {}));
+(function () {
+    this[this[0] = "None"] = 0;
+    this[this[1] = "A"] = 1;
+    this[this[2] = "B"] = 2;
+    this[this[4] = "C"] = 4;
+    this[this[7] = "Mask"] = 7;
+}.call(K = exports.K || (exports.K = {})));
 
 
 //// [index.d.ts]

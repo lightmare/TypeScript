@@ -48,10 +48,10 @@ var TypeScript2;
     ;
     ;
     var PullSymbolVisibility;
-    (function (PullSymbolVisibility) {
-        PullSymbolVisibility[PullSymbolVisibility[0] = "Private"] = 0;
-        PullSymbolVisibility[PullSymbolVisibility[1] = "Public"] = 1;
-    })(PullSymbolVisibility = TypeScript2.PullSymbolVisibility || (TypeScript2.PullSymbolVisibility = {}));
+    (function () {
+        this[this[0] = "Private"] = 0;
+        this[this[1] = "Public"] = 1;
+    }.call(PullSymbolVisibility = TypeScript2.PullSymbolVisibility || (TypeScript2.PullSymbolVisibility = {})));
     var PullSymbol = /** @class */ (function () {
         function PullSymbol(name, declKind) {
         }

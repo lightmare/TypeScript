@@ -66,76 +66,76 @@ define(["require", "exports"], function (require, exports) {
     exports.__esModule = true;
     exports.exports = exports.require = void 0;
     var require;
-    (function (require) {
-        require[require[0] = "_thisVal1"] = 0;
-        require[require[1] = "_thisVal2"] = 1;
-    })(require = exports.require || (exports.require = {}));
+    (function () {
+        this[this[0] = "_thisVal1"] = 0;
+        this[this[1] = "_thisVal2"] = 1;
+    }.call(require = exports.require || (exports.require = {})));
     var exports;
-    (function (exports) {
-        exports[exports[0] = "_thisVal1"] = 0;
-        exports[exports[1] = "_thisVal2"] = 1;
-    })(exports = exports.exports || (exports.exports = {}));
+    (function () {
+        this[this[0] = "_thisVal1"] = 0;
+        this[this[1] = "_thisVal2"] = 1;
+    }.call(exports = exports.exports || (exports.exports = {})));
     var m1;
     (function (m1) {
         var require;
-        (function (require) {
-            require[require[0] = "_thisVal1"] = 0;
-            require[require[1] = "_thisVal2"] = 1;
-        })(require || (require = {}));
+        (function () {
+            this[this[0] = "_thisVal1"] = 0;
+            this[this[1] = "_thisVal2"] = 1;
+        }.call(require || (require = {})));
         var exports;
-        (function (exports) {
-            exports[exports[0] = "_thisVal1"] = 0;
-            exports[exports[1] = "_thisVal2"] = 1;
-        })(exports || (exports = {}));
+        (function () {
+            this[this[0] = "_thisVal1"] = 0;
+            this[this[1] = "_thisVal2"] = 1;
+        }.call(exports || (exports = {})));
     })(m1 || (m1 = {}));
     var m2;
     (function (m2) {
         var require;
-        (function (require) {
-            require[require[0] = "_thisVal1"] = 0;
-            require[require[1] = "_thisVal2"] = 1;
-        })(require = m2.require || (m2.require = {}));
+        (function () {
+            this[this[0] = "_thisVal1"] = 0;
+            this[this[1] = "_thisVal2"] = 1;
+        }.call(require = m2.require || (m2.require = {})));
         var exports;
-        (function (exports) {
-            exports[exports[0] = "_thisVal1"] = 0;
-            exports[exports[1] = "_thisVal2"] = 1;
-        })(exports = m2.exports || (m2.exports = {}));
+        (function () {
+            this[this[0] = "_thisVal1"] = 0;
+            this[this[1] = "_thisVal2"] = 1;
+        }.call(exports = m2.exports || (m2.exports = {})));
     })(m2 || (m2 = {}));
 });
 //// [collisionExportsRequireAndEnum_globalFile.js]
 var require;
-(function (require) {
-    require[require[0] = "_thisVal1"] = 0;
-    require[require[1] = "_thisVal2"] = 1;
-})(require || (require = {}));
+(function () {
+    this[this[0] = "_thisVal1"] = 0;
+    this[this[1] = "_thisVal2"] = 1;
+}.call(require || (require = {})));
 var exports;
-(function (exports) {
-    exports[exports[0] = "_thisVal1"] = 0;
-    exports[exports[1] = "_thisVal2"] = 1;
-})(exports || (exports = {}));
+(function () {
+    this[this[0] = "_thisVal1"] = 0;
+    this[this[1] = "_thisVal2"] = 1;
+}.call(exports || (exports = {})));
 var m3;
 (function (m3) {
     var require;
-    (function (require) {
-        require[require[0] = "_thisVal1"] = 0;
-        require[require[1] = "_thisVal2"] = 1;
-    })(require || (require = {}));
+    (function () {
+        this[this[0] = "_thisVal1"] = 0;
+        this[this[1] = "_thisVal2"] = 1;
+    }.call(require || (require = {})));
     var exports;
-    (function (exports) {
-        exports[exports[0] = "_thisVal1"] = 0;
-        exports[exports[1] = "_thisVal2"] = 1;
-    })(exports || (exports = {}));
+    (function () {
+        this[this[0] = "_thisVal1"] = 0;
+        this[this[1] = "_thisVal2"] = 1;
+    }.call(exports || (exports = {})));
 })(m3 || (m3 = {}));
 var m4;
 (function (m4) {
     var require;
-    (function (require) {
-        require[require[0] = "_thisVal1"] = 0;
-        require[require[1] = "_thisVal2"] = 1;
-    })(require = m4.require || (m4.require = {}));
+    (function () {
+        this[this[0] = "_thisVal1"] = 0;
+        this[this[1] = "_thisVal2"] = 1;
+    }.call(require = m4.require || (m4.require = {})));
     var exports;
-    (function (exports) {
-        exports[exports[0] = "_thisVal1"] = 0;
-        exports[exports[1] = "_thisVal2"] = 1;
-    })(exports = m4.exports || (m4.exports = {}));
+    (function () {
+        this[this[0] = "_thisVal1"] = 0;
+        this[this[1] = "_thisVal2"] = 1;
+    }.call(exports = m4.exports || (m4.exports = {})));
 })(m4 || (m4 = {}));

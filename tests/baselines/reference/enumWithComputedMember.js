@@ -8,8 +8,8 @@ enum A {
 
 //// [enumWithComputedMember.js]
 var A;
-(function (A) {
-    A[A["X"] = "".length] = "X";
-    A[A["Y"] = A.X] = "Y";
-    A[A["Z"] = void 0] = "Z";
-})(A || (A = {}));
+(function () {
+    this[this["X"] = "".length] = "X";
+    this[this["Y"] = this.X] = "Y";
+    this[this["Z"] = void 0] = "Z";
+}.call(A || (A = {})));

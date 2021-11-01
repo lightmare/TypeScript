@@ -249,9 +249,9 @@ var D10 = /** @class */ (function (_super) {
     return D10;
 }(Base));
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var D11 = /** @class */ (function (_super) {
     __extends(D11, _super);
     function D11() {

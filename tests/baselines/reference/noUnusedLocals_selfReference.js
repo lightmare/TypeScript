@@ -44,10 +44,10 @@ var C = /** @class */ (function () {
     return C;
 }());
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[0] = "B"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[0] = "B"] = 0;
+}.call(E || (E = {})));
 ;
 var N;
 (function (N) {

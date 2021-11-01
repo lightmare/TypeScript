@@ -9,9 +9,9 @@ enum E {
 
 //// [enumPropertyAccessBeforeInitalisation.js]
 var E;
-(function (E) {
-    E[E["A"] = E.A] = "A";
-    E[E["B"] = E.B] = "B";
-    E[E["C"] = E["C"]] = "C";
-    E[E["D"] = 1 + E.D] = "D";
-})(E || (E = {}));
+(function () {
+    this[this["A"] = this.A] = "A";
+    this[this["B"] = E.B] = "B";
+    this[this["C"] = E["C"]] = "C";
+    this[this["D"] = 1 + this.D] = "D";
+}.call(E || (E = {})));

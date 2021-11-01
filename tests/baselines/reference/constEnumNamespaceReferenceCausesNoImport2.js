@@ -29,11 +29,11 @@ exports.ConstEnumOnlyModule = void 0;
 var ConstEnumOnlyModule;
 (function (ConstEnumOnlyModule) {
     var ConstFooEnum;
-    (function (ConstFooEnum) {
-        ConstFooEnum[ConstFooEnum[0] = "Some"] = 0;
-        ConstFooEnum[ConstFooEnum[1] = "Values"] = 1;
-        ConstFooEnum[ConstFooEnum[2] = "Here"] = 2;
-    })(ConstFooEnum = ConstEnumOnlyModule.ConstFooEnum || (ConstEnumOnlyModule.ConstFooEnum = {}));
+    (function () {
+        this[this[0] = "Some"] = 0;
+        this[this[1] = "Values"] = 1;
+        this[this[2] = "Here"] = 2;
+    }.call(ConstFooEnum = ConstEnumOnlyModule.ConstFooEnum || (ConstEnumOnlyModule.ConstFooEnum = {})));
 })(ConstEnumOnlyModule = exports.ConstEnumOnlyModule || (exports.ConstEnumOnlyModule = {}));
 //// [reexport.js]
 "use strict";

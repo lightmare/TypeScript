@@ -6,6 +6,6 @@ enum E {
 
 //// [enumWithUnicodeEscape1.js]
 var E;
-(function (E) {
-    E[E[0] = "gold \u2730"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "gold \u2730"] = 0;
+}.call(E || (E = {})));

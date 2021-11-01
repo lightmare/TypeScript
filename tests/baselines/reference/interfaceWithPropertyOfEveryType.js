@@ -54,9 +54,9 @@ var M;
     M.y = 1;
 })(M || (M = {}));
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var a = {
     a: 1,
     b: '',

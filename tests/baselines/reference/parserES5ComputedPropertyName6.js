@@ -5,6 +5,6 @@ enum E {
 
 //// [parserES5ComputedPropertyName6.js]
 var E;
-(function (E) {
-    E[E[e] = 1] = e;
-})(E || (E = {}));
+(function () {
+    this[this[e] = 1] = e;
+}.call(E || (E = {})));

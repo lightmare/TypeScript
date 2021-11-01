@@ -247,11 +247,11 @@ function f() {
 
 //// [expr.js]
 var E;
-(function (E) {
-    E[E[0] = "Red"] = 0;
-    E[E[1] = "Green"] = 1;
-    E[E[2] = "Blue"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "Red"] = 0;
+    this[this[1] = "Green"] = 1;
+    this[this[2] = "Blue"] = 2;
+}.call(E || (E = {})));
 function f() {
     var a;
     var n = 3;

@@ -12,12 +12,12 @@ var y: { readonly a: E; readonly b: E; readonly [x: number]: string; readonly [x
 
 //// [typeOfEnumAndVarRedeclarations.js]
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-})(E || (E = {}));
-(function (E) {
-    E[E[1] = "b"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+}.call(E || (E = {})));
+(function () {
+    this[this[1] = "b"] = 1;
+}.call(E || (E = {})));
 var x = E;
 var x; // Shouldnt error
 var y = E;

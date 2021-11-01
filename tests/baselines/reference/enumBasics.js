@@ -83,11 +83,11 @@ var doPropagate = [
 //// [enumBasics.js]
 // Enum without initializers have first member = 0 and successive members = N + 1
 var E1;
-(function (E1) {
-    E1[E1[0] = "A"] = 0;
-    E1[E1[1] = "B"] = 1;
-    E1[E1[2] = "C"] = 2;
-})(E1 || (E1 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(E1 || (E1 = {})));
 // Enum type is a subtype of Number
 var x = E1.A;
 // Enum object type is anonymous with properties of the enum type and numeric indexer
@@ -99,54 +99,54 @@ var s = E1[e.A];
 var s;
 // Enum with only constant members
 var E2;
-(function (E2) {
-    E2[E2[1] = "A"] = 1;
-    E2[E2[2] = "B"] = 2;
-    E2[E2[3] = "C"] = 3;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[1] = "A"] = 1;
+    this[this[2] = "B"] = 2;
+    this[this[3] = "C"] = 3;
+}.call(E2 || (E2 = {})));
 // Enum with only computed members
 var E3;
-(function (E3) {
-    E3[E3["X"] = 'foo'.length] = "X";
-    E3[E3[7] = "Y"] = 7;
-    E3[E3["Z"] = +'foo'] = "Z";
-})(E3 || (E3 = {}));
+(function () {
+    this[this["X"] = 'foo'.length] = "X";
+    this[this[7] = "Y"] = 7;
+    this[this["Z"] = +'foo'] = "Z";
+}.call(E3 || (E3 = {})));
 // Enum with constant members followed by computed members
 var E4;
-(function (E4) {
-    E4[E4[0] = "X"] = 0;
-    E4[E4[1] = "Y"] = 1;
-    E4[E4["Z"] = 'foo'.length] = "Z";
-})(E4 || (E4 = {}));
+(function () {
+    this[this[0] = "X"] = 0;
+    this[this[1] = "Y"] = 1;
+    this[this["Z"] = 'foo'.length] = "Z";
+}.call(E4 || (E4 = {})));
 // Enum with > 2 constant members with no initializer for first member, non zero initializer for second element
 var E5;
-(function (E5) {
-    E5[E5[0] = "A"] = 0;
-    E5[E5[3] = "B"] = 3;
-    E5[E5[4] = "C"] = 4; // 4
-})(E5 || (E5 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[3] = "B"] = 3;
+    this[this[4] = "C"] = 4; // 4
+}.call(E5 || (E5 = {})));
 var E6;
-(function (E6) {
-    E6[E6[0] = "A"] = 0;
-    E6[E6[0] = "B"] = 0;
-    E6[E6[1] = "C"] = 1; // 1
-})(E6 || (E6 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[0] = "B"] = 0;
+    this[this[1] = "C"] = 1; // 1
+}.call(E6 || (E6 = {})));
 // Enum with computed member initializer of type 'any'
 var E7;
-(function (E7) {
-    E7[E7["A"] = 'foo'['foo']] = "A";
-})(E7 || (E7 = {}));
+(function () {
+    this[this["A"] = 'foo'['foo']] = "A";
+}.call(E7 || (E7 = {})));
 // Enum with computed member initializer of type number
 var E8;
-(function (E8) {
-    E8[E8["B"] = 'foo'['foo']] = "B";
-})(E8 || (E8 = {}));
+(function () {
+    this[this["B"] = 'foo'['foo']] = "B";
+}.call(E8 || (E8 = {})));
 //Enum with computed member intializer of same enum type
 var E9;
-(function (E9) {
-    E9[E9[0] = "A"] = 0;
-    E9[E9[0] = "B"] = 0;
-})(E9 || (E9 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[0] = "B"] = 0;
+}.call(E9 || (E9 = {})));
 // (refer to .js to validate)
 // Enum constant members are propagated
 var doNotPropagate = [

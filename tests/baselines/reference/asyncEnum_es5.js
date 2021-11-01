@@ -5,6 +5,6 @@ async enum E {
 
 //// [asyncEnum_es5.js]
 var E;
-(function (E) {
-    E[E[0] = "Value"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "Value"] = 0;
+}.call(E || (E = {})));

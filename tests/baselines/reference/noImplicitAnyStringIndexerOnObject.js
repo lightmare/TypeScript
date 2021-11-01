@@ -159,17 +159,17 @@ o[k];
 o[k2];
 o[sym];
 var NumEnum;
-(function (NumEnum) {
-    NumEnum[NumEnum[0] = "a"] = 0;
-    NumEnum[NumEnum[1] = "b"] = 1;
-})(NumEnum || (NumEnum = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+}.call(NumEnum || (NumEnum = {})));
 var numEnumKey;
 o[numEnumKey];
 var StrEnum;
-(function (StrEnum) {
-    StrEnum["a"] = "a";
-    StrEnum["b"] = "b";
-})(StrEnum || (StrEnum = {}));
+(function () {
+    this["a"] = "a";
+    this["b"] = "b";
+}.call(StrEnum || (StrEnum = {})));
 var strEnumKey;
 o[strEnumKey];
 var rover = { bark: function () { } };

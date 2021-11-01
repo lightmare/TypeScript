@@ -15,15 +15,15 @@ var daysOfYear: typeof days;
 
 //// [declFileTypeofEnum.js]
 var days;
-(function (days) {
-    days[days[0] = "monday"] = 0;
-    days[days[1] = "tuesday"] = 1;
-    days[days[2] = "wednesday"] = 2;
-    days[days[3] = "thursday"] = 3;
-    days[days[4] = "friday"] = 4;
-    days[days[5] = "saturday"] = 5;
-    days[days[6] = "sunday"] = 6;
-})(days || (days = {}));
+(function () {
+    this[this[0] = "monday"] = 0;
+    this[this[1] = "tuesday"] = 1;
+    this[this[2] = "wednesday"] = 2;
+    this[this[3] = "thursday"] = 3;
+    this[this[4] = "friday"] = 4;
+    this[this[5] = "saturday"] = 5;
+    this[this[6] = "sunday"] = 6;
+}.call(days || (days = {})));
 var weekendDay = days.saturday;
 var daysOfMonth = days;
 var daysOfYear;

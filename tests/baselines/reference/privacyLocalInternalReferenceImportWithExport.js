@@ -166,10 +166,10 @@ var m_private;
     }());
     m_private.c_private = c_private;
     var e_private;
-    (function (e_private) {
-        e_private[e_private[0] = "Happy"] = 0;
-        e_private[e_private[1] = "Grumpy"] = 1;
-    })(e_private = m_private.e_private || (m_private.e_private = {}));
+    (function () {
+        this[this[0] = "Happy"] = 0;
+        this[this[1] = "Grumpy"] = 1;
+    }.call(e_private = m_private.e_private || (m_private.e_private = {})));
     function f_private() {
         return new c_private();
     }
@@ -195,10 +195,10 @@ var m_public;
     }());
     m_public.c_public = c_public;
     var e_public;
-    (function (e_public) {
-        e_public[e_public[0] = "Happy"] = 0;
-        e_public[e_public[1] = "Grumpy"] = 1;
-    })(e_public = m_public.e_public || (m_public.e_public = {}));
+    (function () {
+        this[this[0] = "Happy"] = 0;
+        this[this[1] = "Grumpy"] = 1;
+    }.call(e_public = m_public.e_public || (m_public.e_public = {})));
     function f_public() {
         return new c_public();
     }

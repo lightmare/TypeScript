@@ -24,11 +24,11 @@ var ResultIsBoolean5 = !!!(ENUM["B"] + ENUM.C);
 //// [logicalNotOperatorWithEnumType.js]
 // ! operator on enum type
 var ENUM;
-(function (ENUM) {
-    ENUM[ENUM[0] = "A"] = 0;
-    ENUM[ENUM[1] = "B"] = 1;
-    ENUM[ENUM[2] = "C"] = 2;
-})(ENUM || (ENUM = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(ENUM || (ENUM = {})));
 ;
 var ENUM1;
 ENUM1 || (ENUM1 = {});

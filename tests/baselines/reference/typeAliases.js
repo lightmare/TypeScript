@@ -116,9 +116,9 @@ foo13(x13_1, x13_2);
 foo13(x13_2, x13_1);
 var x14;
 var E;
-(function (E) {
-    E[E[10] = "x"] = 10;
-})(E || (E = {}));
+(function () {
+    this[this[10] = "x"] = 10;
+}.call(E || (E = {})));
 f15(E.x).toLowerCase();
 var x;
 f16(x);

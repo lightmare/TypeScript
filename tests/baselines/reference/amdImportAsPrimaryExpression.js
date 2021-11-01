@@ -18,11 +18,11 @@ define(["require", "exports"], function (require, exports) {
     exports.__esModule = true;
     exports.E1 = void 0;
     var E1;
-    (function (E1) {
-        E1[E1[0] = "A"] = 0;
-        E1[E1[1] = "B"] = 1;
-        E1[E1[2] = "C"] = 2;
-    })(E1 = exports.E1 || (exports.E1 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+        this[this[1] = "B"] = 1;
+        this[this[2] = "C"] = 2;
+    }.call(E1 = exports.E1 || (exports.E1 = {})));
 });
 //// [foo_1.js]
 define(["require", "exports", "./foo_0"], function (require, exports, foo) {

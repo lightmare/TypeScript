@@ -44,11 +44,11 @@ var C1 = /** @class */ (function () {
 }());
 exports.C1 = C1;
 var E1;
-(function (E1) {
-    E1[E1[0] = "A"] = 0;
-    E1[E1[1] = "B"] = 1;
-    E1[E1[2] = "C"] = 2;
-})(E1 = exports.E1 || (exports.E1 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(E1 = exports.E1 || (exports.E1 = {})));
 //// [foo_1.js]
 "use strict";
 exports.__esModule = true;

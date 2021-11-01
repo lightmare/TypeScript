@@ -31,11 +31,11 @@ var m1;
     }());
     m1.c = c;
     var e;
-    (function (e) {
-        e[e[0] = "weekday"] = 0;
-        e[e[1] = "weekend"] = 1;
-        e[e[2] = "holiday"] = 2;
-    })(e = m1.e || (m1.e = {}));
+    (function () {
+        this[this[0] = "weekday"] = 0;
+        this[this[1] = "weekend"] = 1;
+        this[this[2] = "holiday"] = 2;
+    }.call(e = m1.e || (m1.e = {})));
 })(m1 || (m1 = {}));
 var a;
 var b = {

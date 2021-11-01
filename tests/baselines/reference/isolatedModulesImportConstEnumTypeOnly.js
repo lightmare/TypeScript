@@ -13,9 +13,9 @@ function f(foo: Foo) { return; }
 exports.__esModule = true;
 exports.Foo = void 0;
 var Foo;
-(function (Foo) {
-    Foo[Foo[0] = "Bar"] = 0;
-})(Foo = exports.Foo || (exports.Foo = {}));
+(function () {
+    this[this[0] = "Bar"] = 0;
+}.call(Foo = exports.Foo || (exports.Foo = {})));
 //// [index.js]
 "use strict";
 exports.__esModule = true;

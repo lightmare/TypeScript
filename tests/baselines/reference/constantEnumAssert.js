@@ -52,21 +52,21 @@ const foo12 = { a: E5.a as const }
 
 //// [constantEnumAssert.js]
 var E1;
-(function (E1) {
-    E1[E1[0] = "a"] = 0;
-    E1[E1[1] = "b"] = 1;
-})(E1 || (E1 = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+}.call(E1 || (E1 = {})));
 var E2;
-(function (E2) {
-    E2["a"] = "a";
-    E2["b"] = "b";
-})(E2 || (E2 = {}));
+(function () {
+    this["a"] = "a";
+    this["b"] = "b";
+}.call(E2 || (E2 = {})));
 var E3;
-(function (E3) {
-    E3[E3[1] = "a"] = 1;
-    E3[E3[2] = "b"] = 2;
-    E3[E3[4] = "c"] = 4;
-})(E3 || (E3 = {}));
+(function () {
+    this[this[1] = "a"] = 1;
+    this[this[2] = "b"] = 2;
+    this[this[4] = "c"] = 4;
+}.call(E3 || (E3 = {})));
 var E5 = {
     a: 'a',
     b: 'b'

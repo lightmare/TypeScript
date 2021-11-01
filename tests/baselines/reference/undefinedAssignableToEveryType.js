@@ -51,9 +51,9 @@ var C = /** @class */ (function () {
 var ac;
 var ai;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var ae;
 var b = undefined;
 var c = undefined;

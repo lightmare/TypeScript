@@ -312,17 +312,17 @@ if (u === aFunction) {
     var uFunction = u;
 }
 var NumberEnum;
-(function (NumberEnum) {
-    NumberEnum[NumberEnum[0] = "A"] = 0;
-    NumberEnum[NumberEnum[1] = "B"] = 1;
-    NumberEnum[NumberEnum[2] = "C"] = 2;
-})(NumberEnum || (NumberEnum = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(NumberEnum || (NumberEnum = {})));
 var StringEnum;
-(function (StringEnum) {
-    StringEnum["A"] = "A";
-    StringEnum["B"] = "B";
-    StringEnum["C"] = "C";
-})(StringEnum || (StringEnum = {}));
+(function () {
+    this["A"] = "A";
+    this["B"] = "B";
+    this["C"] = "C";
+}.call(StringEnum || (StringEnum = {})));
 if (u === NumberEnum || u === StringEnum) {
     var enumObj = u;
 }

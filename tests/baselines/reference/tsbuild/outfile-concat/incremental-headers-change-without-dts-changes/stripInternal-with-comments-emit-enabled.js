@@ -704,7 +704,7 @@ sourceFile:../../third_part1.ts
 >>>//# sourceMappingURL=third-output.d.ts.map
 
 //// [/src/third/thirdjs/output/third-output.tsbuildinfo]
-{"bundle":{"commonSourceDirectory":"../..","sourceFiles":["../../third_part1.ts"],"js":{"sections":[{"pos":0,"end":110,"kind":"prepend","data":"../../../first/bin/first-output.js","texts":[{"pos":0,"end":110,"kind":"text"}]},{"pos":110,"end":3515,"kind":"prepend","data":"../../../2/second-output.js","texts":[{"pos":110,"end":3515,"kind":"text"}]},{"pos":3515,"end":3551,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":157,"kind":"prepend","data":"../../../first/bin/first-output.d.ts","texts":[{"pos":0,"end":157,"kind":"text"}]},{"pos":157,"end":317,"kind":"prepend","data":"../../../2/second-output.d.ts","texts":[{"pos":157,"end":317,"kind":"text"}]},{"pos":317,"end":336,"kind":"text"}]}},"version":"FakeTSVersion"}
+{"bundle":{"commonSourceDirectory":"../..","sourceFiles":["../../third_part1.ts"],"js":{"sections":[{"pos":0,"end":110,"kind":"prepend","data":"../../../first/bin/first-output.js","texts":[{"pos":0,"end":110,"kind":"text"}]},{"pos":110,"end":3405,"kind":"prepend","data":"../../../2/second-output.js","texts":[{"pos":110,"end":3405,"kind":"text"}]},{"pos":3405,"end":3441,"kind":"text"}]},"dts":{"sections":[{"pos":0,"end":157,"kind":"prepend","data":"../../../first/bin/first-output.d.ts","texts":[{"pos":0,"end":157,"kind":"text"}]},{"pos":157,"end":317,"kind":"prepend","data":"../../../2/second-output.d.ts","texts":[{"pos":157,"end":317,"kind":"text"}]},{"pos":317,"end":336,"kind":"text"}]}},"version":"FakeTSVersion"}
 
 //// [/src/third/thirdjs/output/third-output.tsbuildinfo.baseline.txt]
 ======================================================================
@@ -721,9 +721,9 @@ function f() {
 }
 
 ----------------------------------------------------------------------
-prepend: (110-3515):: ../../../2/second-output.js texts:: 1
+prepend: (110-3405):: ../../../2/second-output.js texts:: 1
 >>--------------------------------------------------------------------
-text: (110-3515)
+text: (110-3405)
 var N;
 (function (N) {
     function f() {
@@ -777,11 +777,11 @@ var normalN;
     /*@internal*/ normalN.someImport = someNamespace.C;
     /*@internal*/ normalN.internalConst = 10;
     /*@internal*/ var internalEnum;
-    (function (internalEnum) {
-        internalEnum[internalEnum[0] = "a"] = 0;
-        internalEnum[internalEnum[1] = "b"] = 1;
-        internalEnum[internalEnum[2] = "c"] = 2;
-    })(internalEnum = normalN.internalEnum || (normalN.internalEnum = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+    }.call(internalEnum = normalN.internalEnum || (normalN.internalEnum = {})));
 })(normalN || (normalN = {}));
 /*@internal*/ var internalC = /** @class */ (function () {
     function internalC() {
@@ -813,11 +813,11 @@ var normalN;
 /*@internal*/ var internalImport = internalNamespace.someClass;
 /*@internal*/ var internalConst = 10;
 /*@internal*/ var internalEnum;
-(function (internalEnum) {
-    internalEnum[internalEnum[0] = "a"] = 0;
-    internalEnum[internalEnum[1] = "b"] = 1;
-    internalEnum[internalEnum[2] = "c"] = 2;
-})(internalEnum || (internalEnum = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(internalEnum || (internalEnum = {})));
 var C = /** @class */ (function () {
     function C() {
     }
@@ -828,7 +828,7 @@ var C = /** @class */ (function () {
 }());
 
 ----------------------------------------------------------------------
-text: (3515-3551)
+text: (3405-3441)
 var c = new C();
 c.doSomething();
 
@@ -894,20 +894,20 @@ declare var c: C;
         },
         {
           "pos": 110,
-          "end": 3515,
+          "end": 3405,
           "kind": "prepend",
           "data": "../../../2/second-output.js",
           "texts": [
             {
               "pos": 110,
-              "end": 3515,
+              "end": 3405,
               "kind": "text"
             }
           ]
         },
         {
-          "pos": 3515,
-          "end": 3551,
+          "pos": 3405,
+          "end": 3441,
           "kind": "text"
         }
       ]

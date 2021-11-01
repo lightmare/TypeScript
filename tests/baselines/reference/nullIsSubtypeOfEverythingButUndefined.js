@@ -134,9 +134,9 @@ var c2;
 var r12 = true ? c2 : null;
 var r12 = true ? null : c2;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var r13 = true ? E : null;
 var r13 = true ? null : E;
 var r14 = true ? E.A : null;

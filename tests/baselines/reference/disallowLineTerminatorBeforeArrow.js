@@ -139,8 +139,8 @@ var m;
         return City;
     }());
     var Enum;
-    (function (Enum) {
-        Enum[Enum["claw"] = (function () { return 10; })()] = "claw";
-    })(Enum = m.Enum || (m.Enum = {}));
+    (function () {
+        this[this["claw"] = (function () { return 10; })()] = "claw";
+    }.call(Enum = m.Enum || (m.Enum = {})));
     m.v = function (x) { return new City(Enum.claw); };
 })(m || (m = {}));

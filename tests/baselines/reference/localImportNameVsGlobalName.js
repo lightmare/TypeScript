@@ -17,12 +17,12 @@ module App {
 var Keyboard;
 (function (Keyboard) {
     var Key;
-    (function (Key) {
-        Key[Key[0] = "UP"] = 0;
-        Key[Key[1] = "DOWN"] = 1;
-        Key[Key[2] = "LEFT"] = 2;
-        Key[Key[3] = "RIGHT"] = 3;
-    })(Key = Keyboard.Key || (Keyboard.Key = {}));
+    (function () {
+        this[this[0] = "UP"] = 0;
+        this[this[1] = "DOWN"] = 1;
+        this[this[2] = "LEFT"] = 2;
+        this[this[3] = "RIGHT"] = 3;
+    }.call(Key = Keyboard.Key || (Keyboard.Key = {})));
 })(Keyboard || (Keyboard = {}));
 var App;
 (function (App) {

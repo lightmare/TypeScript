@@ -41,11 +41,11 @@ const x: E.ONE = e;
 "use strict";
 // Repro from #31771
 var E1;
-(function (E1) {
-    E1[E1[0] = "ONE"] = 0;
-    E1[E1[1] = "TWO"] = 1;
-    E1[E1[2] = "THREE"] = 2;
-})(E1 || (E1 = {}));
+(function () {
+    this[this[0] = "ONE"] = 0;
+    this[this[1] = "TWO"] = 1;
+    this[this[2] = "THREE"] = 2;
+}.call(E1 || (E1 = {})));
 var b1 = {};
 var b2 = {};
 var e1 = E1.ONE;
@@ -55,15 +55,15 @@ b1[e1] = "b";
 b2[1] = "a";
 b2[e2] = "b";
 var N1;
-(function (N1) {
-    N1[N1["A"] = val()] = "A";
-    N1[N1["B"] = val()] = "B";
-})(N1 || (N1 = {}));
+(function () {
+    this[this["A"] = val()] = "A";
+    this[this["B"] = val()] = "B";
+}.call(N1 || (N1 = {})));
 var N2;
-(function (N2) {
-    N2[N2["C"] = val()] = "C";
-    N2[N2["D"] = val()] = "D";
-})(N2 || (N2 = {}));
+(function () {
+    this[this["C"] = val()] = "C";
+    this[this["D"] = val()] = "D";
+}.call(N2 || (N2 = {})));
 var e = E.ONE;
 var x = e;
 

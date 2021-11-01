@@ -98,13 +98,13 @@ var onlyT;
         var r7b = foo2(function (a) { return a; }, function (b) { return b; }); // valid, T is inferred to be Date
     }
     var E;
-    (function (E) {
-        E[E[0] = "A"] = 0;
-    })(E || (E = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E || (E = {})));
     var F;
-    (function (F) {
-        F[F[0] = "A"] = 0;
-    })(F || (F = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(F || (F = {})));
     function foo3(x, a, b) {
         var r;
         return r;
@@ -132,13 +132,13 @@ var TU;
         var r7b = foo2(function (a) { return a; }, function (b) { return b; });
     }
     var E;
-    (function (E) {
-        E[E[0] = "A"] = 0;
-    })(E || (E = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E || (E = {})));
     var F;
-    (function (F) {
-        F[F[0] = "A"] = 0;
-    })(F || (F = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(F || (F = {})));
     function foo3(x, a, b) {
         var r;
         return r;

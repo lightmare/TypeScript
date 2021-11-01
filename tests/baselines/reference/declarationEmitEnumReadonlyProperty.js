@@ -12,10 +12,10 @@ let x: E.A = new C().type;
 
 //// [declarationEmitEnumReadonlyProperty.js]
 var E;
-(function (E) {
-    E["A"] = "a";
-    E["B"] = "b";
-})(E || (E = {}));
+(function () {
+    this["A"] = "a";
+    this["B"] = "b";
+}.call(E || (E = {})));
 var C = /** @class */ (function () {
     function C() {
         this.type = E.A;

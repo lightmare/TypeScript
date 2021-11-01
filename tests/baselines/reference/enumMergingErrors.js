@@ -47,83 +47,83 @@ module M2 {
 var M;
 (function (M) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "A"] = 0;
-    })(E1 = M.E1 || (M.E1 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E1 = M.E1 || (M.E1 = {})));
     var E2;
-    (function (E2) {
-        E2[E2[0] = "C"] = 0;
-    })(E2 = M.E2 || (M.E2 = {}));
+    (function () {
+        this[this[0] = "C"] = 0;
+    }.call(E2 = M.E2 || (M.E2 = {})));
     var E3;
-    (function (E3) {
-        E3[E3[0] = "A"] = 0;
-    })(E3 = M.E3 || (M.E3 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E3 = M.E3 || (M.E3 = {})));
 })(M || (M = {}));
 (function (M) {
     var E1;
-    (function (E1) {
-        E1[E1["B"] = 'foo'.length] = "B";
-    })(E1 = M.E1 || (M.E1 = {}));
+    (function () {
+        this[this["B"] = 'foo'.length] = "B";
+    }.call(E1 = M.E1 || (M.E1 = {})));
     var E2;
-    (function (E2) {
-        E2[E2["B"] = 'foo'.length] = "B";
-    })(E2 = M.E2 || (M.E2 = {}));
+    (function () {
+        this[this["B"] = 'foo'.length] = "B";
+    }.call(E2 = M.E2 || (M.E2 = {})));
     var E3;
-    (function (E3) {
-        E3[E3[0] = "C"] = 0;
-    })(E3 = M.E3 || (M.E3 = {}));
+    (function () {
+        this[this[0] = "C"] = 0;
+    }.call(E3 = M.E3 || (M.E3 = {})));
 })(M || (M = {}));
 (function (M) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "C"] = 0;
-    })(E1 = M.E1 || (M.E1 = {}));
+    (function () {
+        this[this[0] = "C"] = 0;
+    }.call(E1 = M.E1 || (M.E1 = {})));
     var E2;
-    (function (E2) {
-        E2[E2[0] = "A"] = 0;
-    })(E2 = M.E2 || (M.E2 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E2 = M.E2 || (M.E2 = {})));
     var E3;
-    (function (E3) {
-        E3[E3["B"] = 'foo'.length] = "B";
-    })(E3 = M.E3 || (M.E3 = {}));
+    (function () {
+        this[this["B"] = 'foo'.length] = "B";
+    }.call(E3 = M.E3 || (M.E3 = {})));
 })(M || (M = {}));
 // Enum with no initializer in either declaration with constant members with the same root module
 var M1;
 (function (M1) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "A"] = 0;
-    })(E1 = M1.E1 || (M1.E1 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E1 = M1.E1 || (M1.E1 = {})));
 })(M1 || (M1 = {}));
 (function (M1) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "B"] = 0;
-    })(E1 = M1.E1 || (M1.E1 = {}));
+    (function () {
+        this[this[0] = "B"] = 0;
+    }.call(E1 = M1.E1 || (M1.E1 = {})));
 })(M1 || (M1 = {}));
 (function (M1) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "C"] = 0;
-    })(E1 = M1.E1 || (M1.E1 = {}));
+    (function () {
+        this[this[0] = "C"] = 0;
+    }.call(E1 = M1.E1 || (M1.E1 = {})));
 })(M1 || (M1 = {}));
 // Enum with initializer in only one of three declarations with constant members with the same root module
 var M2;
 (function (M2) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "A"] = 0;
-    })(E1 = M2.E1 || (M2.E1 = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(E1 = M2.E1 || (M2.E1 = {})));
 })(M2 || (M2 = {}));
 (function (M2) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "B"] = 0;
-    })(E1 = M2.E1 || (M2.E1 = {}));
+    (function () {
+        this[this[0] = "B"] = 0;
+    }.call(E1 = M2.E1 || (M2.E1 = {})));
 })(M2 || (M2 = {}));
 (function (M2) {
     var E1;
-    (function (E1) {
-        E1[E1[0] = "C"] = 0;
-    })(E1 = M2.E1 || (M2.E1 = {}));
+    (function () {
+        this[this[0] = "C"] = 0;
+    }.call(E1 = M2.E1 || (M2.E1 = {})));
 })(M2 || (M2 = {}));

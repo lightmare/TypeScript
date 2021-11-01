@@ -38,12 +38,12 @@ function reducer(action: ReducerAction): void {
 
 //// [recursiveArrayNotCircular.js]
 var ActionType;
-(function (ActionType) {
-    ActionType[ActionType[0] = "Foo"] = 0;
-    ActionType[ActionType[1] = "Bar"] = 1;
-    ActionType[ActionType[2] = "Baz"] = 2;
-    ActionType[ActionType[3] = "Batch"] = 3;
-})(ActionType || (ActionType = {}));
+(function () {
+    this[this[0] = "Foo"] = 0;
+    this[this[1] = "Bar"] = 1;
+    this[this[2] = "Baz"] = 2;
+    this[this[3] = "Batch"] = 3;
+}.call(ActionType || (ActionType = {})));
 function assertNever(a) {
     throw new Error("Unreachable!");
 }

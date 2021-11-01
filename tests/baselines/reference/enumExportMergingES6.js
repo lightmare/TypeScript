@@ -12,12 +12,12 @@ export enum Animals {
 
 //// [enumExportMergingES6.js]
 export var Animals;
-(function (Animals) {
-    Animals[Animals[1] = "Cat"] = 1;
-})(Animals || (Animals = {}));
-(function (Animals) {
-    Animals[Animals[2] = "Dog"] = 2;
-})(Animals || (Animals = {}));
-(function (Animals) {
-    Animals[Animals[3] = "CatDog"] = 3;
-})(Animals || (Animals = {}));
+(function () {
+    this[this[1] = "Cat"] = 1;
+}.call(Animals || (Animals = {})));
+(function () {
+    this[this[2] = "Dog"] = 2;
+}.call(Animals || (Animals = {})));
+(function () {
+    this[this[3] = "CatDog"] = 3;
+}.call(Animals || (Animals = {})));

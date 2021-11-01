@@ -10,8 +10,8 @@ export = foo
 define(["require", "exports"], function (require, exports) {
     "use strict";
     var foo;
-    (function (foo) {
-        foo[foo[0] = "A"] = 0;
-    })(foo || (foo = {}));
+    (function () {
+        this[this[0] = "A"] = 0;
+    }.call(foo || (foo = {})));
     return foo;
 });

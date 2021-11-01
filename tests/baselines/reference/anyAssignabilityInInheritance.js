@@ -114,9 +114,9 @@ var r3 = foo3(a); // any
 var r3 = foo3(a); // any
 var r3 = foo3(a); // any
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var r3 = foo3(a); // any
 function f() { }
 (function (f) {

@@ -41,9 +41,9 @@ enum E {
 //// [duplicateIdentifierEnum_A.js]
 // Test the error message when attempting to merge an enum with a class, an interface, or a function.
 var A;
-(function (A) {
-    A[A[0] = "bar"] = 0;
-})(A || (A = {}));
+(function () {
+    this[this[0] = "bar"] = 0;
+}.call(A || (A = {})));
 var A = /** @class */ (function () {
     function A() {
     }
@@ -53,9 +53,9 @@ function C() {
     return 0;
 }
 var D;
-(function (D) {
-    D[D[0] = "bar"] = 0;
-})(D || (D = {}));
+(function () {
+    this[this[0] = "bar"] = 0;
+}.call(D || (D = {})));
 var E = /** @class */ (function () {
     function E() {
     }
@@ -67,6 +67,6 @@ function D() {
     return 0;
 }
 var E;
-(function (E) {
-    E[E[0] = "bar"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "bar"] = 0;
+}.call(E || (E = {})));

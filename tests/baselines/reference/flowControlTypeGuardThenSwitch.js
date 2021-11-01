@@ -38,10 +38,10 @@ if (isBoth(foo)) {
 
 //// [flowControlTypeGuardThenSwitch.js]
 var Kind;
-(function (Kind) {
-    Kind[Kind[0] = "A"] = 0;
-    Kind[Kind[1] = "B"] = 1;
-})(Kind || (Kind = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(Kind || (Kind = {})));
 function isBoth(x) {
     return true;
 }

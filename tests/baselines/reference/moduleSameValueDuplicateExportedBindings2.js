@@ -18,10 +18,10 @@ export enum Animals {
 exports.__esModule = true;
 exports.Animals = void 0;
 var Animals;
-(function (Animals) {
-    Animals[Animals[0] = "Cat"] = 0;
-    Animals[Animals[1] = "Dog"] = 1;
-})(Animals = exports.Animals || (exports.Animals = {}));
+(function () {
+    this[this[0] = "Cat"] = 0;
+    this[this[1] = "Dog"] = 1;
+}.call(Animals = exports.Animals || (exports.Animals = {})));
 ;
 //// [b.js]
 "use strict";

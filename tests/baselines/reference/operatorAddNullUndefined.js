@@ -19,9 +19,9 @@ var x16 = E.x + undefined
 
 //// [operatorAddNullUndefined.js]
 var E;
-(function (E) {
-    E[E[0] = "x"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "x"] = 0;
+}.call(E || (E = {})));
 var x1 = null + null;
 var x2 = null + undefined;
 var x3 = undefined + null;

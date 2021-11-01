@@ -8,13 +8,13 @@ var o = {
 //// [computedPropertyNames47_ES5.js]
 var _a;
 var E1;
-(function (E1) {
-    E1[E1[0] = "x"] = 0;
-})(E1 || (E1 = {}));
+(function () {
+    this[this[0] = "x"] = 0;
+}.call(E1 || (E1 = {})));
 var E2;
-(function (E2) {
-    E2[E2[0] = "x"] = 0;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[0] = "x"] = 0;
+}.call(E2 || (E2 = {})));
 var o = (_a = {},
     _a[E1.x || E2.x] = 0,
     _a);

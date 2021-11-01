@@ -24,9 +24,9 @@ i = x;
 //// [invalidUndefinedAssignments.js]
 var x;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 E = x;
 E.A = x;
 var C = /** @class */ (function () {

@@ -102,10 +102,10 @@ var p2 = new M2.Point();
 var M3;
 (function (M3) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Blue"] = 0;
-        Color[Color[1] = "Red"] = 1;
-    })(Color = M3.Color || (M3.Color = {}));
+    (function () {
+        this[this[0] = "Blue"] = 0;
+        this[this[1] = "Red"] = 1;
+    }.call(Color = M3.Color || (M3.Color = {})));
 })(M3 || (M3 = {}));
 var m3;
 var m3 = M3;

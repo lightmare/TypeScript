@@ -13,12 +13,12 @@ enum E {
 
 //// [enumsWithMultipleDeclarations1.js]
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
-(function (E) {
-    E[E[0] = "B"] = 0;
-})(E || (E = {}));
-(function (E) {
-    E[E[0] = "C"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
+(function () {
+    this[this[0] = "B"] = 0;
+}.call(E || (E = {})));
+(function () {
+    this[this[0] = "C"] = 0;
+}.call(E || (E = {})));

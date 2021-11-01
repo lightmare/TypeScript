@@ -14,12 +14,12 @@ x = Colors.FancyPink;
 //// [commentsEnums.js]
 /** Enum of colors*/
 var Colors;
-(function (Colors) {
+(function () {
     /** Fancy name for 'blue'*/
-    Colors[Colors[0] = "Cornflower"] = 0; /* blue */
+    this[this[0] = "Cornflower"] = 0; /* blue */
     /** Fancy name for 'pink'*/
-    Colors[Colors[1] = "FancyPink"] = 1;
-})(Colors || (Colors = {})); // trailing comment
+    this[this[1] = "FancyPink"] = 1;
+}.call(Colors || (Colors = {}))); // trailing comment
 var x = Colors.Cornflower;
 x = Colors.FancyPink;
 

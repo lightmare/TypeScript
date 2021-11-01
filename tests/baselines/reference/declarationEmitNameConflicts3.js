@@ -79,9 +79,9 @@ var M;
         }(C));
         P.E = E;
         var D;
-        (function (D) {
-            D[D[0] = "f"] = 0;
-        })(D = P.D || (P.D = {}));
+        (function () {
+            this[this[0] = "f"] = 0;
+        }.call(D = P.D || (P.D = {})));
         P.w = M.D.f; // error, should be typeof M.D.f
         P.x = M.C.f; // error, should be typeof M.C.f
         P.x = M.E.f; // error, should be typeof M.E.f

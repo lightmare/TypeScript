@@ -48,9 +48,9 @@ var C = /** @class */ (function () {
 }());
 C = null; // Error
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 E = null; // Error
 E.A = null; // OK per spec, Error per implementation (509581)
 function fn() { }

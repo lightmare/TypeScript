@@ -62,9 +62,9 @@ var x4a = /** @class */ (function () {
 // var then enum
 var x5 = 1;
 var x5;
-(function (x5) {
-    x5[x5[0] = "One"] = 0;
-})(x5 || (x5 = {})); // error
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(x5 || (x5 = {}))); // error
 // var then module
 var x6 = 1;
 var x6a = 1; // error

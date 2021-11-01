@@ -1059,10 +1059,10 @@ function f3(t, k, tk) {
     }
 }
 var Flag;
-(function (Flag) {
-    Flag["FLAG_1"] = "flag_1";
-    Flag["FLAG_2"] = "flag_2";
-})(Flag || (Flag = {}));
+(function () {
+    this["FLAG_1"] = "flag_1";
+    this["FLAG_2"] = "flag_2";
+}.call(Flag || (Flag = {})));
 function getFlagsFromSimpleRecord(record, flags) {
     return record[flags[0]];
 }

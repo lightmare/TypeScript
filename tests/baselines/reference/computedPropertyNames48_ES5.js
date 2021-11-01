@@ -20,9 +20,9 @@ extractIndexer({
 //// [computedPropertyNames48_ES5.js]
 var _a, _b, _c;
 var E;
-(function (E) {
-    E[E[0] = "x"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "x"] = 0;
+}.call(E || (E = {})));
 var a;
 extractIndexer((_a = {},
     _a[a] = "",

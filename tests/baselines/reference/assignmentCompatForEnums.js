@@ -16,10 +16,10 @@ function foo() {
 
 //// [assignmentCompatForEnums.js]
 var TokenType;
-(function (TokenType) {
-    TokenType[TokenType[0] = "One"] = 0;
-    TokenType[TokenType[1] = "Two"] = 1;
-})(TokenType || (TokenType = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+    this[this[1] = "Two"] = 1;
+}.call(TokenType || (TokenType = {})));
 ;
 var list = {};
 function returnType() { return null; }

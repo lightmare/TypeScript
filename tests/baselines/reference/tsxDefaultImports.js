@@ -17,9 +17,9 @@ let a = Def.E.one;
 "use strict";
 exports.__esModule = true;
 var SomeEnum;
-(function (SomeEnum) {
-    SomeEnum[SomeEnum[0] = "one"] = 0;
-})(SomeEnum || (SomeEnum = {}));
+(function () {
+    this[this[0] = "one"] = 0;
+}.call(SomeEnum || (SomeEnum = {})));
 var SomeClass = /** @class */ (function () {
     function SomeClass() {
     }

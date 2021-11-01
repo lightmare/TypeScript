@@ -42,10 +42,10 @@ x5 += {};
 
 //// [compoundAdditionAssignmentWithInvalidOperands.js]
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-    E[E[1] = "b"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+}.call(E || (E = {})));
 var a;
 var x1;
 x1 += a;

@@ -23,16 +23,16 @@ function fn2(x: D): List<D> { return asList(x); }
 //// [enumLiteralUnionNotWidened.js]
 // repro from #22093
 var A;
-(function (A) {
-    A["one"] = "one";
-    A["two"] = "two";
-})(A || (A = {}));
+(function () {
+    this["one"] = "one";
+    this["two"] = "two";
+}.call(A || (A = {})));
 ;
 var B;
-(function (B) {
-    B["foo"] = "foo";
-    B["bar"] = "bar";
-})(B || (B = {}));
+(function () {
+    this["foo"] = "foo";
+    this["bar"] = "bar";
+}.call(B || (B = {})));
 ;
 var List = /** @class */ (function () {
     function List() {

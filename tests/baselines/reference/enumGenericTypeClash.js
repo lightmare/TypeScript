@@ -9,6 +9,6 @@ var X = /** @class */ (function () {
     }
     return X;
 }());
-(function (X) {
-    X[X[0] = "MyVal"] = 0;
-})(X || (X = {}));
+(function () {
+    this[this[0] = "MyVal"] = 0;
+}.call(X || (X = {})));

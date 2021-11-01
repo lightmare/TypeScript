@@ -9,8 +9,8 @@ async function* test(x: Promise<number>) {
 //// [awaitAndYield.js]
 async function* test(x) {
     let E;
-    (function (E) {
-        E[E["foo"] = await x] = "foo";
-        E[E["baz"] = yield 1] = "baz";
-    })(E || (E = {}));
+    (function () {
+        this[this["foo"] = await x] = "foo";
+        this[this["baz"] = yield 1] = "baz";
+    }.call(E || (E = {})));
 }

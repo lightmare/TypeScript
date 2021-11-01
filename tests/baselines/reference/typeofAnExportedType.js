@@ -77,9 +77,9 @@ var M;
 })(M = exports.M || (exports.M = {}));
 exports.Z = M;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E = exports.E || (exports.E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E = exports.E || (exports.E = {})));
 function foo() { }
 exports.foo = foo;
 (function (foo) {

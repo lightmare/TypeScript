@@ -48,11 +48,11 @@ var W;
     }());
     W.D = D;
 })(W || (W = {}));
-(function (W) {
-    W[W[0] = "a"] = 0;
-    W[W[1] = "b"] = 1;
-    W[W[2] = "c"] = 2;
-})(W || (W = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(W || (W = {})));
 var x = W;
 var y = W;
 var z = W; // error

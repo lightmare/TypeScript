@@ -15,9 +15,9 @@ var a = x;
 var b = x;
 var c = x;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 ;
 var d = x;
 var e = E.A;

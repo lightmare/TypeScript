@@ -9,7 +9,7 @@
 exports.__esModule = true;
 exports.CodeGenTarget = void 0;
 var CodeGenTarget;
-(function (CodeGenTarget) {
-    CodeGenTarget[CodeGenTarget[0] = "ES3"] = 0;
-    CodeGenTarget[CodeGenTarget[1] = "ES5"] = 1;
-})(CodeGenTarget = exports.CodeGenTarget || (exports.CodeGenTarget = {}));
+(function () {
+    this[this[0] = "ES3"] = 0;
+    this[this[1] = "ES5"] = 1;
+}.call(CodeGenTarget = exports.CodeGenTarget || (exports.CodeGenTarget = {})));

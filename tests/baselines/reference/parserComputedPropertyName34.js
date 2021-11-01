@@ -7,8 +7,8 @@ enum E {
 
 //// [parserComputedPropertyName34.js]
 var E;
-(function (E) {
+(function () {
     // no ASI, comma expected
-    E[E[e] = id++] = e;
-    E[E[e2] = 1] = e2;
-})(E || (E = {}));
+    this[this[e] = id++] = e;
+    this[this[e2] = 1] = e2;
+}.call(E || (E = {})));

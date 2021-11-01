@@ -41,10 +41,10 @@ function foo<T, U>(t: T, u: U) {
 //// [additionOperatorWithTypeParameter.js]
 // type parameter type is not a valid operand of addition operator
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-    E[E[1] = "b"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+}.call(E || (E = {})));
 function foo(t, u) {
     var a;
     var b;

@@ -285,10 +285,10 @@ function f3(x) {
 }
 // Repro from #11572
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[1] = "B"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(E || (E = {})));
 function f(e) {
     switch (e) {
         case E.A: return 0;
@@ -336,10 +336,10 @@ function areaWrapped(s) {
 }
 // Repro from #13241
 var MyEnum;
-(function (MyEnum) {
-    MyEnum[MyEnum[0] = "A"] = 0;
-    MyEnum[MyEnum[1] = "B"] = 1;
-})(MyEnum || (MyEnum = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(MyEnum || (MyEnum = {})));
 function thisGivesError(e) {
     var s;
     switch (e) {
@@ -375,10 +375,10 @@ function good2(e) {
 }
 // Repro from #18362
 var Level;
-(function (Level) {
-    Level[Level[0] = "One"] = 0;
-    Level[Level[1] = "Two"] = 1;
-})(Level || (Level = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+    this[this[1] = "Two"] = 1;
+}.call(Level || (Level = {})));
 var doSomethingWithLevel = function (level) {
     var next;
     switch (level) {
@@ -434,10 +434,10 @@ function test4(value) {
 }
 // Repro from #34661
 var Animal;
-(function (Animal) {
-    Animal[Animal[0] = "DOG"] = 0;
-    Animal[Animal[1] = "CAT"] = 1;
-})(Animal || (Animal = {}));
+(function () {
+    this[this[0] = "DOG"] = 0;
+    this[this[1] = "CAT"] = 1;
+}.call(Animal || (Animal = {})));
 function expression() {
     var _a;
     switch ((_a = zoo === null || zoo === void 0 ? void 0 : zoo.animal) !== null && _a !== void 0 ? _a : Animal.DOG) {

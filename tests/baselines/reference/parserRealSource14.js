@@ -958,9 +958,9 @@ var TypeScript;
     }());
     TypeScript.AstPathContext = AstPathContext;
     var GetAstPathOptions;
-    (function (GetAstPathOptions) {
-        GetAstPathOptions[GetAstPathOptions[0] = "Default"] = 0;
-        GetAstPathOptions[GetAstPathOptions[1] = "EdgeInclusive"] = 1;
+    (function () {
+        this[this[0] = "Default"] = 0;
+        this[this[1] = "EdgeInclusive"] = 1;
         //We need this options dealing with an AST coming from an incomplete AST. For example:
         //     class foo { // r
         // If we ask for the AST at the position after the "r" character, we won't see we are 
@@ -968,8 +968,8 @@ var TypeScript;
         // the "{" character, meaning we don't traverse the tree down to the stmt list of the class, meaning
         // we don't find the "precomment" attached to the errorneous empty stmt.
         //TODO: It would be nice to be able to get rid of this.
-        GetAstPathOptions[GetAstPathOptions[2] = "DontPruneSearchBasedOnPosition"] = 2;
-    })(GetAstPathOptions = TypeScript.GetAstPathOptions || (TypeScript.GetAstPathOptions = {}));
+        this[this[2] = "DontPruneSearchBasedOnPosition"] = 2;
+    }.call(GetAstPathOptions = TypeScript.GetAstPathOptions || (TypeScript.GetAstPathOptions = {})));
     ///
     /// Return the stack of AST nodes containing "position"
     ///

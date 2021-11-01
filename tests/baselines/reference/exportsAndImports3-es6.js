@@ -47,11 +47,11 @@ class C {
 exports.C = C;
 exports.C1 = C;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[1] = "B"] = 1;
-    E[E[2] = "C"] = 2;
-})(E = exports.E || (exports.E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(E = exports.E || (exports.E = {})));
 exports.E1 = E;
 var M;
 (function (M) {

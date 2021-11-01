@@ -6,6 +6,6 @@ enum A {
 
 //// [enumWithNegativeInfinityProperty.js]
 var A;
-(function (A) {
-    A[A[1] = "-Infinity"] = 1;
-})(A || (A = {}));
+(function () {
+    this[this[1] = "-Infinity"] = 1;
+}.call(A || (A = {})));

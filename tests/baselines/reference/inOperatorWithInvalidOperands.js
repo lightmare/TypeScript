@@ -54,9 +54,9 @@ var Foo = /** @class */ (function () {
     return Foo;
 }());
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+}.call(E || (E = {})));
 var x;
 // invalid left operands
 // the left operand is required to be of type Any, the String primitive type, or the Number primitive type

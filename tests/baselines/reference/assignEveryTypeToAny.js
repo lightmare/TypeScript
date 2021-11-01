@@ -74,9 +74,9 @@ x = e;
 var e2;
 x = e2;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 x = E.A;
 var f = E.A;
 x = f;

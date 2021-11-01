@@ -57,10 +57,10 @@ const um = {
 var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 // Fixes #16887
 var Strs;
-(function (Strs) {
-    Strs["A"] = "a";
-    Strs["B"] = "b";
-})(Strs || (Strs = {}));
+(function () {
+    this["A"] = "a";
+    this["B"] = "b";
+}.call(Strs || (Strs = {})));
 var x = (_a = {},
     _a[Strs.A] = 'xo',
     _a[Strs.B] = 'xe',
@@ -84,10 +84,10 @@ var uz = (_e = {},
     _e[b] = 'ze',
     _e);
 var Nums;
-(function (Nums) {
-    Nums[Nums[0] = "A"] = 0;
-    Nums[Nums[1] = "B"] = 1;
-})(Nums || (Nums = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(Nums || (Nums = {})));
 var n = (_f = {},
     _f[Nums.A] = 1,
     _f[Nums.B] = 2,

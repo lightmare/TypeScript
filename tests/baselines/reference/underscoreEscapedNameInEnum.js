@@ -7,7 +7,7 @@ enum E {
 
 //// [underscoreEscapedNameInEnum.js]
 var E;
-(function (E) {
-    E[E[1] = "__foo"] = 1;
-    E[E[2] = "bar"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[1] = "__foo"] = 1;
+    this[this[2] = "bar"] = 2;
+}.call(E || (E = {})));

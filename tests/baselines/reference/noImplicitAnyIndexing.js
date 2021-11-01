@@ -50,9 +50,9 @@ var mResult3 = m[hi];
 
 //// [noImplicitAnyIndexing.js]
 var MyEmusEnum;
-(function (MyEmusEnum) {
-    MyEmusEnum[MyEmusEnum[0] = "emu"] = 0;
-})(MyEmusEnum || (MyEmusEnum = {}));
+(function () {
+    this[this[0] = "emu"] = 0;
+}.call(MyEmusEnum || (MyEmusEnum = {})));
 // Should be okay; should be a string.
 var strRepresentation1 = MyEmusEnum[0];
 // Should be okay; should be a string.

@@ -19,11 +19,11 @@ var c = EnumE.C;
 //// [exportAssignmentEnum_A.js]
 "use strict";
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[1] = "B"] = 1;
-    E[E[2] = "C"] = 2;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(E || (E = {})));
 module.exports = E;
 //// [exportAssignmentEnum_B.js]
 "use strict";

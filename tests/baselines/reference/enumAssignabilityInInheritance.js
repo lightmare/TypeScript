@@ -112,9 +112,9 @@ var r4 = foo16(E.A);
 //// [enumAssignabilityInInheritance.js]
 // enum is only a subtype of number, no types are subtypes of enum, all of these except the first are errors
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 var r = foo(E.A); // E
 var r2 = foo(1); // number
 var r3 = foo(null); // any
@@ -140,9 +140,9 @@ var r4 = foo10(E.A);
 var r4 = foo11(E.A);
 var r4 = foo12(E.A);
 var E2;
-(function (E2) {
-    E2[E2[0] = "A"] = 0;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E2 || (E2 = {})));
 var r4 = foo13(E.A);
 function f() { }
 (function (f) {

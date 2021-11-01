@@ -12,7 +12,7 @@ sourceFile:sourceMapValidationEnums.ts
 1 >
 2 >^^^^
 3 >    ^
-4 >     ^^^^^^^^^^^->
+4 >     ^^^^^^^^^^->
 1 >
 2 >enum 
 3 >    e {
@@ -24,89 +24,83 @@ sourceFile:sourceMapValidationEnums.ts
 2 >Emitted(1, 5) Source(1, 6) + SourceIndex(0)
 3 >Emitted(1, 6) Source(5, 2) + SourceIndex(0)
 ---
->>>(function (e) {
+>>>(function () {
 1->
-2 >^^^^^^^^^^^
-3 >           ^
-4 >            ^^^^^^^^^^^->
+2 >^^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
 1->
-2 >enum 
-3 >           e
 1->Emitted(2, 1) Source(1, 1) + SourceIndex(0)
-2 >Emitted(2, 12) Source(1, 6) + SourceIndex(0)
-3 >Emitted(2, 13) Source(1, 7) + SourceIndex(0)
 ---
->>>    e[e[0] = "x"] = 0;
+>>>    this[this[0] = "x"] = 0;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^
-3 >                     ^
-4 >                      ^->
-1-> {
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^
+3 >                           ^
+4 >                            ^->
+1->enum e {
   >    
 2 >    x
-3 >                     
+3 >                           
 1->Emitted(3, 5) Source(2, 5) + SourceIndex(0)
-2 >Emitted(3, 22) Source(2, 6) + SourceIndex(0)
-3 >Emitted(3, 23) Source(2, 6) + SourceIndex(0)
+2 >Emitted(3, 28) Source(2, 6) + SourceIndex(0)
+3 >Emitted(3, 29) Source(2, 6) + SourceIndex(0)
 ---
->>>    e[e[1] = "y"] = 1;
+>>>    this[this[1] = "y"] = 1;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^
-3 >                     ^
-4 >                      ^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^
+3 >                           ^
+4 >                            ^->
 1->,
   >    
 2 >    y
-3 >                     
+3 >                           
 1->Emitted(4, 5) Source(3, 5) + SourceIndex(0)
-2 >Emitted(4, 22) Source(3, 6) + SourceIndex(0)
-3 >Emitted(4, 23) Source(3, 6) + SourceIndex(0)
+2 >Emitted(4, 28) Source(3, 6) + SourceIndex(0)
+3 >Emitted(4, 29) Source(3, 6) + SourceIndex(0)
 ---
->>>    e[e[2] = "x"] = 2;
+>>>    this[this[2] = "x"] = 2;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^
-3 >                     ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^
+3 >                           ^
 1->,
   >    
 2 >    x
-3 >                     
+3 >                           
 1->Emitted(5, 5) Source(4, 5) + SourceIndex(0)
-2 >Emitted(5, 22) Source(4, 6) + SourceIndex(0)
-3 >Emitted(5, 23) Source(4, 6) + SourceIndex(0)
+2 >Emitted(5, 28) Source(4, 6) + SourceIndex(0)
+3 >Emitted(5, 29) Source(4, 6) + SourceIndex(0)
 ---
->>>})(e || (e = {}));
+>>>}.call(e || (e = {})));
 1 >
 2 >^
-3 > ^^
-4 >   ^
-5 >    ^^^^^
-6 >         ^
-7 >          ^^^^^^^^
+3 > ^^^^^^
+4 >       ^
+5 >        ^^^^^
+6 >             ^
+7 >              ^^^^^^^^^
 1 >
   >
 2 >}
 3 > 
-4 >   e
-5 >    
-6 >         e
-7 >           {
-  >              x,
-  >              y,
-  >              x
-  >          }
+4 >       e
+5 >        
+6 >             e
+7 >               {
+  >                  x,
+  >                  y,
+  >                  x
+  >              }
 1 >Emitted(6, 1) Source(5, 1) + SourceIndex(0)
 2 >Emitted(6, 2) Source(5, 2) + SourceIndex(0)
-3 >Emitted(6, 4) Source(1, 6) + SourceIndex(0)
-4 >Emitted(6, 5) Source(1, 7) + SourceIndex(0)
-5 >Emitted(6, 10) Source(1, 6) + SourceIndex(0)
-6 >Emitted(6, 11) Source(1, 7) + SourceIndex(0)
-7 >Emitted(6, 19) Source(5, 2) + SourceIndex(0)
+3 >Emitted(6, 8) Source(1, 6) + SourceIndex(0)
+4 >Emitted(6, 9) Source(1, 7) + SourceIndex(0)
+5 >Emitted(6, 14) Source(1, 6) + SourceIndex(0)
+6 >Emitted(6, 15) Source(1, 7) + SourceIndex(0)
+7 >Emitted(6, 24) Source(5, 2) + SourceIndex(0)
 ---
 >>>var e2;
 1 >
 2 >^^^^
 3 >    ^^
-4 >      ^^^^^^^^^^^->
+4 >      ^^^^^^^^^->
 1 >
   >
 2 >enum 
@@ -120,97 +114,91 @@ sourceFile:sourceMapValidationEnums.ts
 2 >Emitted(7, 5) Source(6, 6) + SourceIndex(0)
 3 >Emitted(7, 7) Source(11, 2) + SourceIndex(0)
 ---
->>>(function (e2) {
+>>>(function () {
 1->
-2 >^^^^^^^^^^^
-3 >           ^^
-4 >             ^^^^^^^^^^^^^^->
+2 >^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^->
 1->
-2 >enum 
-3 >           e2
 1->Emitted(8, 1) Source(6, 1) + SourceIndex(0)
-2 >Emitted(8, 12) Source(6, 6) + SourceIndex(0)
-3 >Emitted(8, 14) Source(6, 8) + SourceIndex(0)
 ---
->>>    e2[e2[10] = "x"] = 10;
+>>>    this[this[10] = "x"] = 10;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^
-3 >                         ^
-4 >                          ^->
-1-> {
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                             ^
+4 >                              ^->
+1->enum e2 {
   >    
 2 >    x = 10
-3 >                         
+3 >                             
 1->Emitted(9, 5) Source(7, 5) + SourceIndex(0)
-2 >Emitted(9, 26) Source(7, 11) + SourceIndex(0)
-3 >Emitted(9, 27) Source(7, 11) + SourceIndex(0)
+2 >Emitted(9, 30) Source(7, 11) + SourceIndex(0)
+3 >Emitted(9, 31) Source(7, 11) + SourceIndex(0)
 ---
->>>    e2[e2[10] = "y"] = 10;
+>>>    this[this[10] = "y"] = 10;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^
-3 >                         ^
-4 >                          ^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                             ^
+4 >                              ^->
 1->,
   >    
 2 >    y = 10
-3 >                         
+3 >                             
 1->Emitted(10, 5) Source(8, 5) + SourceIndex(0)
-2 >Emitted(10, 26) Source(8, 11) + SourceIndex(0)
-3 >Emitted(10, 27) Source(8, 11) + SourceIndex(0)
+2 >Emitted(10, 30) Source(8, 11) + SourceIndex(0)
+3 >Emitted(10, 31) Source(8, 11) + SourceIndex(0)
 ---
->>>    e2[e2[11] = "z"] = 11;
+>>>    this[this[11] = "z"] = 11;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^
-3 >                         ^
-4 >                          ^^->
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                             ^
+4 >                              ^^->
 1->,
   >    
 2 >    z
-3 >                         
+3 >                             
 1->Emitted(11, 5) Source(9, 5) + SourceIndex(0)
-2 >Emitted(11, 26) Source(9, 6) + SourceIndex(0)
-3 >Emitted(11, 27) Source(9, 6) + SourceIndex(0)
+2 >Emitted(11, 30) Source(9, 6) + SourceIndex(0)
+3 >Emitted(11, 31) Source(9, 6) + SourceIndex(0)
 ---
->>>    e2[e2[12] = "x2"] = 12;
+>>>    this[this[12] = "x2"] = 12;
 1->^^^^
-2 >    ^^^^^^^^^^^^^^^^^^^^^^
-3 >                          ^
+2 >    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+3 >                              ^
 1->,
   >    
 2 >    x2
-3 >                          
+3 >                              
 1->Emitted(12, 5) Source(10, 5) + SourceIndex(0)
-2 >Emitted(12, 27) Source(10, 7) + SourceIndex(0)
-3 >Emitted(12, 28) Source(10, 7) + SourceIndex(0)
+2 >Emitted(12, 31) Source(10, 7) + SourceIndex(0)
+3 >Emitted(12, 32) Source(10, 7) + SourceIndex(0)
 ---
->>>})(e2 || (e2 = {}));
+>>>}.call(e2 || (e2 = {})));
 1 >
 2 >^
-3 > ^^
-4 >   ^^
-5 >     ^^^^^
-6 >          ^^
-7 >            ^^^^^^^^
+3 > ^^^^^^
+4 >       ^^
+5 >         ^^^^^
+6 >              ^^
+7 >                ^^^^^^^^^
 1 >
   >
 2 >}
 3 > 
-4 >   e2
-5 >     
-6 >          e2
-7 >             {
-  >                x = 10,
-  >                y = 10,
-  >                z,
-  >                x2
-  >            }
+4 >       e2
+5 >         
+6 >              e2
+7 >                 {
+  >                    x = 10,
+  >                    y = 10,
+  >                    z,
+  >                    x2
+  >                }
 1 >Emitted(13, 1) Source(11, 1) + SourceIndex(0)
 2 >Emitted(13, 2) Source(11, 2) + SourceIndex(0)
-3 >Emitted(13, 4) Source(6, 6) + SourceIndex(0)
-4 >Emitted(13, 6) Source(6, 8) + SourceIndex(0)
-5 >Emitted(13, 11) Source(6, 6) + SourceIndex(0)
-6 >Emitted(13, 13) Source(6, 8) + SourceIndex(0)
-7 >Emitted(13, 21) Source(11, 2) + SourceIndex(0)
+3 >Emitted(13, 8) Source(6, 6) + SourceIndex(0)
+4 >Emitted(13, 10) Source(6, 8) + SourceIndex(0)
+5 >Emitted(13, 15) Source(6, 6) + SourceIndex(0)
+6 >Emitted(13, 17) Source(6, 8) + SourceIndex(0)
+7 >Emitted(13, 26) Source(11, 2) + SourceIndex(0)
 ---
 >>>var e3;
 1 >

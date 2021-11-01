@@ -47,33 +47,33 @@ module m2 {
 
 //// [es6ModuleEnumDeclaration.js]
 export var e1;
-(function (e1) {
-    e1[e1[0] = "a"] = 0;
-    e1[e1[1] = "b"] = 1;
-    e1[e1[2] = "c"] = 2;
-})(e1 || (e1 = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(e1 || (e1 = {})));
 var e2;
-(function (e2) {
-    e2[e2[0] = "x"] = 0;
-    e2[e2[1] = "y"] = 1;
-    e2[e2[2] = "z"] = 2;
-})(e2 || (e2 = {}));
+(function () {
+    this[this[0] = "x"] = 0;
+    this[this[1] = "y"] = 1;
+    this[this[2] = "z"] = 2;
+}.call(e2 || (e2 = {})));
 var x = e1.a;
 var y = e2.x;
 export var m1;
 (function (m1) {
     let e3;
-    (function (e3) {
-        e3[e3[0] = "a"] = 0;
-        e3[e3[1] = "b"] = 1;
-        e3[e3[2] = "c"] = 2;
-    })(e3 = m1.e3 || (m1.e3 = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+    }.call(e3 = m1.e3 || (m1.e3 = {})));
     let e4;
-    (function (e4) {
-        e4[e4[0] = "x"] = 0;
-        e4[e4[1] = "y"] = 1;
-        e4[e4[2] = "z"] = 2;
-    })(e4 || (e4 = {}));
+    (function () {
+        this[this[0] = "x"] = 0;
+        this[this[1] = "y"] = 1;
+        this[this[2] = "z"] = 2;
+    }.call(e4 || (e4 = {})));
     var x1 = e1.a;
     var y1 = e2.x;
     var x2 = e3.a;
@@ -82,17 +82,17 @@ export var m1;
 var m2;
 (function (m2) {
     let e5;
-    (function (e5) {
-        e5[e5[0] = "a"] = 0;
-        e5[e5[1] = "b"] = 1;
-        e5[e5[2] = "c"] = 2;
-    })(e5 = m2.e5 || (m2.e5 = {}));
+    (function () {
+        this[this[0] = "a"] = 0;
+        this[this[1] = "b"] = 1;
+        this[this[2] = "c"] = 2;
+    }.call(e5 = m2.e5 || (m2.e5 = {})));
     let e6;
-    (function (e6) {
-        e6[e6[0] = "x"] = 0;
-        e6[e6[1] = "y"] = 1;
-        e6[e6[2] = "z"] = 2;
-    })(e6 || (e6 = {}));
+    (function () {
+        this[this[0] = "x"] = 0;
+        this[this[1] = "y"] = 1;
+        this[this[2] = "z"] = 2;
+    }.call(e6 || (e6 = {})));
     var x1 = e1.a;
     var y1 = e2.x;
     var x2 = e5.a;

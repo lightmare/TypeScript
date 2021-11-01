@@ -39,8 +39,8 @@ function foo3(x) { }
 function foo4(x) { }
 function foo5(x) { }
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 function foo6(x) { }
 function foo7(x) { }

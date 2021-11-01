@@ -70,10 +70,10 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 var E;
-(function (E) {
-    E[E[0] = "v1"] = 0;
-    E[E[1] = "v2"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "v1"] = 0;
+    this[this[1] = "v2"] = 1;
+}.call(E || (E = {})));
 ;
 function f(p1, p2) {
     var t;

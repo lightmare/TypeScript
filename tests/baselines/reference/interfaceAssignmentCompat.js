@@ -56,11 +56,11 @@ M.test();
 var M;
 (function (M) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Green"] = 0;
-        Color[Color[1] = "Blue"] = 1;
-        Color[Color[2] = "Brown"] = 2;
-    })(Color = M.Color || (M.Color = {}));
+    (function () {
+        this[this[0] = "Green"] = 0;
+        this[this[1] = "Blue"] = 1;
+        this[this[2] = "Brown"] = 2;
+    }.call(Color = M.Color || (M.Color = {})));
     function CompareEyes(a, b) {
         return a.color - b.color;
     }

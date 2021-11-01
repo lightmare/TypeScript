@@ -15,9 +15,9 @@ export const enum Foo {
 exports.__esModule = true;
 exports.Foo = void 0;
 var Foo;
-(function (Foo) {
-    Foo[Foo[0] = "BAR"] = 0;
-})(Foo = exports.Foo || (exports.Foo = {}));
+(function () {
+    this[this[0] = "BAR"] = 0;
+}.call(Foo = exports.Foo || (exports.Foo = {})));
 //// [file1.js]
 "use strict";
 exports.__esModule = true;

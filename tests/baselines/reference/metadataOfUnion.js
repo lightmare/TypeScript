@@ -70,12 +70,12 @@ var B = /** @class */ (function () {
     return B;
 }());
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-    E[E[1] = "B"] = 1;
-    E[E[2] = "C"] = 2;
-    E[E[3] = "D"] = 3;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+    this[this[3] = "D"] = 3;
+}.call(E || (E = {})));
 var D = /** @class */ (function () {
     function D() {
     }

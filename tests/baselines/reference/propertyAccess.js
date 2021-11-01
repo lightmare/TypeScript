@@ -179,12 +179,12 @@ var B = /** @class */ (function (_super) {
     return B;
 }(A));
 var Compass;
-(function (Compass) {
-    Compass[Compass[0] = "North"] = 0;
-    Compass[Compass[1] = "South"] = 1;
-    Compass[Compass[2] = "East"] = 2;
-    Compass[Compass[3] = "West"] = 3;
-})(Compass || (Compass = {}));
+(function () {
+    this[this[0] = "North"] = 0;
+    this[this[1] = "South"] = 1;
+    this[this[2] = "East"] = 2;
+    this[this[3] = "West"] = 3;
+}.call(Compass || (Compass = {})));
 var numIndex = { 3: 'three', 'three': 'three' };
 var strIndex = { 'N': Compass.North, 'E': Compass.East };
 var bothIndex;

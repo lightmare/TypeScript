@@ -21,11 +21,11 @@ if(color === foo.green){
 define(["require", "exports"], function (require, exports) {
     "use strict";
     var foo;
-    (function (foo) {
-        foo[foo[0] = "red"] = 0;
-        foo[foo[1] = "green"] = 1;
-        foo[foo[2] = "blue"] = 2;
-    })(foo || (foo = {}));
+    (function () {
+        this[this[0] = "red"] = 0;
+        this[this[1] = "green"] = 1;
+        this[this[2] = "blue"] = 2;
+    }.call(foo || (foo = {})));
     (function (foo) {
         foo.answer = 42;
     })(foo || (foo = {}));

@@ -39,11 +39,11 @@ enum E2 { // should error for continued autonumbering
 
 //// [enumBasics1.js]
 var E;
-(function (E) {
-    E[E[1] = "A"] = 1;
-    E[E[2] = "B"] = 2;
-    E[E[3] = "C"] = 3;
-})(E || (E = {}));
+(function () {
+    this[this[1] = "A"] = 1;
+    this[this[2] = "B"] = 2;
+    this[this[3] = "C"] = 3;
+}.call(E || (E = {})));
 /*
 var a: E;
 var b = E["B"]; // shouldn't error
@@ -65,11 +65,11 @@ var e = E; // shouldn't error
 */
 E.A.A; // should error
 var E2;
-(function (E2) {
-    E2[E2[0] = "A"] = 0;
-    E2[E2[1] = "B"] = 1;
-})(E2 || (E2 = {}));
-(function (E2) {
-    E2[E2[0] = "C"] = 0;
-    E2[E2[1] = "D"] = 1;
-})(E2 || (E2 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+}.call(E2 || (E2 = {})));
+(function () {
+    this[this[0] = "C"] = 0;
+    this[this[1] = "D"] = 1;
+}.call(E2 || (E2 = {})));

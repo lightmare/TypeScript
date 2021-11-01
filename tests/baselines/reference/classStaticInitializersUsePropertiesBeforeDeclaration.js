@@ -28,9 +28,9 @@ var Foo = /** @class */ (function () {
     return Foo;
 }());
 var Enum;
-(function (Enum) {
-    Enum[Enum[0] = "A"] = 0;
-})(Enum || (Enum = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(Enum || (Enum = {})));
 var ObjLiteral = {
     A: 0
 };

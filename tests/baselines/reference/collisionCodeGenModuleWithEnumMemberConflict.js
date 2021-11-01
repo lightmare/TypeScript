@@ -10,8 +10,8 @@ module m1 {
 var m1;
 (function (m1) {
     var e;
-    (function (e) {
-        e[e[0] = "m1"] = 0;
-        e[e[0] = "m2"] = 0;
-    })(e || (e = {}));
+    (function () {
+        this[this[0] = "m1"] = 0;
+        this[this[0] = "m2"] = 0;
+    }.call(e || (e = {})));
 })(m1 || (m1 = {}));

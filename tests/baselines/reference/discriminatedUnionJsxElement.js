@@ -31,10 +31,10 @@ function Menu(data) {
     return <ListItem variant={listItemVariant}/>;
 }
 var ListItemVariant;
-(function (ListItemVariant) {
-    ListItemVariant[ListItemVariant[0] = "OneLine"] = 0;
-    ListItemVariant[ListItemVariant[1] = "Avatar"] = 1;
-})(ListItemVariant || (ListItemVariant = {}));
+(function () {
+    this[this[0] = "OneLine"] = 0;
+    this[this[1] = "Avatar"] = 1;
+}.call(ListItemVariant || (ListItemVariant = {})));
 function ListItem(_data) {
     return null;
 }

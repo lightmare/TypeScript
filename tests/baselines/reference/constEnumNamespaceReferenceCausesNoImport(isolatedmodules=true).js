@@ -22,11 +22,11 @@ function check(x: Foo.ConstFooEnum): void {
 exports.__esModule = true;
 exports.fooFunc = exports.ConstFooEnum = void 0;
 var ConstFooEnum;
-(function (ConstFooEnum) {
-    ConstFooEnum[ConstFooEnum[0] = "Some"] = 0;
-    ConstFooEnum[ConstFooEnum[1] = "Values"] = 1;
-    ConstFooEnum[ConstFooEnum[2] = "Here"] = 2;
-})(ConstFooEnum = exports.ConstFooEnum || (exports.ConstFooEnum = {}));
+(function () {
+    this[this[0] = "Some"] = 0;
+    this[this[1] = "Values"] = 1;
+    this[this[2] = "Here"] = 2;
+}.call(ConstFooEnum = exports.ConstFooEnum || (exports.ConstFooEnum = {})));
 ;
 function fooFunc() { }
 exports.fooFunc = fooFunc;

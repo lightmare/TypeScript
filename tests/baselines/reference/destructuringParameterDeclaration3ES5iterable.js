@@ -131,10 +131,10 @@ function foo() {
 foo("hello", 1, 2);
 foo("hello", "world");
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-    E[E[1] = "b"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+}.call(E || (E = {})));
 function foo1() {
     var a = [];
     for (var _i = 0; _i < arguments.length; _i++) {

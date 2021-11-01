@@ -22,14 +22,14 @@ export const DOMMouseButton = {
 exports.__esModule = true;
 exports.DOMMouseButton = exports.MouseButton = void 0;
 var MouseButton;
-(function (MouseButton) {
-    MouseButton[MouseButton[1] = "LEFT_BUTTON"] = 1;
-    MouseButton[MouseButton[2] = "RIGHT_BUTTON"] = 2;
-    MouseButton[MouseButton[4] = "MIDDLE_BUTTON"] = 4;
-    MouseButton[MouseButton[5] = "XBUTTON1_BUTTON"] = 5;
-    MouseButton[MouseButton[6] = "XBUTTON2_BUTTON"] = 6;
-    MouseButton[MouseButton[0] = "NO_BUTTON"] = 0;
-})(MouseButton = exports.MouseButton || (exports.MouseButton = {}));
+(function () {
+    this[this[1] = "LEFT_BUTTON"] = 1;
+    this[this[2] = "RIGHT_BUTTON"] = 2;
+    this[this[4] = "MIDDLE_BUTTON"] = 4;
+    this[this[5] = "XBUTTON1_BUTTON"] = 5;
+    this[this[6] = "XBUTTON2_BUTTON"] = 6;
+    this[this[0] = "NO_BUTTON"] = 0;
+}.call(MouseButton = exports.MouseButton || (exports.MouseButton = {})));
 exports.DOMMouseButton = {
     '-1': MouseButton.NO_BUTTON,
     "0": MouseButton.LEFT_BUTTON,

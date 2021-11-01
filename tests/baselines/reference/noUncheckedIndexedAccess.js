@@ -105,22 +105,22 @@ const fn3 = <Key extends keyof typeof myRecord2>(key: Key) => {
 //// [noUncheckedIndexedAccess.js]
 "use strict";
 var NumericEnum1;
-(function (NumericEnum1) {
-    NumericEnum1[NumericEnum1[0] = "A"] = 0;
-    NumericEnum1[NumericEnum1[1] = "B"] = 1;
-    NumericEnum1[NumericEnum1[2] = "C"] = 2;
-})(NumericEnum1 || (NumericEnum1 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(NumericEnum1 || (NumericEnum1 = {})));
 var NumericEnum2;
-(function (NumericEnum2) {
-    NumericEnum2[NumericEnum2[0] = "A"] = 0;
-    NumericEnum2[NumericEnum2[1] = "B"] = 1;
-    NumericEnum2[NumericEnum2[2] = "C"] = 2;
-})(NumericEnum2 || (NumericEnum2 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+    this[this[1] = "B"] = 1;
+    this[this[2] = "C"] = 2;
+}.call(NumericEnum2 || (NumericEnum2 = {})));
 var StringEnum1;
-(function (StringEnum1) {
-    StringEnum1["A"] = "Alpha";
-    StringEnum1["B"] = "Beta";
-})(StringEnum1 || (StringEnum1 = {}));
+(function () {
+    this["A"] = "Alpha";
+    this["B"] = "Beta";
+}.call(StringEnum1 || (StringEnum1 = {})));
 // All of these should be errors
 var e1 = strMap["foo"];
 var e2 = strMap.bar;

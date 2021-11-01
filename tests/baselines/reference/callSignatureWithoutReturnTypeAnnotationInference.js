@@ -223,9 +223,9 @@ function foo14() {
 }
 var r14 = foo14();
 var e1;
-(function (e1) {
-    e1[e1[0] = "A"] = 0;
-})(e1 || (e1 = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(e1 || (e1 = {})));
 (function (e1) {
     e1.y = 1;
 })(e1 || (e1 = {}));

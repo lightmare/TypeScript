@@ -60,10 +60,10 @@ class C<T, U> {
 // When a function expression with no type parameters and no parameter type annotations 
 // is contextually typed (section 4.19) by a type T and a contextual signature S can be extracted from T
 var E;
-(function (E) {
-    E[E[0] = "red"] = 0;
-    E[E[1] = "blue"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "red"] = 0;
+    this[this[1] = "blue"] = 1;
+}.call(E || (E = {})));
 // A contextual signature S is extracted from a function type T as follows:
 //      If T is a function type with exactly one call signature, and if that call signature is non- generic, S is that signature.
 var a0 = function (num, str) {

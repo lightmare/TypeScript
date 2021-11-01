@@ -137,10 +137,10 @@ while (true) {
 exports.__esModule = true;
 exports.Choice = void 0;
 var Choice;
-(function (Choice) {
-    Choice[Choice[0] = "One"] = 0;
-    Choice[Choice[1] = "Two"] = 1;
-})(Choice = exports.Choice || (exports.Choice = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+    this[this[1] = "Two"] = 1;
+}.call(Choice = exports.Choice || (exports.Choice = {})));
 var choice = Choice.One;
 var choiceOne = Choice.One;
 if (choice === choiceOne) { }

@@ -18,9 +18,9 @@ export default {
 "use strict";
 exports.__esModule = true;
 var EnumExample;
-(function (EnumExample) {
-    EnumExample["TEST"] = "TEST";
-})(EnumExample || (EnumExample = {}));
+(function () {
+    this["TEST"] = "TEST";
+}.call(EnumExample || (EnumExample = {})));
 exports["default"] = EnumExample;
 //// [index.js]
 "use strict";

@@ -15,15 +15,15 @@ var b = A.Day.Monday;
 var A;
 (function (A) {
     var Color;
-    (function (Color) {
-        Color[Color[0] = "Red"] = 0;
-        Color[Color[1] = "Blue"] = 1;
-    })(Color = A.Color || (A.Color = {}));
+    (function () {
+        this[this[0] = "Red"] = 0;
+        this[this[1] = "Blue"] = 1;
+    }.call(Color = A.Color || (A.Color = {})));
     var Day;
-    (function (Day) {
-        Day[Day[0] = "Monday"] = 0;
-        Day[Day[1] = "Tuesday"] = 1;
-    })(Day || (Day = {}));
+    (function () {
+        this[this[0] = "Monday"] = 0;
+        this[this[1] = "Tuesday"] = 1;
+    }.call(Day || (Day = {})));
 })(A || (A = {}));
 // not an error since exported
 var a = A.Color.Red;

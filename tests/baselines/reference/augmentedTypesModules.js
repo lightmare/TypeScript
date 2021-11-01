@@ -211,20 +211,20 @@ var m4a;
 (function (m4a) {
     var y = 2;
 })(m4a || (m4a = {}));
-(function (m4a) {
-    m4a[m4a[0] = "One"] = 0;
-})(m4a || (m4a = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(m4a || (m4a = {})));
 var m4b;
 (function (m4b) {
     m4b.y = 2;
 })(m4b || (m4b = {}));
-(function (m4b) {
-    m4b[m4b[0] = "One"] = 0;
-})(m4b || (m4b = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(m4b || (m4b = {})));
 var m4c;
-(function (m4c) {
-    m4c[m4c[0] = "One"] = 0;
-})(m4c || (m4c = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(m4c || (m4c = {})));
 var m4d;
 (function (m4d) {
     var C = /** @class */ (function () {
@@ -234,9 +234,9 @@ var m4d;
         return C;
     }());
 })(m4d || (m4d = {}));
-(function (m4d) {
-    m4d[m4d[0] = "One"] = 0;
-})(m4d || (m4d = {}));
+(function () {
+    this[this[0] = "One"] = 0;
+}.call(m4d || (m4d = {})));
 //// module then module
 var m5;
 (function (m5) {

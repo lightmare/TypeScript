@@ -38,11 +38,11 @@ function f2(x: Color | string | string[]) {
 
 //// [TypeGuardWithEnumUnion.js]
 var Color;
-(function (Color) {
-    Color[Color[0] = "R"] = 0;
-    Color[Color[1] = "G"] = 1;
-    Color[Color[2] = "B"] = 2;
-})(Color || (Color = {}));
+(function () {
+    this[this[0] = "R"] = 0;
+    this[this[1] = "G"] = 1;
+    this[this[2] = "B"] = 2;
+}.call(Color || (Color = {})));
 function f1(x) {
     if (typeof x === "number") {
         var y = x;

@@ -27,9 +27,9 @@ let broken = [
 var M;
 (function (M) {
     var MyEnum;
-    (function (MyEnum) {
-        MyEnum[MyEnum[0] = "BAR"] = 0;
-    })(MyEnum = M.MyEnum || (M.MyEnum = {}));
+    (function () {
+        this[this[0] = "BAR"] = 0;
+    }.call(MyEnum = M.MyEnum || (M.MyEnum = {})));
     M.object2 = {
         foo: MyEnum.BAR
     };
@@ -37,9 +37,9 @@ var M;
 var N;
 (function (N) {
     var MyEnum;
-    (function (MyEnum) {
-        MyEnum[MyEnum[0] = "FOO"] = 0;
-    })(MyEnum = N.MyEnum || (N.MyEnum = {}));
+    (function () {
+        this[this[0] = "FOO"] = 0;
+    }.call(MyEnum = N.MyEnum || (N.MyEnum = {})));
     ;
     N.object1 = {
         foo: MyEnum.FOO

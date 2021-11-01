@@ -12,9 +12,9 @@ export type E = E;
 exports.__esModule = true;
 exports.E = void 0;
 var E;
-(function (E) {
-    E[E[0] = "X"] = 0;
-})(E = exports.E || (exports.E = {}));
+(function () {
+    this[this[0] = "X"] = 0;
+}.call(E = exports.E || (exports.E = {})));
 //// [f2.js]
 "use strict";
 exports.__esModule = true;

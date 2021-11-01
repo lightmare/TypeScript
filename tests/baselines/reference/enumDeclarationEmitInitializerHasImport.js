@@ -15,10 +15,10 @@ export const value = provider.Enum.Value1;
 exports.__esModule = true;
 exports.Enum = void 0;
 var Enum;
-(function (Enum) {
-    Enum[Enum[0] = "Value1"] = 0;
-    Enum[Enum[1] = "Value2"] = 1;
-})(Enum = exports.Enum || (exports.Enum = {}));
+(function () {
+    this[this[0] = "Value1"] = 0;
+    this[this[1] = "Value2"] = 1;
+}.call(Enum = exports.Enum || (exports.Enum = {})));
 //// [consumer.js]
 "use strict";
 exports.__esModule = true;

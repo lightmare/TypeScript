@@ -32,9 +32,9 @@ x = 1;
 x = '';
 x = true;
 var E;
-(function (E) {
-    E[E[0] = "A"] = 0;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "A"] = 0;
+}.call(E || (E = {})));
 x = E;
 x = E.A;
 var C = /** @class */ (function () {

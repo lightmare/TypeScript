@@ -14,9 +14,9 @@ U8.bit_2
 // Fixes #16245 -- always suggest the exact match, even when
 // other options are very close
 var U8;
-(function (U8) {
-    U8[U8[1] = "BIT_0"] = 1;
-    U8[U8[2] = "BIT_1"] = 2;
-    U8[U8[4] = "BIT_2"] = 4;
-})(U8 || (U8 = {}));
+(function () {
+    this[this[1] = "BIT_0"] = 1;
+    this[this[2] = "BIT_1"] = 2;
+    this[this[4] = "BIT_2"] = 4;
+}.call(U8 || (U8 = {})));
 U8.bit_2;

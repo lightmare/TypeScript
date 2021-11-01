@@ -35,9 +35,9 @@ var C = /** @class */ (function () {
 }());
 var c = C;
 var E;
-(function (E) {
-    E[E[0] = "Red"] = 0;
-    E[E[1] = "Blue"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "Red"] = 0;
+    this[this[1] = "Blue"] = 1;
+}.call(E || (E = {})));
 var e = E;
 var i = I;

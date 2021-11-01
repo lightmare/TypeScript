@@ -26,15 +26,15 @@ var r14 = c + c;
 
 //// [additionOperatorWithNumberAndEnum.js]
 var E;
-(function (E) {
-    E[E[0] = "a"] = 0;
-    E[E[1] = "b"] = 1;
-})(E || (E = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+}.call(E || (E = {})));
 var F;
-(function (F) {
-    F[F[0] = "c"] = 0;
-    F[F[1] = "d"] = 1;
-})(F || (F = {}));
+(function () {
+    this[this[0] = "c"] = 0;
+    this[this[1] = "d"] = 1;
+}.call(F || (F = {})));
 var a;
 var b;
 var c;

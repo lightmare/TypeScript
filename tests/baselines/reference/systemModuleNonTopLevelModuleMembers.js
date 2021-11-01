@@ -31,9 +31,9 @@ System.register([], function (exports_1, context_1) {
                 var v;
             })(TopLevelModule || (TopLevelModule = {}));
             exports_1("TopLevelModule", TopLevelModule);
-            (function (TopLevelEnum) {
-                TopLevelEnum[TopLevelEnum[0] = "E"] = 0;
-            })(TopLevelEnum || (TopLevelEnum = {}));
+            (function () {
+                this[this[0] = "E"] = 0;
+            }.call(TopLevelEnum || (TopLevelEnum = {})));
             exports_1("TopLevelEnum", TopLevelEnum);
             (function (TopLevelModule2) {
                 var NonTopLevelClass = /** @class */ (function () {
@@ -49,9 +49,9 @@ System.register([], function (exports_1, context_1) {
                 function NonTopLevelFunction() { }
                 TopLevelModule2.NonTopLevelFunction = NonTopLevelFunction;
                 var NonTopLevelEnum;
-                (function (NonTopLevelEnum) {
-                    NonTopLevelEnum[NonTopLevelEnum[0] = "E"] = 0;
-                })(NonTopLevelEnum = TopLevelModule2.NonTopLevelEnum || (TopLevelModule2.NonTopLevelEnum = {}));
+                (function () {
+                    this[this[0] = "E"] = 0;
+                }.call(NonTopLevelEnum = TopLevelModule2.NonTopLevelEnum || (TopLevelModule2.NonTopLevelEnum = {})));
             })(TopLevelModule2 || (TopLevelModule2 = {}));
             exports_1("TopLevelModule2", TopLevelModule2);
         }

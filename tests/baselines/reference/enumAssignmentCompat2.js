@@ -39,11 +39,11 @@ var p: W.D;
 
 //// [enumAssignmentCompat2.js]
 var W;
-(function (W) {
-    W[W[0] = "a"] = 0;
-    W[W[1] = "b"] = 1;
-    W[W[2] = "c"] = 2;
-})(W || (W = {}));
+(function () {
+    this[this[0] = "a"] = 0;
+    this[this[1] = "b"] = 1;
+    this[this[2] = "c"] = 2;
+}.call(W || (W = {})));
 (function (W) {
     var D = /** @class */ (function () {
         function D() {

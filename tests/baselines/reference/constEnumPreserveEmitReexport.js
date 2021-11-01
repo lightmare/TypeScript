@@ -16,10 +16,10 @@ export { MyConstEnum as default } from './ConstEnum';
 exports.__esModule = true;
 exports.MyConstEnum = void 0;
 var MyConstEnum;
-(function (MyConstEnum) {
-    MyConstEnum[MyConstEnum[0] = "Foo"] = 0;
-    MyConstEnum[MyConstEnum[1] = "Bar"] = 1;
-})(MyConstEnum = exports.MyConstEnum || (exports.MyConstEnum = {}));
+(function () {
+    this[this[0] = "Foo"] = 0;
+    this[this[1] = "Bar"] = 1;
+}.call(MyConstEnum = exports.MyConstEnum || (exports.MyConstEnum = {})));
 ;
 //// [ImportExport.js]
 "use strict";
