@@ -2337,9 +2337,6 @@ namespace ts {
                 }
             }
 
-            // `parameterName` is the declaration name used inside of the enum.
-            const parameterName = getNamespaceParameterName(node);
-
             // `containerName` is the expression used inside of the enum for assignments.
             const containerName = getNamespaceContainerName(node);
 
@@ -2370,23 +2367,25 @@ namespace ts {
                 moduleArg = factory.createAssignment(localName, moduleArg);
             }
 
-            //  (function (x) {
-            //      x[x["y"] = 0] = "y";
+            //  (function () {
+            //      this[this[0] = "y"] = 0;
+            //      this[this["x"] = nonLiteral] = "x";
+            //      this["parrot"] = "no more";
             //      ...
-            //  })(x || (x = {}));
+            //  }).call(x || (x = {}));
             const enumStatement = factory.createExpressionStatement(
                 some(node.members)
-                    ? factory.createCallExpression(
+                    ? factory.createMethodCall(
                         factory.createFunctionExpression(
                             /*modifiers*/ undefined,
                             /*asteriskToken*/ undefined,
                             /*name*/ undefined,
                             /*typeParameters*/ undefined,
-                            [factory.createParameterDeclaration(/*decorators*/ undefined, /*modifiers*/ undefined, /*dotDotDotToken*/ undefined, parameterName)],
+                            /*parameters*/ undefined,
                             /*type*/ undefined,
                             transformEnumBody(node, containerName)
                         ),
-                        /*typeArguments*/ undefined,
+                        "call",
                         [moduleArg])
                     : moduleArg);
 
@@ -2452,7 +2451,7 @@ namespace ts {
 
             const innerAssignment = factory.createAssignment(
                 factory.createElementAccessExpression(
-                    currentNamespaceContainerName,
+                    factory.createThis(),
                     innerKey
                 ),
                 innerValue
@@ -2461,7 +2460,7 @@ namespace ts {
                 innerAssignment :
                 factory.createAssignment(
                     factory.createElementAccessExpression(
-                        currentNamespaceContainerName,
+                        factory.createThis(),
                         innerAssignment
                     ),
                     innerKey
@@ -3319,25 +3318,31 @@ namespace ts {
         }
 
         function trySubstituteNamespaceExportedName(node: Identifier): Expression | undefined {
+            let namespace: Expression | undefined;
+
             // If this is explicitly a local name, do not substitute.
             if (enabledSubstitutions & applicableSubstitutions && !isGeneratedIdentifier(node) && !isLocalName(node)) {
-                // If we are nested within a namespace declaration, we may need to qualifiy
+                // If we are nested within a namespace declaration, we may need to qualify
                 // an identifier that is exported from a merged namespace.
                 const container = resolver.getReferencedExportContainer(node, /*prefixLocals*/ false);
-                if (container && container.kind !== SyntaxKind.SourceFile) {
-                    const substitute =
-                        (applicableSubstitutions & TypeScriptSubstitutionFlags.NamespaceExports && container.kind === SyntaxKind.ModuleDeclaration) ||
-                        (applicableSubstitutions & TypeScriptSubstitutionFlags.NonQualifiedEnumMembers && container.kind === SyntaxKind.EnumDeclaration);
-                    if (substitute) {
-                        return setTextRange(
-                            factory.createPropertyAccessExpression(factory.getGeneratedNameForNode(container), node),
-                            /*location*/ node
-                        );
-                    }
+                switch (container?.kind) {
+                    case SyntaxKind.ModuleDeclaration:
+                        if (applicableSubstitutions & TypeScriptSubstitutionFlags.NamespaceExports) {
+                            namespace = factory.getGeneratedNameForNode(container);
+                        }
+                        break;
+                    case SyntaxKind.EnumDeclaration:
+                        if (applicableSubstitutions & TypeScriptSubstitutionFlags.NonQualifiedEnumMembers) {
+                            namespace = factory.createThis();
+                        }
+                        break;
                 }
             }
 
-            return undefined;
+            return namespace && setTextRange(
+                factory.createPropertyAccessExpression(namespace, node),
+                /*location*/ node
+            );
         }
 
         function substitutePropertyAccessExpression(node: PropertyAccessExpression) {
